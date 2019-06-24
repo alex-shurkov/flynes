@@ -1,0 +1,6 @@
+AddDefaultCharset UTF-8
+AddHandler application/x-httpd-php .html
+ErrorDocument 404 /_HTML/dist/404.html
+RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^([^\.]+)$ $1.html [NC,L]
