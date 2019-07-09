@@ -1,0 +1,46 @@
+/// helpers for  visibility of elements
+@mixin helpers-show-hide ($points: ()) {
+	// sass-lint:disable no-important
+	._hide {
+		display: none !important;
+	}
+
+	.touchevents {
+		._hide-touch {
+			display: none !important;
+		}
+	}
+
+	.no-touchevents {
+		._hide-notouch {
+			display: none !important;
+		}
+	}
+
+	._unhidden {
+		display: initial;
+	}
+
+	@media print {
+		._noprint {
+			display: none !important;
+		}
+	}
+
+	@each $point, $size in $points {
+		$mod: $point + $sep;
+
+		@include media($size) {
+			._#{$mod}hide {
+				display: none !important;
+			}
+		}
+
+		@include media($size, max) {
+			._#{$mod}show {
+				display: none !important;
+			}
+		}
+	}
+	// sass-lint:enable no-important
+}

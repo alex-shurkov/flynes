@@ -1,51 +1,22 @@
 # -------------------------------------------------
-# Common
-# -------------------------------------------------
-
-# fs
-.DS_Store
-thumbs.db
-
-# robots
-/robots.txt
-/robotshttps.txt
-
-# sitemap
-/sitemap.xml
-
-# -------------------------------------------------
-# WezomCMS
-# -------------------------------------------------
-
-# prog
-/Config/database.php
-/nbproject/
-/export/
-
-# Media
-
-# -------------------------------------------------
 # _HTML
 # -------------------------------------------------
+# source code
 
-# Nodejs
-.npm/
-node_modules/
-*.log*
-
-# итоговая разметка
 _HTML/dist/
-/ftp/
+_HTML/system/
+_HTML/src/assets/
+_HTML/src/ejs/
+_HTML/src/svg-sprite/from-parser-only/
+_HTML/src/js/
 
-# документация по исходному коду
-_HTML/api-docs/
+# -------------------------------------------------
+# _DIST
+# -------------------------------------------------
+# build code
+_DIST/media/assets/js
 
-# tmp файлы
-/tmp/
-_HTML/tmp/
 
-# webpack cтатистика
-webpack.stats.json
 
 # -------------------------------------------------
 # JetBrains

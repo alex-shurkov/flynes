@@ -1,0 +1,32 @@
+/// Main wrap of the page
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	position: relative;
+	min-height: 100%;
+}
+
+/// Container for page content
+.container {
+	width: 100%;
+	flex-basis: 100%;
+	max-width: 1202px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+
+	& &,
+	&--no-gap {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&--full {
+		max-width: 100%;
+	}
+
+	@include clearfix();
+}

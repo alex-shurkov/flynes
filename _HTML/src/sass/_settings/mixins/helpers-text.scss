@@ -1,0 +1,39 @@
+//helpers for text control
+@mixin _helpers-text-generate($mod: "") {
+	// sass-lint:disable no-important
+	._#{$mod}text-left {
+		text-align: left !important;
+	}
+
+	._#{$mod}text-right {
+		text-align: right !important;
+	}
+
+	._#{$mod}text-center {
+		text-align: center !important;
+	}
+
+	._#{$mod}ellipsis {
+		max-width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	._#{$mod}ellipsis-free {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	// sass-lint:enable no-important
+}
+
+//helpers for text control
+@mixin helpers-text ($points: ()) {
+	@include _helpers-text-generate();
+	@each $point, $size in $points {
+		@include media($size) {
+			@include _helpers-text-generate($point + $sep);
+		}
+	}
+}

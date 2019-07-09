@@ -1,0 +1,36 @@
+@import "_settings/settings";
+@import "_system/normalize";
+@import "_system/html-tags";
+@import "_system/fonts";
+
+// structure
+@import "_blocks/container-and-wrapper";
+@import "_blocks/header";
+@import "_blocks/header-dropdowns";
+@import "_blocks/footer";
+
+
+// ui
+@import "_blocks/cookie";
+@import "_blocks/scroll-up";
+
+// popup
+@import "_blocks/popup";
+
+// form
+@import "_blocks/form";
+@import "_blocks/button";
+
+//modal
+@import "_blocks/modal";
+
+
+@import "_pages/catalog";
+@import "_blocks/catalog/search-form";
+@import "_blocks/catalog/products";
+@import "_pages/about";
+@import "_pages/faq";
+@import "_pages/contacts";
+@import "_blocks/daypicker";
+
+

@@ -1,0 +1,327 @@
+////
+/// @group _blocks/
+////
+
+/// Описание
+.footer {
+	background-color: #72c3d6;
+	color: #fff;
+	padding: rem(25) 0;
+}
+
+.ft-name {
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-align: center;
+	margin-bottom: rem(10);
+
+	@include media(sm, max) {
+		line-height: 32px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	@include media(md) {
+		text-align: left;
+		margin-bottom: 0;
+
+		[dir="rtl"] & {
+			text-align: right;
+		}
+	}
+
+	&__title {
+		margin-bottom: rem(9);
+		font-size: rem(32);
+
+		@include media(sm, max) {
+			font-size: 32px;
+		}
+	}
+
+	&__subtitle {
+		text-transform: uppercase;
+		font-size: 17px;
+	}
+}
+
+.ft-menu {
+	text-transform: uppercase;
+	font-size: 13px;
+	@include media(md) {
+		padding-top: rem(28);
+	}
+	@include media(def) {
+		padding-left: rem(10);
+	}
+
+	&__list {
+		list-style: none;
+		padding-left: 0;
+		column-count: 2;
+		column-gap: rem(10);
+		margin-bottom: 0;
+
+		[dir="rtl"] & {
+			padding-right: 0;
+		}
+
+		@include media(def) {
+			column-gap: 20%;
+		}
+	}
+
+	&__item {
+		position: relative;
+		padding-left: rem(12);
+		margin-bottom: rem(8);
+
+		[dir="rtl"] & {
+			padding-left: 0;
+			padding-right: rem(12);
+		}
+
+		@include media(def) {
+			padding-left: rem(25);
+			margin-bottom: rem(20);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: rem(3);
+			left: 0;
+			height: rem(5);
+			width: rem(5);
+			background: #ffffff;
+			border-radius: 50%;
+
+			[dir="rtl"] & {
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+
+	&__link {
+		color: #ffffff;
+		transition: text-decoration 0.1s ease-in-out;
+		text-decoration: none;
+
+		@include media(def, max) {
+			line-height: 1.2;
+			font-size: 12px;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.gcell {
+	&--socials {
+		@include media(md, max) {
+			order: 3;
+		}
+	}
+}
+
+.socials {
+	@include media(sm, max) {
+		display: flex;
+		justify-content: space-between;
+		line-height: rem(20);
+		align-items: center;
+		margin-top: 10px;
+	}
+
+	&__links {
+		display: flex;
+		justify-content: center;
+		@include media(sm) {
+			padding-top: 10px;
+		}
+		@include media(md) {
+			padding-top: rem(38);
+		}
+		@include media(def) {
+			padding-right: 22%;
+			padding-top: rem(28);
+
+			[dir="rtl"] & {
+				padding-right: 0;
+				padding-left: 22%;
+			}
+		}
+
+		.popup & {
+			justify-content: center;
+			width: 100%;
+		}
+	}
+
+
+	&__link {
+		text-decoration: none;
+		padding: rem(3);
+		display: inline-block;
+		margin: 0 4px;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		@include media(sm) {
+			padding: rem(7);
+		}
+
+		@include media(ms) {
+			margin: 0 8px;
+		}
+
+		@include media(def) {
+			padding: rem(7);
+		}
+
+		.popup & {
+			margin: 0 12px;
+		}
+
+		&:hover {
+			svg {
+				transform: scale(1.2);
+			}
+		}
+
+		svg {
+			fill: #ffffff;
+			transition: 0.1s ease-in-out;
+			height: 17px;
+			width: 17px;
+			min-height: 17px;
+			min-width: 17px;
+
+			.popup & {
+				fill: map-get($colors, main);
+				height: 20px;
+				width: 20px;
+			}
+		}
+	}
+}
+
+.contacts-item {
+	font-size: 13px;
+
+	@include media(md, max) {
+		padding-top: rem(10);
+	}
+
+	@include media(def, max) {
+		padding-top: rem(7);
+	}
+
+	@include media(def) {
+		padding-left: rem(20);
+		font-size: 14px;
+	}
+
+	.popup & {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 44px 0;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: #fff;
+		display: inline-flex;
+		align-items: center;
+		padding: rem(5);
+		letter-spacing: 0.1px;
+
+		.popup & {
+			color: map-get($colors, dark);
+			font-size: 17px;
+			min-width: 190px;
+			line-height: 30px;
+		}
+
+		@include media(md) {
+			margin-bottom: rem(5);
+		}
+
+		span {
+			white-space: nowrap;
+		}
+
+		svg {
+			fill: #ffffff;
+			height: rem(15);
+			width: rem(15);
+			min-height: rem(15);
+			min-width: rem(15);
+			margin-right: rem(10);
+
+			[dir="rtl"] & {
+				margin-left: rem(10);
+				margin-right: 0;
+			}
+
+			@include media(ms) {
+				margin-right: rem(20);
+
+				[dir="rtl"] & {
+					margin-left: rem(20);
+					margin-right: 0;
+				}
+
+			}
+
+			.popup & {
+				fill: map-get($colors, main);
+				height: 17px;
+				width: 17px;
+			}
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.ft-bottom {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	font-size: rem(12);
+	opacity: 0.6;
+
+	@include media(md, max) {
+		padding-top: rem(10);
+	}
+}
+
+.mb-copyright {
+	font-size: 12px;
+	letter-spacing: 0.7px;
+
+	.popup & {
+		color: map-get($colors, dark);
+		font-size: 12px;
+		text-align: center;
+		font-weight: 600;
+		padding-bottom: 15px;
+	}
+}
+
+.ft-container {
+	@include media(sm, max) {
+		padding: 0 rem(24);
+	}
+}

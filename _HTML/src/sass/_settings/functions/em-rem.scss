@@ -1,0 +1,23 @@
+/// Getting `unitless` / @param {number} $number - size / @return {number}
+@function strip-units ($number) {
+	@if type-of($number) == "number" and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+	@return $number;
+}
+
+//function to convert 'px' to 'em'
+@function em ($value, $base: 14px, $unit: 1em) {
+	@if not unitless($value) {
+		$value: strip-units($value);
+	}
+	@if not unitless($base) {
+		$base: strip-units($base);
+	}
+	@return ($value / $base) * $unit;
+}
+
+//function to convert 'px' to 'rem'
+@function rem ($value, $base: 14px) {
+	@return em($value, $base, 1rem);
+}

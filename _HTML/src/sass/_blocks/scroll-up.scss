@@ -1,0 +1,42 @@
+////
+/// @group _blocks/
+////
+
+/// Description
+.scroll-up {
+	$t: map-get($transitions, normal);
+	position: fixed;
+	z-index: 100;
+	right: 2rem;
+	bottom: 2rem;
+	opacity: 0;
+	visibility: hidden;
+	border: 1px solid map-get($colors, main);
+	fill: map-get($colors, light);
+	cursor: pointer;
+	background-color: map-get($colors, light-blue);
+	transition: fill $t, background-color $t, border-color $t, opacity $t, visibility $t;
+
+	[dir="rtl"] & {
+		left: 2rem;
+		right: auto;
+
+	}
+
+	&--show {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: map-get($colors, main);
+	}
+
+	.svg {
+		padding: 10px;
+		line-height: 0;
+		font-size: 0;
+		display: inline-block;
+	}
+}

@@ -1,0 +1,10 @@
+/// Size of flex cell
+@mixin flex-cell-width($width) {
+	flex-basis: $width;
+	width: $width;
+	@if ($width == auto) {
+		max-width: none;
+	} @else {
+		max-width: $width;
+	}
+}

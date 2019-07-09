@@ -1,5 +1,11 @@
 # flynes
 
+####_DIST 
+> directory with compiled css and ready media and html
+
+####_HTML
+> directory with source scss files and svg icons 
+
 ####React demo calendar
 > example js file media/assets/_demo-react/js/example.js.txt
 

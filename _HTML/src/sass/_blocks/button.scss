@@ -1,0 +1,102 @@
+.button {
+	display: inline-block;
+	vertical-align: top;
+	padding: 14px 60px;
+	border: none;
+	border-radius: rem(8);
+	background-color: #01bab4;
+	box-sizing: border-box;
+	font-size: 15px;
+	line-height: normal;
+	cursor: pointer;
+	margin: 0 3px 5px 0;
+	text-transform: uppercase;
+	color: map-get($colors, light);
+	font-weight: 900;
+	position: relative;
+
+	&::after {
+		transition: width 0.25s cubic-bezier(0.6, 0, 0.74, 0.05);
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 0;
+		height: 100%;
+		right: 0;
+		background: rgba(255, 255, 255, 0.15);
+	}
+
+	&--full-width {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	&:only-child {
+		margin: 0;
+	}
+
+	&:hover {
+		background-color: map-get($colors, main);
+
+		&::after {
+			width: 100%;
+		}
+	}
+
+	&--link {
+		color: map-get($colors, dark);
+		background: none;
+		text-transform: none;
+		font-weight: 600;
+
+		&:hover {
+			background-color: transparent;
+		}
+	}
+
+	&--secondary {
+		background-color: map-get($colors, light);
+		color: #5db9ce;
+
+		&::after {
+			background: rgba(255, 255, 255, 0.15);
+		}
+
+		&:hover {
+
+			color: map-get($colors, light);
+		}
+	}
+
+	&--outline {
+		background-color: map-get($colors, light);
+		color: map-get($colors, dark);
+		border: 2px solid map-get($colors, main);
+		padding: 12px 40px;
+
+		&::after {
+			background: rgba(255, 255, 255, 0.15);
+		}
+
+		&:hover {
+			color: map-get($colors, light);
+		}
+	}
+
+	&:active {
+
+		&::after {
+			width: 100%;
+		}
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: .6;
+	}
+
+	&.is-active {
+		cursor: default;
+		background-color: map-get($colors, main);
+	}
+}

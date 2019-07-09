@@ -1,0 +1,178 @@
+// ================================
+// MIXINS
+// ================================
+@import "./mixins/media";
+@import "./mixins/clearfix";
+@import "./mixins/flex-cell-width";
+@import "./mixins/helpers-flex";
+@import "./mixins/helpers-grid";
+@import "./mixins/helpers-gutter";
+@import "./mixins/helpers-show-hide";
+@import "./mixins/helpers-text";
+
+// ================================
+// FUNCTIONS
+// ================================
+
+/// Getting `unitless` / @param {number} $number - size / @return {number}
+@function strip-units ($number) {
+	@if type-of($number) == "number" and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+	@return $number;
+}
+
+//function to convert 'px' to 'em'
+@function em ($value, $base: 14px, $unit: 1em) {
+	@if not unitless($value) {
+		$value: strip-units($value);
+	}
+	@if not unitless($base) {
+		$base: strip-units($base);
+	}
+	@return ($value / $base) * $unit;
+}
+
+//function to convert 'px' to 'rem'
+@function rem ($value, $base: 14px) {
+	@return em($value, $base, 1rem);
+}
+
+
+// ================================
+// VARIABLES
+// ================================
+
+/// Basic Transition Map
+/// @type {Map}
+$transitions: (
+		fast: .125s ease,
+		normal: .25s ease,
+);
+
+/// Basic color map
+/// @type {Map}
+$colors: (
+		light: #fff,
+		dark: #313131,
+		main: #01bab4,
+		secondary: #df2d69,
+		light-blue: #72c3d6,
+		border: #ccc,
+		text: #505050,
+		error: #e3050f,
+		calendar: #8d8d8d,
+		placeholder: #afafaf
+);
+
+/// Fonts Map
+/// @type {Map}
+$font-family: (
+		main: #{"Lato"},
+		secondary: #{sans-serif},
+		monospace: #{Consolas, "Liberation Mono", Menlo, Courier, monospace}
+);
+
+/// Separator
+$sep: "-";
+
+// Breakpoints of screen width or height
+/// Breakpoints map (in `px`)
+/// @type Map
+$breakpoints: (
+		st: 320px,
+		xs: 375px,
+		psw: 412px,
+		sm: 480px,
+		ms: 640px,
+		psh: 732px,
+		md: 768px,
+		def: 1024px,
+		lg: 1280px,
+		xl: 1366px,
+		mg: 1440px,
+		dt: 1980px
+);
+
+///Breakpoint Map for devices
+/// @type Map
+$devices: (
+		iphone4: "only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)",
+		iphone5: "only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2)",
+		iphone6: "only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2)",
+		iphone6plus: "only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3)",
+		ipadmini: "only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)",
+		ipad1: "only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)",
+		ipad2: "only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)",
+		ipad3: "only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)",
+		ipad4: "only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)"
+);
+
+//Breakpoint Map for device orientation
+/// @type Map
+$orientations: (
+		auto: "only screen and (orientation: auto)",
+		landscape: "only screen and (orientation: landscape)",
+		portrait: "only screen and (orientation: portrait)"
+);
+
+/// Gutters map for breakpoints
+/// @type Map
+$gutters: (
+		none: 0,
+		sm: rem(5),
+		ms: rem(10),
+		md: rem(15),
+		def: rem(20),
+		lg: rem(25),
+		xl: rem(30),
+		mg: rem(40),
+		dt: rem(50)
+);
+
+/// Breakpoins map for helpers
+$helpers-breakpoints: (
+		st: map-get($breakpoints, st),
+		xs: map-get($breakpoints, xs),
+		psw: map-get($breakpoints, psw),
+		sm: map-get($breakpoints, sm),
+		ms: map-get($breakpoints, ms),
+		psh: map-get($breakpoints, psh),
+		md: map-get($breakpoints, md),
+		def: map-get($breakpoints, def),
+		lg: map-get($breakpoints, lg),
+		xl: map-get($breakpoints, xl),
+		mg: map-get($breakpoints, mg),
+);
+
+/// Gutters map for helpers
+$helpers-gutters: (
+		none: map-get($gutters, none),
+		sm: map-get($gutters, sm),
+		ms: map-get($gutters, ms),
+		md: map-get($gutters, md),
+		def: map-get($gutters, def),
+		lg: map-get($gutters, lg),
+		xl: map-get($gutters, xl),
+	// mg: map-get($gutters, mg),
+	// dt: map-get($gutters, dt),
+);
+
+/// Colors map for helpers
+$helpers-colors: (
+		light: map-get($colors, light),
+		dark: map-get($colors, dark),
+		main: map-get($colors, main),
+		secondary: map-get($colors, secondary),
+		border: map-get($colors, border),
+		text: map-get($colors, text),
+		error: map-get($colors, error),
+);
+
+// sass-lint:disable no-css-comments
+@include helpers-grid(12, $helpers-breakpoints, $helpers-gutters);
+@include helpers-flex($helpers-breakpoints);
+@include helpers-gutter($helpers-breakpoints, $helpers-gutters);
+@include helpers-text(/*$helpers-breakpoints*/);
+@include helpers-show-hide($helpers-breakpoints);
+// sass-lint:enable no-css-comments

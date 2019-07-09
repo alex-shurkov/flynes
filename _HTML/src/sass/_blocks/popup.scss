@@ -1,0 +1,113 @@
+.popup {
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	padding: 0.4rem 2.8rem;
+	border-radius: 8px;
+
+	@include media(def) {
+		padding: 1.6rem 1.8rem;
+		margin: 1.5rem auto;
+		height: 100%;
+		max-width: rem(770);
+		background-color: #fff;
+		box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+	}
+
+	&-logo {
+		color: map-get($colors, main);
+		font-family: 'Lato', sans-serif;
+		padding: 3px 0 55px;
+
+		[dir="rtl"] & {
+			text-align: right;
+		}
+
+		@include media(def) {
+			display: none;
+		}
+
+		&__title {
+			letter-spacing: -25 / 1000 * 24px;
+			font-size: rem(33);
+			line-height: 1.3;
+		}
+
+		&__subtitle {
+			font-size: rem(17);
+			line-height: 2;
+		}
+	}
+
+	&__title {
+		font-family: 'Gotham', 'Lato', sans-serif;
+		font-size: rem(26);
+		line-height: 1;
+		color: map-get($colors, main);
+		letter-spacing: -25 / 1000 * 24px;
+		padding: 0 0 rem(14);
+		text-align: center;
+
+		&--strong {
+			font-size: rem(50);
+			text-align: left;
+			line-height: 1.2;
+			letter-spacing: -80 / 1000 * 24px;
+
+			@include media(md) {
+				padding: rem(30) 0 rem(24);
+			}
+
+			[dir="rtl"] & {
+				text-align: right;
+			}
+		}
+	}
+
+	&__sub-title {
+		font-size: rem(16);
+		line-height: rem(18);
+		text-align: center;
+		padding: rem(16) 0 rem(26);
+	}
+
+	&__image {
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	&__line {
+		position: relative;
+		margin-bottom: 20px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			background-color: map-get($colors, secondary);
+			top: auto;
+			bottom: -10px;
+			left: 2.14286rem;
+			right: 0;
+			height: 1px;
+		}
+
+		@include media(md) {
+			margin-bottom: 0;
+
+			&::before {
+				background-color: map-get($colors, main);
+				top: rem(18);
+				bottom: rem(18);
+				left: rem(-18);
+				width: 1px;
+				height: auto;
+
+				[dir="rtl"] & {
+					right: rem(-18);
+				}
+			}
+		}
+	}
+}

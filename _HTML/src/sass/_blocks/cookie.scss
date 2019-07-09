@@ -1,0 +1,169 @@
+////
+/// @group _blocks/
+////
+
+/// Description
+.cookie {
+	position: fixed;
+	bottom: -1px;
+	left: 0;
+	right: 0;
+	background-color: rgba(114, 195, 214, 0.8);
+	transition: transform map-get($transitions, default);
+	z-index: 1000;
+
+	&__wrap {
+		position: relative;
+	}
+
+	&.is-hidden {
+		transform: translateY(110%);
+	}
+
+	&__container {
+		position: relative;
+		padding: 10px;
+		background: #ffffff;
+		border-radius: 8px;
+		margin: 8px;
+		max-width: calc(100% - 16px);
+		padding-right: 40px;
+
+		[dir="rtl"] & {
+			padding-right: 10px;
+			padding-left: 40px;
+		}
+
+		@include media(def) {
+			padding: 18px 70px;
+			margin: 15px auto;
+			max-width: 1170px;
+		}
+	}
+
+	&__title {
+		font-size: 15px;
+		color: map-get($colors, secondary);
+
+		@include media(md) {
+			font-size: 18px;
+			text-align: center;
+		}
+		@include media(def) {
+			text-align: center;
+		}
+	}
+
+	&__subtitle {
+		font-size: 13px;
+		color: #212121;
+		font-weight: bold;
+		margin-bottom: 7px;
+
+		@include media(md) {
+			font-size: 15px;
+		}
+
+		@include media(def) {
+			margin-bottom: 17px;
+		}
+	}
+
+	&__content {
+		padding: 0;
+		margin: 0;
+		font-size: 12px;
+		line-height: 18px;
+		color: #313131;
+		letter-spacing: -0.01em;
+
+		@include media(md) {
+			font-size: 14px;
+			line-height: 22px;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: map-get($colors, main);
+	}
+
+	&__btn {
+		text-align: center;
+		padding-top: 10px;
+		@include media(def) {
+			padding-left: 0;
+			text-align: right;
+
+			[dir="rtl"] & {
+				text-align: left;
+			}
+		}
+	}
+
+	.button {
+		background-color: #72c3d6;
+		padding: 14px 20px;
+		min-width: 180px;
+		text-align: center;
+
+		&:hover {
+			background-color: #72c3d6;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 13px;
+		right: 40px;
+		border-radius: 50%;
+		height: 40px;
+		width: 40px;
+		min-height: 40px;
+		min-width: 40px;
+		transition: 0.2s linear;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid #ffffff;
+
+		[dir="rtl"] & {
+			left: 40px;
+			right: auto;
+		}
+
+		@include media(lg, max) {
+			background-color: #ffffff;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+			top: 8px;
+			right: 8px;
+
+			[dir="rtl"] & {
+				left: 8px;
+				right: auto;
+			}
+
+			svg {
+				fill: map-get($colors, main);
+			}
+		}
+
+		&:hover {
+			background-color: #ffffff;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+
+			svg {
+				fill: map-get($colors, main);
+			}
+		}
+
+		svg {
+			fill: #ffffff;
+			height: 20px;
+			width: 20px;
+			min-height: 20px;
+			min-width: 20px;
+		}
+	}
+}

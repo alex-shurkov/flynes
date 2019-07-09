@@ -1,0 +1,124 @@
+/// Flex helpers
+
+/// @param {String} $mod [""] - breakpoint name with separator
+@mixin _helpers-flex-generate($mod: "") {
+	// sass-lint:disable no-important
+	._#{$mod}flex {
+		display: flex !important;
+	}
+
+	._#{$mod}items-start {
+		align-items: flex-start !important;
+	}
+
+	._#{$mod}items-end {
+		align-items: flex-end !important;
+	}
+
+	._#{$mod}items-center {
+		align-items: center !important;
+	}
+
+	._#{$mod}items-stretch {
+		align-items: stretch !important;
+	}
+
+	._#{$mod}justify-start {
+		justify-content: flex-start !important;
+	}
+
+	._#{$mod}justify-end {
+		justify-content: flex-end !important;
+	}
+
+	._#{$mod}justify-center {
+		justify-content: center !important;
+	}
+
+	._#{$mod}justify-between {
+		justify-content: space-between !important;
+	}
+
+	._#{$mod}justify-around {
+		justify-content: space-around !important;
+	}
+
+	._#{$mod}self-start {
+		align-self: flex-start !important;
+	}
+
+	._#{$mod}self-end {
+		align-self: flex-end !important;
+	}
+
+	._#{$mod}self-center {
+		align-self: center !important;
+	}
+
+	._#{$mod}self-stretch {
+		align-self: stretch !important;
+	}
+
+	._#{$mod}flex-wrap {
+		flex-wrap: wrap !important;
+	}
+
+	._#{$mod}flex-nowrap {
+		flex-wrap: nowrap !important;
+	}
+
+	._#{$mod}flex-column {
+		flex-direction: column !important;
+	}
+
+	._#{$mod}flex-column-reverse {
+		flex-direction: column-reverse !important;
+	}
+
+	._#{$mod}flex-row {
+		flex-direction: row !important;
+	}
+
+	._#{$mod}flex-row-reverse {
+		flex-direction: row-reverse !important;
+	}
+
+	._#{$mod}flex-grow {
+		flex-grow: 1 !important;
+	}
+
+	._#{$mod}flex-nogrow {
+		flex-grow: 0 !important;
+	}
+
+	._#{$mod}flex-shrink {
+		flex-shrink: 1 !important;
+	}
+
+	._#{$mod}flex-noshrink {
+		flex-shrink: 0 !important;
+	}
+
+	@for $i from 0 through 5 {
+		._#{$mod}flex-order-#{$i} {
+			order: $i !important;
+		}
+	}
+	// sass-lint:enable no-important
+}
+
+/// Flex helpers
+/// @requires {mixin} media
+/// @param {Map} $points [()] - breakpoint map for which you need to make helpers
+@mixin helpers-flex($points: ()) {
+
+	//basic set
+	@include _helpers-flex-generate();
+
+	//set for media queries
+	@each $point, $size in $points {
+		@include media($size) {
+			@include _helpers-flex-generate($point + $sep);
+		}
+	}
+}

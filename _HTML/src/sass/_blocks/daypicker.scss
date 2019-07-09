@@ -1,0 +1,310 @@
+//sass-lint:disable-all
+.DayPicker {
+	&.Selectable {
+		width: 100%;
+		outline: none;
+		margin-bottom: 10px;
+
+		.DayPicker-Week {
+			border-bottom: 1px solid #ebebeb;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		.DayPicker-wrapper {
+			outline: none;
+			margin: 0 0.9em;
+			padding-bottom: 0.5em;
+			border-bottom: 1px solid map-get($colors, secondary);
+		}
+
+		.DayPicker-Months {
+			flex-wrap: nowrap;
+		}
+
+		.DayPicker-Day {
+			padding: 0;
+			outline: none;
+			background-color: transparent !important; //sass-lint:disable-line no-important
+			border-radius: 0;
+			color: map-get($colors, dark);
+
+			small {
+				color: map-get($colors, main);
+			}
+
+			&:hover {
+				.DayPicker-Day-Content {
+					background-color: rgba(map-get($colors, main), 0.2);
+				}
+			}
+
+			&--selected {
+				&:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+					border-radius: 0;
+
+					.DayPicker-Day-Content {
+						background-color: rgba(map-get($colors, main), 0.2) !important;
+
+						small {
+							color: map-get($colors, main);
+						}
+					}
+
+					&:not(.DayPicker-Day--today) {
+						.DayPicker-Day-Content {
+							color: map-get($colors, dark);
+						}
+					}
+
+				}
+			}
+
+			&--start,
+			&--end {
+				position: relative;
+
+				&:hover {
+					.DayPicker-Day-Content {
+						background-color: transparent;
+					}
+				}
+
+				&.DayPicker-Day--selected {
+					&.DayPicker-Day--outside {
+						&::before,
+						&::after {
+							content: none;
+						}
+					}
+
+					color: map-get($colors, light) !important;
+
+					&::before {
+						content: '';
+						position: absolute;
+						background-color: map-get($colors, main);
+						height: 31px;
+						width: 31px;
+						display: block;
+						z-index: 1;
+						top: 2px;
+						bottom: 2px;
+						left: -1px;
+						border-radius: 100%;
+
+						@include media(ms, max) {
+							height: 37px;
+							width: 37px;
+							left: 0;
+						}
+					}
+
+					small {
+						color: map-get($colors, light) !important; //sass-lint:disable-line no-important
+					}
+
+					& + .DayPicker-Day--selected {
+						&:not(.DayPicker-Day--outside) {
+							&::after {
+								content: '';
+								position: absolute;
+								top: 2px;
+								right: 100%;
+								bottom: 2px;
+								left: -50%;
+								background-color: rgba(map-get($colors, main), 0.2);
+							}
+						}
+					}
+				}
+			}
+
+			&--end {
+				&.DayPicker-Day--selected {
+					&::after {
+						content: '';
+						position: absolute;
+						top: 2px;
+						right: 50%;
+						left: 0;
+						bottom: 2px;
+						background-color: rgba(map-get($colors, main), 0.2);
+					}
+
+					&.DayPicker-Day--start {
+						&::after {
+							content: none;
+						}
+					}
+				}
+			}
+
+			.DayPicker-Day-Content {
+				padding: 4px;
+				max-width: 29px;
+				width: 29px;
+				max-height: 31px;
+				height: 31px;
+				position: relative;
+				z-index: 2;
+				margin: 2px 0;
+
+				@include media(ms, max) {
+					max-height: 37px;
+					height: 37px;
+					max-width: 37px;
+					width: 37px;
+					padding: 4px 6px;
+				}
+			}
+
+			span {
+				display: block;
+				line-height: 1;
+				font-size: 14px;
+				font-weight: 600;
+
+				@include media(ms, max) {
+					font-size: 17px;
+				}
+			}
+
+			small {
+				position: relative;
+				top: -4px;
+				font-size: 10px;
+				line-height: 1;
+
+				@include media(ms, max) {
+					font-size: 11px;
+					top: -2px;
+				}
+			}
+
+			&.DayPicker-Day--today {
+				&:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+					position: relative;
+					color: map-get($colors, light) !important;
+
+					&::before {
+						content: '';
+						position: absolute;
+						background-color: map-get($colors, secondary);
+						height: 31px;
+						width: 31px;
+						display: block;
+						z-index: 1;
+						top: 2px;
+						bottom: 2px;
+						left: -1px;
+						border-radius: 100%;
+
+						@include media(ms, max) {
+							height: 37px;
+							width: 37px;
+							left: 0;
+						}
+					}
+
+					small {
+						color: map-get($colors, light) !important; //sass-lint:disable-line no-important
+					}
+				}
+			}
+		}
+
+		.DayPicker-Month {
+			margin: 1em  8px 0 0;
+
+			& + .DayPicker-Month {
+				margin: 1em 0 0 8px;
+			}
+		}
+
+		.DayPicker-Weekday {
+			padding: .6em .4em .9em;
+
+			@include media(ms, max) {
+				font-size: 13px;
+			}
+		}
+
+		.DayPicker-Caption {
+			font-size: 14px;
+			line-height: 1;
+			color: map-get($colors, main);
+			text-align: center;
+
+			& > div {
+				font-weight: bold;
+			}
+
+			@include media(ms, max) {
+				margin-bottom: 0.9em;
+			}
+		}
+
+		.DayPicker-NavButton {
+			$t: map-get($transitions, normal);
+			width: 22px;
+			height: 22px;
+			border-radius: 100%;
+			border: 1px solid map-get($colors, calendar);
+			background-size: 40%;
+			margin-top: -2px;
+			transition: background-color $t, border-color $t;
+			outline: none;
+
+			@include media(ms, max) {
+				width: 27px;
+				height: 27px;
+				top: 0;
+				margin-top: 6px;
+				background-size: 50%;
+			}
+
+			&--prev {
+				margin-right: 0;
+				left: 5px;
+				background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDM3MC44MTQgMzcwLjgxNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzcwLjgxNCAzNzAuODE0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+PGc+Cgk8Zz4KCQk8cG9seWdvbiBwb2ludHM9IjI5Mi45MiwyNC44NDggMjY4Ljc4MSwwIDc3Ljg5NSwxODUuNDAxIDI2OC43ODEsMzcwLjgxNCAyOTIuOTIsMzQ1Ljk2MSAxMjcuNjM4LDE4NS40MDEgICAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6IzhEOEQ4RCIgZGF0YS1vbGRfY29sb3I9IiM4ZDhkOGQiPjwvcG9seWdvbj4KCTwvZz4KPC9nPjwvZz4gPC9zdmc+);
+
+				@include media(ms, max) {
+					left: 15px;
+					background-position: 45%;
+				}
+
+				[dir="rtl"] & {
+					left: auto;
+					right: 5px;
+					transform: scale(-1);
+				}
+
+			}
+
+			&--next {
+				right: 5px;
+				background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQwNy40MzYgNDA3LjQzNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDA3LjQzNiA0MDcuNDM2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGNsYXNzPSIiPjxnPjxwb2x5Z29uIHBvaW50cz0iMTEyLjgxNCwwIDkxLjU2NiwyMS4xNzggMjczLjUxMiwyMDMuNzE4IDkxLjU2NiwzODYuMjU4IDExMi44MTQsNDA3LjQzNiAzMTUuODY5LDIwMy43MTggIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiM4RDhEOEQiIGRhdGEtb2xkX2NvbG9yPSIjOGQ4ZDhkIj48L3BvbHlnb24+PC9nPiA8L3N2Zz4=);
+
+				@include media(ms, max) {
+					right: 15px;
+					background-position: 55%;
+				}
+
+				[dir="rtl"] & {
+					right: auto;
+					left: 5px;
+					transform: scale(-1);
+				}
+			}
+
+			&:hover {
+				background-color: rgba(map-get($colors, main), 0.1);
+				opacity: 1;
+				border-color: map-get($colors, main);
+			}
+		}
+	}
+}

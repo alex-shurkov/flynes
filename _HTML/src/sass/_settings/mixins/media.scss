@@ -1,0 +1,36 @@
+/// Media queries
+/// @param {Number|Keyword|String} $value - breakpoint value
+/// @param {Keyword} $direction [min] - "direction" of media query (min / max)
+/// @param {Keyword} $dimension [width] - value
+@mixin media($value, $direction: min, $dimension: width) {
+	$corrector: 1;
+
+	@if $direction == max {
+		$corrector: 0;
+	}
+
+	@if map-has-key($breakpoints, $value) {
+		$value: map-get($breakpoints, $value);
+	} @else if map-has-key($devices, $value) {
+		$value: map-get($devices, $value);
+	} @else if map-has-key($orientations, $value) {
+		$value: map-get($orientations, $value);
+	}
+
+	@if type-of($value) == number  {
+		$dir: #{$direction}-width;
+
+		@if $dimension == height {
+			$dir: #{$direction}-height;
+		}
+
+		@media only screen and ($dir: $value + $corrector) {
+			@content;
+		}
+
+	} @else {
+		@media #{$value} {
+			@content;
+		}
+	}
+}

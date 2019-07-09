@@ -1,0 +1,24 @@
+@import "_settings/settings";
+@import "_system/normalize";
+@import "_system/html-tags";
+@import "_system/fonts";
+
+// structure
+@import "_blocks/container-and-wrapper";
+@import "_blocks/header";
+@import "_blocks/header-dropdowns";
+@import "_blocks/footer";
+
+// ui
+@import "_blocks/cookie";
+@import "_blocks/scroll-up";
+
+// popup
+@import "_blocks/popup";
+
+// form
+@import "_blocks/form";
+@import "_blocks/button";
+
+//modals
+@import "_blocks/modal";
