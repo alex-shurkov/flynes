@@ -1,0 +1,580 @@
+.achievements {
+	&__line {
+		border-radius: 8px;
+		width: 70px;
+		height: 3px;
+		background: map-get($colors, secondary);
+		margin-bottom: 30px;
+
+		&--bottom {
+			margin-top: 50px;
+			margin-bottom: 0;
+
+			@include media(ms) {
+				margin-top: 73px;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 29px;
+		font-weight: 700;
+		line-height: 1.25;
+		color: #313131;
+		margin-bottom: 25px;
+		letter-spacing: -0.3px;
+
+		@include media(sm) {
+			font-size: 35px;
+		}
+
+		@include media(ms) {
+			font-size: 40px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 26px;
+		font-weight: 700;
+		color: #313131;
+		letter-spacing: 0;
+		@include media(xs, max) {
+			font-size: 18px;
+			line-height: 1.25;
+		}
+		@include media(sm, max) {
+			width: 90%;
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+
+	&__text {
+		color: #505050;
+		font-size: 14px;
+		line-height: 24px;
+		letter-spacing: 0.01em;
+
+		@include media(def) {
+			font-size: 15px;
+		}
+
+		&--sm {
+			@include media(sm, max) {
+				line-height: 20px;
+			}
+
+			@include media(def) {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.achievements-top {
+	position: relative;
+
+	&__wrap {
+		position: relative;
+		background: url(/Media/assets/images/achievements/achievements-main.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding-top: calc(725/1920*100%);
+
+		@include media(sm, max) {
+			background-image: url(/Media/assets/images/achievements/achievements-main-mb.jpg);
+			padding-top: calc(627/375*100%);
+			background-position: center center;
+			background-position-y: top;
+		}
+	}
+}
+
+.achievements-info {
+	padding: 40px 0;
+	position: relative;
+
+	&::before {
+		content: ' ';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: url(/Media/assets/images/achievements/achievements-info-bg.jpg);
+		background-position: right center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		[dir="rtl"] & {
+			transform: scale(-1, 1);
+		}
+	}
+
+	@include media(sm, max) {
+		background-color: #f1f9fb;
+
+		&::before {
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 100% 0;
+		}
+	}
+
+	@include media(lg) {
+		padding: 50px 0;
+	}
+
+	&__container {
+		width: 90%;
+		margin-left: 10%;
+		height: 100%;
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+		box-shadow: 14.627px 13.64px 45px 0 rgba(114, 195, 214, 0.25);
+		position: relative;
+
+		[dir="rtl"] & {
+			margin-right: 10%;
+			margin-left: 0;
+			box-shadow: -14.627px 13.64px 45px 0 rgba(114, 195, 214, 0.25);
+		}
+
+		&::before {
+			content: ' ';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 100%);
+
+			[dir="rtl"] & {
+				background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 100%);
+			}
+		}
+
+		@include media(lg) {
+			margin-left: 19%;
+			width: 81%;
+
+			[dir="rtl"] & {
+				margin-left: 0;
+				margin-right: 19%;
+			}
+		}
+	}
+
+	&__wrap {
+		max-width: 1170px;
+		position: relative;
+		padding: 9% 10% 9% 6%;
+
+		[dir="rtl"] & {
+			padding: 9% 6% 9% 10%;
+		}
+
+		@include media(xs) {
+			padding: 9% 13% 9% 9%;
+
+
+			[dir="rtl"] & {
+				padding: 9% 9% 9% 13%;
+			}
+		}
+
+		@include media(ms) {
+			padding: 5% 15% 5% 5%;
+
+			[dir="rtl"] & {
+				padding: 5% 5% 5% 15%;
+			}
+		}
+
+		@include media(lg) {
+			padding: 70px 115px 76px 103px;
+
+			[dir="rtl"] & {
+				padding: 70px 103px 76px 115px;
+			}
+		}
+	}
+
+	.section-img {
+		top: 12%;
+		left: -15%;
+		height: rem(316);
+		width: rem(108);
+
+		@include media(mg, max) {
+			max-width: calc(107px * 0.8);
+		}
+
+		[dir="rtl"] & {
+			right: -15%;
+			left: auto;
+		}
+	}
+}
+
+.achievements-item {
+	&__head {
+		display: flex;
+		margin-bottom: 25px;
+		align-items: center;
+
+		@include media(lg) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__icon {
+		margin-right: 10px;
+
+		@include media(sm) {
+			margin-right: 20px;
+		}
+
+		@include media(ms) {
+			margin-right: 30px;
+		}
+
+		[dir="rtl"] & {
+			margin-right: 0;
+			margin-left: 20px;
+
+			@include media(sm) {
+				margin-right: 0;
+				margin-left: 30px;
+			}
+		}
+
+		svg {
+			height: 40px;
+			width: 40px;
+			min-height: 40px;
+			min-width: 40px;
+			fill: map-get($colors, main);
+			@include media(sm) {
+				height: 50px;
+				width: 50px;
+				min-height: 50px;
+				min-width: 50px;
+			}
+			@include media(ms) {
+				height: 70px;
+				width: 70px;
+				min-height: 70px;
+				min-width: 70px;
+			}
+		}
+	}
+}
+
+.achievements-meet {
+	padding: 40px 0;
+	position: relative;
+
+	&::before {
+		content: ' ';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: url(/Media/assets/images/achievements/meet-bg.jpg);
+		background-position: left center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		[dir="rtl"] & {
+			transform: scale(-1, 1);
+		}
+	}
+
+
+	@include media(sm, max) {
+		&::before {
+			background-color: #f4f5f7;
+			background-position: left bottom;
+		}
+	}
+
+	@include media(lg) {
+		padding: 50px 0;
+	}
+
+	&__container {
+		background: linear-gradient(to right, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, 0) 100%);
+		width: 90%;
+		margin-right: 10%;
+		height: 100%;
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
+		display: flex;
+		justify-content: flex-end;
+		position: relative;
+		box-shadow: 9.811px 8.529px 45px 0 rgba(114, 195, 214, 0.25);
+
+		[dir="rtl"] & {
+			margin-left: 10%;
+			margin-right: 0;
+
+			background: linear-gradient(to left, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, 0) 100%);
+			box-shadow: -9.811px 8.529px 45px 0px rgba(114, 195, 214, 0.25);
+		}
+
+		@include media(sm) {
+			background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%);
+
+			[dir="rtl"] & {
+				background: linear-gradient(to right, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, 0) 100%);
+			}
+		}
+
+		@include media(md) {
+			background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+			width: 90%;
+			margin-right: 10%;
+
+			[dir="rtl"] & {
+				background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+				margin-right: 0;
+				margin-left: 10%;
+			}
+		}
+
+		@include media(def) {
+			box-shadow: -9.811px 8.529px 45px 0px rgba(114, 195, 214, 0.25);
+
+			[dir="rtl"] & {
+				box-shadow: 9.811px 8.529px 45px 0px rgba(114, 195, 214, 0.25);
+			}
+		}
+
+		@include media(lg) {
+			margin-right: 19%;
+			width: 81%;
+
+			[dir="rtl"] & {
+				margin-right: 0;
+				margin-left: 19%;
+			}
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		max-width: 1170px;
+		position: relative;
+		padding: 9% 3% 9% 17%;
+		[dir="rtl"] & {
+			padding: 9% 17% 9% 3%;
+		}
+
+		@include media(sm) {
+			padding: 9% 3% 9% 19%;
+			[dir="rtl"] & {
+				padding: 9% 19% 9% 3%;
+			}
+		}
+		@include media(ms) {
+			padding: 5% 4% 5% 16%;
+			[dir="rtl"] & {
+				padding: 5% 16% 5% 4%;
+			}
+		}
+		@include media(lg) {
+			padding: 50px 120px 62px 90px;
+			background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 100%);
+
+
+			[dir="rtl"] & {
+				padding: 50px 90px 62px 120px;
+				background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 100%);
+			}
+		}
+	}
+
+	.section-img {
+		bottom: 4%;
+		right: -14%;
+		height: 320px;
+		width: 41px;
+
+		@include media(mg, max) {
+			max-width: calc(41px * 0.8);
+		}
+
+		[dir="rtl"] & {
+			right: auto;
+			left: -14%;
+		}
+	}
+}
+
+.achievements-permission {
+	background: #ffffff;
+	position: relative;
+	padding: 40px 0;
+
+	&::before {
+		content: ' ';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: url(/Media/assets/images/achievements/permission-bg.jpg) no-repeat;
+		background-position: top right;
+		background-size: cover;
+
+		[dir="rtl"] & {
+			transform: scale(-1, 1);
+		}
+	}
+
+	@include media(ms) {
+		padding: 40px 0 0;
+		margin-bottom: 40px;
+	}
+
+	@include media(lg) {
+		padding: 50px 0 0;
+		margin-bottom: 50px;
+	}
+
+	&__container {
+		width: 90%;
+		margin-left: 10%;
+		height: 100%;
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+		box-shadow: -14.627px 13.64px 45px 0 rgba(114, 195, 214, 0.25);
+		position: relative;
+
+		[dir="rtl"] & {
+			margin-left: 0;
+			margin-right: 10%;
+			box-shadow: 14.627px 13.64px 45px 0 rgba(114, 195, 214, 0.25);
+		}
+
+
+		@include media(def) {
+			box-shadow: 14.627px 13.64px 45px 0 rgba(114, 195, 214, 0.25);
+
+			[dir="rtl"] & {
+				box-shadow: -14.627px 13.64px 45px 0 rgba(114, 195, 214, 0.25);
+			}
+		}
+
+		@include media(lg) {
+			margin-left: 19%;
+			width: 81%;
+
+			[dir="rtl"] & {
+				margin-left: 0;
+				margin-right: 19%;
+			}
+		}
+	}
+
+	&__wrap {
+		max-width: 1170px;
+		position: relative;
+		padding: 9% 10% 9% 6%;
+
+		[dir="rtl"] & {
+			padding: 9% 6% 9% 10%;
+		}
+
+		@include media(sm) {
+			padding: 9% 13% 9% 9%;
+
+			[dir="rtl"] & {
+				padding: 9% 9% 9% 13%;
+			}
+		}
+
+		@include media(ms) {
+			padding: 5% 15% 5% 5%;
+
+			[dir="rtl"] & {
+				padding: 5% 5% 5% 15%;
+			}
+		}
+
+		@include media(lg) {
+			padding: 50px 11% 40px 100px;
+
+			[dir="rtl"] & {
+				padding: 50px 100px 40px 11%;
+			}
+		}
+	}
+
+
+	.section-img {
+		bottom: 0;
+		left: -12%;
+		height: rem(341);
+		width: rem(52);
+
+		@include media(mg, max) {
+			max-width: calc(52px * 0.8);
+		}
+
+		[dir="rtl"] & {
+			right: -12%;
+			left: auto;
+		}
+	}
+}
+
+.section-img {
+	position: absolute;
+	max-height: 100%;
+	display: none;
+
+	@include media(def) {
+		display: inline-block;
+	}
+
+	&--left {
+		&.section-img {
+			@include media(mg, max) {
+				left: -10% !important;
+				max-height: 70%;
+
+				[dir="rtl"] & {
+					right: -10% !important;
+					left: auto !important;
+				}
+			}
+		}
+	}
+
+	&--right {
+		&.section-img {
+			@include media(mg, max) {
+				right: -10% !important;
+				max-height: 70%;
+
+				[dir="rtl"] & {
+					left: -10% !important;
+					right: auto !important;
+				}
+			}
+		}
+	}
+}
+
+

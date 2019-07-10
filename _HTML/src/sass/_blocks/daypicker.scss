@@ -31,6 +31,13 @@
 			border-radius: 0;
 			color: map-get($colors, dark);
 
+			&--outside {
+				&::after,
+				&::before {
+					content: none !important;
+				}
+			}
+
 			small {
 				color: map-get($colors, main);
 			}
@@ -73,13 +80,6 @@
 				}
 
 				&.DayPicker-Day--selected {
-					&.DayPicker-Day--outside {
-						&::before,
-						&::after {
-							content: none;
-						}
-					}
-
 					color: map-get($colors, light) !important;
 
 					&::before {
@@ -105,35 +105,44 @@
 					small {
 						color: map-get($colors, light) !important; //sass-lint:disable-line no-important
 					}
+				}
+			}
 
-					& + .DayPicker-Day--selected {
-						&:not(.DayPicker-Day--outside) {
-							&::after {
-								content: '';
-								position: absolute;
-								top: 2px;
-								right: 100%;
-								bottom: 2px;
-								left: -50%;
-								background-color: rgba(map-get($colors, main), 0.2);
-							}
-						}
+			&--start {
+				&::after {
+					content: '';
+					position: absolute;
+					top: 2px;
+					bottom: 2px;
+					width: 50%;
+					left: 50%;
+					background-color: rgba(map-get($colors, main), 0.2);
+
+					[dir="rtl"] & {
+						left: auto;
+						right: 50%;
+
 					}
 				}
 			}
 
 			&--end {
-				&.DayPicker-Day--selected {
-					&::after {
-						content: '';
-						position: absolute;
-						top: 2px;
-						right: 50%;
-						left: 0;
-						bottom: 2px;
-						background-color: rgba(map-get($colors, main), 0.2);
-					}
+				&::after {
+					content: '';
+					position: absolute;
+					top: 2px;
+					bottom: 2px;
+					width: 50%;
+					right: 50%;
+					background-color: rgba(map-get($colors, main), 0.2);
 
+					[dir="rtl"] & {
+						right: auto;
+						left: 50%;
+					}
+				}
+
+				&.DayPicker-Day--selected {
 					&.DayPicker-Day--start {
 						&::after {
 							content: none;
@@ -219,8 +228,16 @@
 		.DayPicker-Month {
 			margin: 1em  8px 0 0;
 
+			[dir="rtl"] & {
+				margin: 1em 0 0 8px;
+			}
+
 			& + .DayPicker-Month {
 				margin: 1em 0 0 8px;
+
+				[dir="rtl"] & {
+					margin: 1em 8px 0 0;
+				}
 			}
 		}
 
@@ -281,7 +298,6 @@
 					right: 5px;
 					transform: scale(-1);
 				}
-
 			}
 
 			&--next {

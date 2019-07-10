@@ -180,7 +180,11 @@
 		font-weight: 900;
 		color: #313131;
 
-		@include media(xs, max) {
+		@include media(def, max) {
+			margin-bottom: 5px;
+		}
+
+		@include media(ms, max) {
 			margin-bottom: 10px;
 		}
 	}
@@ -191,6 +195,14 @@
 		color: #313131;
 		margin-bottom: 5px;
 		transition: 0.15s linear;
+
+		@include media(xs, max) {
+			margin-bottom: 10px;
+		}
+
+		@include media(def, max) {
+			margin-bottom: 15px;
+		}
 
 		&:hover {
 			color: #df2d69;
@@ -208,6 +220,10 @@
 			line-height: 24px;
 		}
 
+		@include media(def, max) {
+			padding-bottom: 5px;
+		}
+
 		@include media(def) {
 			padding-right: 15px;
 			font-size: 16px;
@@ -219,6 +235,14 @@
 		display: flex;
 		align-items: center;
 		font-size: 16px;
+
+		@include media(xs, max) {
+			margin-bottom: 10px;
+		}
+
+		@include media(def, max) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__info {

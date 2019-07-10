@@ -399,6 +399,10 @@
 	border-bottom: 1px solid #bdbdbd;
 	padding: rem(11) 0;
 
+	[dir="rtl"] & {
+		flex-direction: row-reverse;
+	}
+
 	&:last-child {
 		border-bottom: none;
 		padding-bottom: 0;

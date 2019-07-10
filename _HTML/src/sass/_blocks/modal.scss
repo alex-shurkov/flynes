@@ -60,7 +60,9 @@
 		z-index: 1045;
 		width: 99%;
 		cursor: auto;
-		overflow: hidden auto;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
 
 		@include media(def, max) {
 			height: 100%;
