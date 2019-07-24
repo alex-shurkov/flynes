@@ -323,7 +323,7 @@
 			background-color: rgba(#fff, 0.5);
 
 			svg {
-				fill: #ffffff;
+				fill: map_get($colors, main);
 			}
 		}
 
