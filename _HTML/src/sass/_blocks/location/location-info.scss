@@ -1,0 +1,325 @@
+//*********************************
+//left aside with booking info
+//*********************************
+
+.loc-info {
+	font-size: 12px;
+	line-height: 1.2;
+	position: absolute;
+	top: 0;
+	width: 270px;
+	height: 100%;
+	background: #ffffff;
+	color: #313131;
+	right: -250px;
+	z-index: 0;
+
+	@include media(ms, max) {
+		box-shadow: -2px 0 5px 0 rgba(0,0,0,0.25);
+
+		[dir="rtl"] & {
+			box-shadow: 2px 0 5px 0 rgba(0,0,0,0.25);
+		}
+	}
+
+	@include media(xs, max) {
+		width: 260px;
+		right: -260px;
+
+		[dir="rtl"] & {
+			right: auto;
+			left: -260px;
+		}
+	}
+
+
+	[dir="rtl"] & {
+		right: auto;
+		left: -250px;
+	}
+
+	&.open {
+		right: 0;
+
+		[dir="rtl"] & {
+			right: auto;
+			left: 0;
+		}
+	}
+
+	&__wrap {
+		overflow-y: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		padding: 25px 15px;
+		background: #ffffff;
+
+		@include media(sm) {
+			padding: 25px 10px 25px 24px;
+			right: 10px;
+			width: calc(100% - 10px);
+
+			[dir="rtl"] & {
+				padding: 25px 24px 25px 10px;
+				right: auto;
+				left:  10px;
+			}
+		}
+
+		&::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+			border-radius: 10px;
+			background-color: #F5F5F5;
+		}
+
+		&::-webkit-scrollbar {
+			width: 7px;
+			background-color: #F5F5F5;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+			background-color: #c2c2c2;
+		}
+	}
+
+	&__group {
+		background: #fafafa;
+		border-radius: 5px;
+		padding: 12px 10px;
+	}
+
+	svg {
+		fill: map-get($colors, main);
+	}
+}
+
+.loc-package {
+	text-align: center;
+	padding-top: 17px;
+
+	& > div {
+		margin-bottom: 10px;
+	}
+
+	&__btn {
+		padding: 10px;
+		font-size: 12px;
+		@include media(def) {
+			max-width: 90%;
+		}
+	}
+}
+
+.loc-booking {
+	&__title {
+		margin: 30px 0 12px;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 500;
+
+		@include media(md) {
+			margin-top: 38px;
+		}
+	}
+
+	&__subtitle {
+		display: flex;
+		align-items: center;
+	}
+
+	svg {
+		margin-right: 10px;
+
+		[dir="rtl"] & {
+			margin-right: 0;
+			margin-left: 10px;
+		}
+	}
+
+	&__place {
+		display: flex;
+		margin-top: 10px;
+		svg {
+			fill: #9c9c9c;
+		}
+	}
+
+	&__moon {
+		margin: 16px 0 7px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		span {
+			display: block;
+			margin-right: 10px;
+
+			[dir="rtl"] & {
+				margin-right: 0;
+				margin-left: 10px;
+			}
+		}
+
+		svg {
+			margin: 0;
+
+			[dir="rtl"] & {
+				margin: 0;
+			}
+		}
+	}
+
+	&__date {
+		display: flex;
+		text-align: center;
+		&-item {
+			width: 50%;
+		}
+	}
+}
+
+.loc-total {
+	margin: 15px auto;
+	display: flex;
+	justify-content: space-between;
+	@include media(def) {
+		max-width: 90%;
+	}
+
+	&--sub {
+		font-weight: 500;
+	}
+
+	& > div {
+		max-width: 50%;
+	}
+}
+
+.loc-change {
+	&__link {
+		text-decoration: none;
+		color: map_get($colors, main);
+		display: inline-flex;
+		align-items: center;
+
+		svg {
+			transition: 0.15s linear;
+			margin-right: 10px;
+
+			[dir="rtl"] & {
+				margin-right: 0;
+				margin-left: 10px;
+			}
+		}
+
+		&:hover {
+			color: map-get($colors, secondary);
+
+			svg {
+				transform: rotate(180deg);
+				fill: map-get($colors, secondary);
+
+				[dir="rtl"] & {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+}
+
+.loc-flight {
+	&__title {
+		margin: 30px 0 19px;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 500;
+
+		@include media(md) {
+			margin-top: 50px;
+		}
+	}
+
+	&__head {
+		display: flex;
+		align-items: center;
+
+		svg {
+			margin: 0 12px;
+
+			[dir="rtl"] & {
+				transform: scale(-1, 1);
+			}
+
+			&.return {
+				transform: scale(-1, 1);
+
+				[dir="rtl"] & {
+					transform: scale(1, 1);
+				}
+
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 10px auto;
+
+		@include media(def) {
+			max-width: 90%;
+		}
+
+		& > span {
+			max-width: 50%;
+		}
+	}
+
+	&__body {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&__item {
+		margin-bottom: 15px;
+	}
+
+	&__group {
+		display: flex;
+		text-align: center;
+
+		& > div {
+			width: calc(50% - 10px);
+
+			&:nth-of-type(2) {
+				width: 20px;
+			}
+		}
+
+		svg {
+			transform: rotate(70deg);
+
+			[dir="rtl"] & {
+				transform: scale(-1, 1) rotate(70deg);
+			}
+		}
+	}
+
+	&__foot {
+		border-top: 1px solid map_get($colors, main);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 8px 5% 0;
+
+		& > div {
+			max-width: 50%;
+		}
+	}
+}

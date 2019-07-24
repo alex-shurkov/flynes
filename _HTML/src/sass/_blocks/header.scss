@@ -29,6 +29,15 @@
 			border-bottom-right-radius: 8%;
 			border-bottom-left-radius: 8%;
 		}
+
+		&--small {
+			position: relative;
+			top: rem(-30);
+
+			@include media(lg) {
+				top: rem(-40);
+			}
+		}
 	}
 }
 
@@ -227,7 +236,11 @@
 		font-size: 16px;
 		font-weight: 600;
 		justify-content: center;
-		margin: 35px 0;
+		margin: 20px 0;
+
+		@include media(md) {
+			margin: 35px 0;
+		}
 	}
 
 	&__sign-in {

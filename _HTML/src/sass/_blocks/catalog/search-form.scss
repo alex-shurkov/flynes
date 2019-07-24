@@ -366,6 +366,10 @@
 	max-width: 100%;
 	padding: rem(13) rem(20);
 
+	@include media(xs, max) {
+		width: 100%;
+	}
+
 	@include media(def) {
 		width: 100%;
 	}
@@ -478,6 +482,10 @@
 	}
 	@include media(def, max) {
 		order: 3;
+
+		.loc-head & {
+			order: 0;
+		}
 	}
 
 	&__item,
@@ -675,6 +683,10 @@
 	@include media(sm, max) {
 		&.form-group {
 			margin-top: 19px;
+
+			.loc-head & {
+				margin-top: 0;
+			}
 		}
 	}
 
@@ -897,6 +909,7 @@
 	width: 100%;
 	max-width: 100%;
 	padding: 0 0 0.5em;
+	z-index: 2;
 
 	@include media(def) {
 		width: 100%;

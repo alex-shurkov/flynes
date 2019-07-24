@@ -1,0 +1,328 @@
+.loc {
+	&__container {
+		padding: 0;
+	}
+
+	&__content {
+		position: relative;
+	}
+
+	&__map {
+		height: 940px;
+
+		@include media(sm, max) {
+			height: 600px;
+		}
+	}
+
+	&__arrow {
+		top: 38%;
+		position: absolute;
+		border-radius: 50%;
+		background-color: rgb(255, 255, 255);
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 2;
+		cursor: pointer;
+		transition: 0.15s linear;
+
+		@include media(xs, max) {
+			width: 30px;
+			height: 30px;
+		}
+
+		&--right {
+			left: -20px;
+			box-shadow: -2px 0 3px 0 rgba(62, 62, 62, 0.2);
+
+			[dir="rtl"] & {
+				left: auto;
+				right: -20px;
+				box-shadow: 2px 0 3px 0 rgba(62, 62, 62, 0.2);
+			}
+
+			@include media(xs, max) {
+				left: -30px;
+
+				[dir="rtl"] & {
+					left: auto;
+					right: -30px;
+				}
+			}
+
+
+			svg {
+				transform: scale(-1, 1);
+
+				[dir="rtl"] & {
+					transform: scale(1, 1);
+				}
+
+				.open > & {
+					transform: none;
+
+					[dir="rtl"] & {
+						transform: scale(-1, 1);
+					}
+				}
+			}
+		}
+
+		&--left {
+			right: -20px;
+			box-shadow: 2px 0 3px 0 rgba(62, 62, 62, 0.2);
+
+			[dir="rtl"] & {
+				right: auto;
+				left: -20px;
+				box-shadow: -2px 0 3px 0 rgba(62, 62, 62, 0.2);
+			}
+
+			@include media(xs, max) {
+				right: -30px;
+
+				[dir="rtl"] & {
+					right: auto;
+					left: -30px;
+				}
+			}
+
+			svg {
+				[dir="rtl"] & {
+					transform: scale(-1, 1);
+				}
+
+				.open > & {
+					transform: scale(-1, 1);
+
+					[dir="rtl"] & {
+						transform: scale(1, 1);
+					}
+				}
+			}
+		}
+
+		&:hover {
+			background: map-get($colors, secondary);
+
+			svg {
+				fill: #ffffff !important;
+			}
+		}
+
+		svg {
+			transition: 0.15s linear;
+			fill: map-get($colors, secondary) !important;
+		}
+	}
+}
+
+//*********************************
+//header filter with selected info
+//*********************************
+.loc-head {
+	background-color: #f8f8f8;
+	padding: 19px 0;
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 1px;
+		left: 0;
+		top: 100%;
+		display: block;
+		box-shadow: 2px 0 10px 0 rgba(62, 62, 62, 0.2);
+	}
+
+	&__container {
+		max-width: 1300px;
+
+		@include media(1770px, max) {
+			width: 85%;
+			max-width: 85%;
+			margin: 0;
+			margin-left: 15%;
+
+			[dir="rtl"] & {
+				margin-left: 0;
+				margin-right: 15%;
+			}
+		}
+
+		@include media(def, max) {
+			margin-left: 160px;
+			width: 100%;
+			max-width: calc(100% - 160px);
+
+			[dir="rtl"] & {
+				margin-left: 0;
+				margin-right: 160px;
+			}
+		}
+
+		@include media(ms, max) {
+			margin: 60px 0 0;
+			max-width: 100%;
+
+			[dir="rtl"] & {
+				margin: 60px 0 0;
+			}
+		}
+	}
+
+	&__form {
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+
+		@include media(def, max) {
+			justify-content: space-between;
+		}
+	}
+
+	.fs-calendar {
+		width: 100%;
+		margin-bottom: 15px;
+
+		@include media(md) {
+			width: 52%;
+			margin-bottom: 0;
+		}
+
+		@include media(def) {
+			width: 42%;
+			margin: 0 13px 0 0;
+
+			[dir="rtl"] & {
+				margin-right: 0;
+				margin-left: 13px;
+			}
+		}
+
+		@include media(mg) {
+			width: 34%;
+		}
+	}
+
+	.fs-submit {
+		padding: 0 !important;
+
+		@include media(xs, max) {
+			width: 100%;
+		}
+
+		@include media(md, max) {
+			width: 48%;
+		}
+
+		@include media(def, max) {
+			width: 20%;
+
+			.button {
+				width: 100%;
+				padding: 14px;
+			}
+		}
+
+	}
+
+	.fs-visitors {
+		width: 100%;
+		margin-bottom: 15px;
+
+		@include media(xs) {
+			width: 48%;
+			margin-bottom: 0;
+		}
+
+		@include media(md) {
+			width: 25%;
+		}
+
+		@include media(def) {
+			width: 200px;
+			margin-right: 13px;
+
+			[dir="rtl"] & {
+				margin-right: 0;
+				margin-left: 13px;
+			}
+		}
+
+		&__icon {
+			margin-right: 15px;
+
+			[dir="rtl"] & {
+				margin-right: 0;
+				margin-left: 15px;
+			}
+		}
+
+		&__item {
+			padding: 0 16px !important;
+		}
+	}
+
+	.form-group {
+		margin-top: 0;
+	}
+}
+
+//*********************************
+//helpers classes for fonts
+//*********************************
+.color {
+	&--light {
+		color: #9c9c9c;
+	}
+
+	&--rose {
+		color: #df2d69;
+	}
+
+	&--main {
+		color: map-get($colors, main);
+	}
+
+	&--second {
+		color: #5db9ce;
+	}
+}
+
+.size {
+	&--ms {
+		font-size: 14px;
+	}
+
+	&--md {
+		font-size: 15px;
+	}
+
+	&--lg {
+		font-size: 18px;
+	}
+
+	&--xl {
+		font-size: 19px;
+	}
+
+	&--upper {
+		text-transform: uppercase;
+	}
+}
+
+.weight {
+	&--semibold {
+		font-weight: 600;
+	}
+
+	&--bold {
+		font-weight: 700;
+	}
+}
+

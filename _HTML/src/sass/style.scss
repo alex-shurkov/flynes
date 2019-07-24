@@ -1,39 +1,30 @@
-@import "_settings/settings";
-@import "_system/normalize";
-@import "_system/html-tags";
-@import "_system/fonts";
+@import "./general-styles";
 
-// structure
-@import "_blocks/container-and-wrapper";
-@import "_blocks/header";
-@import "_blocks/header-dropdowns";
-@import "_blocks/footer";
-
-
-// ui
-@import "_blocks/cookie";
-@import "_blocks/scroll-up";
-
-// popup
-@import "_blocks/popup";
-
-// form
-@import "_blocks/form";
-@import "_blocks/button";
-
-//modal
-@import "_blocks/modal";
-
-
-@import "_pages/catalog";
 @import "_blocks/catalog/search-form";
 @import "_blocks/catalog/products";
+@import "_blocks/catalog/products-horizontal";
+
+@import "_blocks/daypicker";
+@import "_blocks/select-styles";
+@import "_blocks/amenities";
+@import "_blocks/rating";
+
+@import "_pages/catalog";
 @import "_pages/about";
 @import "_pages/faq";
 @import "_pages/contacts";
-@import "_blocks/daypicker";
-
 @import "_pages/achievements";
+@import "_pages/hotel";
+@import "_pages/location";
+
+//room summary page
+@import "_pages/room-summary";
+@import "_blocks/summary/aside";
+@import "_blocks/summary/summary-hotel";
+@import "_blocks/summary/summary-preferences";
+@import "_blocks/summary/booking-terms";
+@import "_blocks/summary/summary-register";
+@import "_blocks/summary/contacts-and-payment";
 
 
 

@@ -1,0 +1,65 @@
+.rating {
+	&__icons {
+		margin-right: 10px;
+
+		[dir="rtl"] & {
+			margin-right: 0;
+			margin-left: 10px;
+		}
+
+		svg {
+			fill: #afafaf;
+			width: 17px;
+			height: 17px;
+			min-width: 17px;
+			min-height: 17px;
+			position: relative;
+			right: -1px;
+			margin-right: -3px;
+		}
+
+		&[data-rating="1"] {
+			svg {
+				&:first-of-type {
+					fill: #df2d69;
+				}
+			}
+		}
+
+		&[data-rating="2"] {
+			svg {
+				&:first-of-type,
+				&:nth-child(2) {
+					fill: #df2d69;
+				}
+			}
+		}
+
+		&[data-rating="3"] {
+			svg {
+				&:first-of-type,
+				&:nth-child(2),
+				&:nth-child(3) {
+					fill: #df2d69;
+				}
+			}
+		}
+
+		&[data-rating="4"] {
+			svg {
+				&:first-of-type,
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4) {
+					fill: #df2d69;
+				}
+			}
+		}
+
+		&[data-rating="5"] {
+			& > svg {
+				fill: #df2d69;
+			}
+		}
+	}
+}

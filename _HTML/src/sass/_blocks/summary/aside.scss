@@ -1,0 +1,316 @@
+.aside {
+	background: #fbfbfb;
+	border: 1px solid #e1e1e1;
+	max-width: 345px;
+	width: 100%;
+
+	@include media(sm, max) {
+		max-width: 100%;
+	}
+
+	@include media(md, max) {
+		max-width: 80%;
+	}
+
+	@include media(def, max) {
+		margin: 0 auto 30px;
+		max-width: 50%;
+	}
+
+	@include media(def) {
+		top: 15px;
+		position: sticky;
+		margin-bottom: 15px;
+		float: right;
+
+		[dir="rtl"] & {
+			float: left;
+		}
+	}
+
+	svg {
+		fill: map_get($colors, main);
+	}
+
+	&__title {
+		padding: 18px 24px 12px;
+		display: flex;
+		align-items: center;
+		font-size: 21px;
+		font-weight: 700;
+		color: map_get($colors, main);
+		letter-spacing: 0.025em;
+		line-height: 1.2;
+	}
+
+	&__flight {
+		background: #ffffff;
+		padding: 5px 24px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-weight: 700;
+		color: #313131;
+		font-size: 15px;
+
+		svg {
+			height: 30px;
+			width: 30px;
+			min-height: 30px;
+			min-width: 30px;
+			fill: map_get($colors, main);
+
+			[dir="rtl"] & {
+				transform: scale(-1, 1);
+			}
+		}
+	}
+
+	&__flight-point {
+		width: calc(50% - 15px);
+
+		&--end {
+			text-align: right;
+
+			[dir="rtl"] & {
+				text-align: left;
+			}
+		}
+	}
+
+	&__main {
+		padding: 19px 24px 7px;
+	}
+
+	&__text {
+		font-size: 12px;
+		line-height: 16px;
+		color: #9c9c9c;
+
+		&--dark {
+			color: #313131;
+		}
+	}
+}
+
+.aside-path {
+	display: flex;
+	flex-wrap: wrap;
+	font-weight: 600;
+	color: #313131;
+	font-size: 12px;
+
+	@include media(sm) {
+		font-size: 14px;
+	}
+
+	&__item {
+		margin-right: 10px;
+		margin-bottom: 10px;
+
+		@include media(xl) {
+			margin-right: 15px;
+		}
+
+		[dir="rtl"] & {
+			margin-right: 0;
+			margin-left: 10px;
+
+			@include media(xl) {
+				margin-left: 15px;
+			}
+		}
+
+	}
+
+	&__svg {
+		margin-right: 10px;
+		height: 15px;
+		width: 15px;
+		min-height: 15px;
+		min-width: 15px;
+		@include media(xl) {
+			margin-right: 15px;
+		}
+
+		[dir="rtl"] & {
+			margin-right: 0;
+			margin-left: 10px;
+
+			@include media(xl) {
+				margin-left: 15px;
+			}
+		}
+	}
+}
+
+.aside-visitors {
+	margin: 5px 0 10px;
+	font-size: 12px;
+	line-height: 16px;
+	color: #9c9c9c;
+
+	span {
+		color: #313131;
+	}
+}
+
+.aside-cost {
+	display: flex;
+	justify-content: flex-end;
+	font-size: 14px;
+	color: #9c9c9c;
+	letter-spacing: 0.01em;
+	padding-bottom: 14px;
+	border-bottom: 1px dashed #e1e1e1;
+	align-items: flex-end;
+	line-height: 18px;
+
+	&__currency {
+		color: #313131;
+		font-size: 12px;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding: 0 4px;
+	}
+
+	&__value {
+		color: #313131;
+		font-weight: 700;
+		font-size: 18px;
+	}
+}
+
+.aside-hotel {
+	padding: 15px 0;
+
+	&__title {
+		display: flex;
+		align-items: center;
+		font-size: 15px;
+		font-weight: 700;
+		color: #5db9ce;
+
+		svg {
+			height: 30px;
+			width: 30px;
+			min-height: 30px;
+			min-width: 30px;
+			margin-right: 15px;
+
+			[dir="rtl"] & {
+				margin-right: 0;
+				margin-left: 15px;
+			}
+		}
+	}
+
+	&__tags {
+		margin-top: 17px;
+	}
+
+	&__tag {
+		color: #ffffff;
+		background: #72c3d6;
+		padding: 6px 12px;
+		text-transform: uppercase;
+		font-size: 10px;
+		text-align: center;
+		border-radius: 5px;
+		display: inline-block;
+		margin:  0 10px 10px 0;
+
+		[dir="rtl"] & {
+			margin:  0 0 10px 10px;
+		}
+	}
+}
+
+.aside-code {
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #e1e1e1;
+
+	&__form {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 8px;
+	}
+
+	&__btn {
+		width: 30%;
+		text-align: center;
+		padding: 8px;
+		height: 30px;
+		font-size: 12px;
+		font-weight: 600;
+		border-radius: 5px;
+	}
+
+	&__input {
+		font-size: 12px;
+		padding: 8px;
+		height: 30px;
+		width: 67%;
+		box-shadow: none;
+		border: 1px solid #e1e1e1;
+		border-radius: 5px;
+	}
+}
+
+.aside-total {
+	margin: 26px 0 10px;
+
+	&__price {
+		font-weight: 700;
+		font-size: 12px;
+		color: #313131;
+		display: flex;
+		align-items: flex-end;
+		line-height: 20px;
+	}
+
+	&__price-item {
+		width: 50%;
+
+		&:nth-child(2) {
+			text-align: right;
+			font-size: 14px;
+
+			[dir="rtl"] & {
+				text-align: left;
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
+	}
+
+	&__value {
+		font-size: 20px;
+	}
+
+	&__currency {
+		padding: 0 4px;
+	}
+
+	&__info {
+		margin: 10px 0;
+		display: flex;
+		align-items: center;
+		background: #ffffff;
+		padding: 9px;
+
+		svg {
+			fill: map_get($colors, main);
+			height: 21px;
+			width: 21px;
+			min-height: 21px;
+			min-width: 21px;
+			margin-right: 15px;
+
+			[dir="rtl"] & {
+				margin-right: 0;
+				margin-left: 15px;
+			}
+		}
+	}
+}

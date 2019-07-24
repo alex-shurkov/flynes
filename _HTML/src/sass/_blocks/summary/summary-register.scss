@@ -1,0 +1,64 @@
+//-----------------------------
+// SUMMARY LOGIN FORM SECTION STYLES
+//-----------------------------
+
+.summary-register {
+	@include media(def) {
+		margin-right: 10px;
+
+		[dir="rtl"] & {
+			margin-right: 0;
+			margin-left: 10px;
+		}
+	}
+
+	&__body {
+		background: #ffffff;
+		border-radius: 8px;
+		box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
+		margin-bottom: 50px;
+		padding: 19px 22px;
+
+		@include media(sm, max) {
+			max-width: 100%;
+		}
+
+		@include media(md, max) {
+			max-width: 80%;
+		}
+
+		@include media(def, max) {
+			max-width: 80%;
+			margin: 0 auto 35px;
+			padding: 18px 24px;
+		}
+
+
+	}
+
+	&__head {
+		border-bottom: 1px solid map_get($colors, main);
+		padding-bottom: 15px;
+		margin-bottom: 24px;
+	}
+
+	&__title {
+		margin-bottom: 5px;
+		font-size: 16px;
+		font-weight: 600;
+		color: #313131;
+		line-height: 20px;
+	}
+
+	&__text {
+		color: #9c9c9c;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 18px;
+	}
+
+	.form-group__label {
+		margin-bottom: 12px;
+	}
+}
+

@@ -1,0 +1,164 @@
+.amenities {
+	&__info {
+		@include media(md) {
+			padding-right: 30px;
+
+			[dir="rtl"] & {
+				padding-right: 0;
+				padding-left: 30px;
+			}
+		}
+
+		@include media(lg) {
+			padding-right: 17%;
+
+			[dir="rtl"] & {
+				padding-right: 0;
+				padding-left: 17%;
+			}
+
+			.preferences-amenities & {
+				padding-right: 0;
+
+				[dir="rtl"] & {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	&__group {
+		margin-bottom: 10px;
+
+		.preferences-amenities & {
+			margin-bottom: 9px;
+		}
+
+		&--mt-lg {
+			margin-top: 20px;
+		}
+	}
+
+	&__title {
+		color: #313131;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 700;
+		@include media(def) {
+			font-size: 16px;
+		}
+	}
+
+	&__text {
+		color: #8d8d8d;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 400;
+
+		@include media(def) {
+			font-size: 15px;
+		}
+	}
+
+	&__list {
+		margin: 4px 0 0;
+		padding-left: 5px;
+		display: flex;
+		flex-wrap: wrap;
+
+		[dir="rtl"] & {
+			padding-left: 0;
+			padding-right: 5px;
+		}
+
+		@include media(xs, max) {
+			margin-top: 0;
+		}
+
+		@include media(md, max) {
+			margin-top: 20px;
+			padding-left: 18px;
+
+			[dir="rtl"] & {
+				padding-left: 0;
+				padding-right: 18px;
+			}
+		}
+
+		.preferences-amenities & {
+			@include media(def) {
+				padding-left: 10%;
+				justify-content: space-between;
+
+				[dir="rtl"] & {
+					padding-right: 10%;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	&__list-item {
+		color: #8d8d8d;
+		font-size: 12px;
+		line-height: 15px;
+		letter-spacing: 0.01em;
+		margin-bottom: 5px;
+		position: relative;
+		width: 100%;
+		@include media(xs) {
+			width: 50%;
+			padding-right: 20px;
+			margin-bottom: 15px;
+
+			[dir="rtl"] & {
+				padding-right: 0;
+				padding-left: 20px;
+			}
+		}
+
+		@include media(sm) {
+			font-size: 14px;
+		}
+
+		@include media(def) {
+			width: 33%;
+
+			.preferences-amenities & {
+				width: 43%;
+				padding-right: 0;
+
+				[dir="rtl"] & {
+					padding-left: 0;
+				}
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		span {
+			position: relative;
+			display: inline-block;
+			color: inherit;
+
+			&::before {
+				position: absolute;
+				left: -18px;
+				top: 1px;
+				width: 12px;
+				height: 12px;
+				background: url(/Media/assets/images/static-svg/correct-symbol.svg) no-repeat;
+				background-size: contain;
+				display: inline-block;
+				content: '';
+
+				[dir="rtl"] & {
+					left: auto;
+					right: -18px;
+				}
+			}
+		}
+	}
+}

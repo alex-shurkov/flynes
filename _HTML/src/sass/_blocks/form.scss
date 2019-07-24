@@ -86,6 +86,12 @@ select:-webkit-autofill:focus {
 			}
 		}
 
+		&--no-line {
+			&::before {
+				display: none;
+			}
+		}
+
 	}
 
 	&__forgot {
@@ -273,6 +279,15 @@ select:-webkit-autofill:focus {
 	display: inline-block;
 	vertical-align: top;
 	margin: 0 3px 5px 0;
+	cursor: pointer;
+
+	[dir="rtl"] & {
+		margin: 0 0 5px 3px;
+	}
+
+	.prf-form & {
+		margin-bottom: 12px;
+	}
 
 	&:only-child {
 		margin: 0;
@@ -285,6 +300,16 @@ select:-webkit-autofill:focus {
 		line-height: 1.4;
 		padding-left: 24px;
 		position: relative;
+
+		.prf-form & {
+			font-size: 14px;
+			font-weight: 600;
+			color: #9c9c9c;
+
+			@include media(def) {
+				font-size: 15px;
+			}
+		}
 
 		[dir="rtl"] & {
 			padding-right: 24px;
@@ -303,6 +328,10 @@ select:-webkit-autofill:focus {
 			height: 16px;
 			border: 1px solid map-get($colors, main);
 			border-radius: 4px;
+
+			.prf-form & {
+				border-color: #9ed3c8;
+			}
 
 			[dir="rtl"] & {
 				left: auto;
@@ -336,6 +365,10 @@ select:-webkit-autofill:focus {
 		&:checked ~ span {
 			color: map-get($colors, main);
 
+			.prf-form & {
+				color: #5db9ce;
+			}
+
 			&::before {
 				box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
 				background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyNiAyNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjYgMjYiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBjbGFzcz0iIj48Zz48cGF0aCBkPSJtLjMsMTRjLTAuMi0wLjItMC4zLTAuNS0wLjMtMC43czAuMS0wLjUgMC4zLTAuN2wxLjQtMS40YzAuNC0wLjQgMS0wLjQgMS40LDBsLjEsLjEgNS41LDUuOWMwLjIsMC4yIDAuNSwwLjIgMC43LDBsMTMuNC0xMy45aDAuMXYtOC44ODE3OGUtMTZjMC40LTAuNCAxLTAuNCAxLjQsMGwxLjQsMS40YzAuNCwwLjQgMC40LDEgMCwxLjRsMCwwLTE2LDE2LjZjLTAuMiwwLjItMC40LDAuMy0wLjcsMC4zLTAuMywwLTAuNS0wLjEtMC43LTAuM2wtNy44LTguNC0uMi0uM3oiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6IzAxQkFCNCIgZGF0YS1vbGRfY29sb3I9IiMwMWJhYjQiPjwvcGF0aD48L2c+IDwvc3ZnPg==');
@@ -350,6 +383,94 @@ select:-webkit-autofill:focus {
 			~ span {
 				&::before {
 					border-radius: 50%;
+				}
+			}
+		}
+	}
+}
+
+.radio {
+	display: inline-block;
+	margin-right: rem(25);
+	position: relative;
+	padding-left: rem(20);
+	cursor: pointer;
+	margin-bottom: rem(10);
+
+	@include media(xs, max) {
+		width: 48%;
+		margin-right: 0;
+		text-align: left;
+		margin-bottom: 23px;
+	}
+
+	[dir="rtl"] & {
+		padding-left: 0;
+		padding-right: rem(20);
+		margin-right: 0;
+		margin-left: rem(25);
+
+		@include media(xs, max) {
+			margin-left: 0;
+			text-align: right;
+		}
+	}
+
+	&__input {
+		height: 0;
+		width: 0;
+		visibility: hidden;
+
+		& + span {
+			color: map-get($colors, dark);
+			display: inline-block;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				height: rem(14);
+				left: 0;
+				width: rem(14);
+				box-shadow: inset 0 1px 5px 0 rgba(0, 0, 1, 0.35);
+				border-radius: 50%;
+				margin-right: rem(20);
+				box-sizing: border-box;
+				border: 1px solid #ffffff;
+
+				[dir="rtl"] & {
+					left: auto;
+					right: 0;
+					margin-right: 0;
+					margin-left: rem(20);
+
+				}
+			}
+
+			&::after {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				height: rem(16);
+				top: -1px;
+				left: -1px;
+				width: rem(16);
+				border-radius: 50%;
+				border: 2px solid transparent;
+
+				[dir="rtl"] & {
+					left: auto;
+					right: -1px;
+				}
+			}
+		}
+
+		&:checked {
+			& + span {
+				color: map-get($colors, main);
+
+				&::after {
+					border-color: rgb(93, 185, 206);
 				}
 			}
 		}
