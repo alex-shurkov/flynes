@@ -1,0 +1,130 @@
+.preloader {
+	justify-content: center;
+	align-items: center;
+	background: url(/Media/assets/images/preloader/preloader-bg.png);
+	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+
+	&--visible {
+		display: flex;
+		z-index: 9999;
+	}
+
+	&::before {
+		position: absolute;
+		content: '';
+		display: block;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 50%;
+		background: #ffffff url(/Media/assets/images/preloader/preloader-flynas.png) no-repeat;
+		background-position-x: calc(100% - 215px);
+		background-position-y: center;
+		box-shadow: 10px 0 15px 0 rgba(68, 68, 68, 0.1);
+		z-index: 1;
+
+		[dir="rtl"] & {
+			left: auto;
+			right: 0;
+			box-shadow: -10px 0 15px 0 rgba(68, 68, 68, 0.1);
+			background-position-x: 215px;
+		}
+
+		@include media(md, max) {
+			background-size: 20%;
+			background-position-x: calc(100% - 120px);
+
+			[dir="rtl"] & {
+				background-position-x: 120px;
+			}
+		}
+	}
+
+	&::after {
+		position: absolute;
+		display: block;
+		content: '';
+		height: 240px;
+		width: 240px;
+		background: url(/Media/assets/images/preloader/preloader-front.png);
+		background-size: contain;
+		animation: rotate 10s linear infinite;
+		z-index: 3;
+
+		[dir="rtl"] & {
+			animation: rotateBack 10s linear infinite;
+		}
+
+		@include media(md, max) {
+			height: 192px;
+			width: 192px;
+		}
+	}
+}
+
+.preloader-back {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	&:before {
+		position: absolute;
+		display: block;
+		content: '';
+		height: 264px;
+		width: 264px;
+		background: url(/Media/assets/images/preloader/preloader-shadow.png);
+		background-size: contain;
+		animation: rotate 10s linear infinite;
+
+		[dir="rtl"] & {
+			animation: rotateBack 10s linear infinite;
+		}
+
+		@include media(md, max) {
+			height: 211px;
+			width: 211px;
+		}
+
+	}
+
+	&:after {
+		position: absolute;
+		display: block;
+		content: '';
+		background: url(/Media/assets/images/preloader/preloader-back.png);
+		background-size: contain;
+		animation: rotate 10s linear infinite;
+		transform-origin: center center;
+		height: 350px;
+		width: 350px;
+
+		[dir="rtl"] & {
+			animation: rotateBack 10s linear infinite;
+		}
+
+		@include media(md, max) {
+			height: 280px;
+			width: 280px;
+		}
+	}
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotateBack {
+	100% {
+		transform: rotate(-360deg);
+	}
+}

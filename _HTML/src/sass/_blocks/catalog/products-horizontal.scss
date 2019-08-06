@@ -1,9 +1,14 @@
 .hrz-products {
+
 	&__item {
 		height: 100%;
 		width: 100%;
 		transition: 0.2s linear;
 		margin: 0 auto 25px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 
 		@include media(xs, max) {
 			margin-bottom: 13px;

@@ -3,22 +3,26 @@
 //*********************************
 
 .loc-filter {
-	max-width: 1100px;
 	font-weight: 600;
 	font-size: 14px;
 	line-height: 1.2;
-	position: absolute;
-	top: 0;
+	position: relative;
 	height: 100%;
 	color: #313131;
-	width: 320px;
-	left: -300px;
 	background-color: #ffffff;
 	z-index: 0;
+	width: 21%;
 
-	[dir="rtl"] & {
-		left: auto;
-		right: -300px;
+	@include media(def, max) {
+		position: absolute;
+		top: 0;
+		left: -300px;
+		width: 320px;
+
+		[dir="rtl"] & {
+			left: auto;
+			right: -300px;
+		}
 	}
 
 	@include media(xs, max) {
@@ -31,49 +35,8 @@
 		}
 	}
 
-	@include media(ms, max) {
-		box-shadow: 2px 0 5px 0 rgba(0,0,0,0.25);
-
-		[dir="rtl"] & {
-			box-shadow: -2px 0 5px 0 rgba(0,0,0,0.25);
-		}
-	}
-
-	@include media(def) {
-		width: 70%;
-		left: calc(-70% + 20px);
-
-		[dir="rtl"] & {
-			left: auto;
-			right: calc(-70% + 20px);
-		}
-
-		&::before {
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: calc(30% - 10px);
-			height: 100%;
-			display: block;
-			content: '';
-			background: #ffffff;
-
-			[dir="rtl"] & {
-				left: auto;
-				right: 0;
-			}
-		}
-
-	}
-
-	@include media(1600px) {
-		width: 53.5%;
-		left: calc(-53.5% + 20px);
-
-		[dir="rtl"] & {
-			left: auto;
-			right: calc(-53.5% + 20px);
-		}
+	@include media(xl) {
+		width: 300px;
 	}
 
 	&.open {
@@ -86,42 +49,8 @@
 		}
 	}
 
-	&__left {
-		width: 100%;
-		padding: 15px;
-		background-color: #ffffff;
-
-		@include media(def) {
-			width: 30%;
-			background-color: transparent;
-		}
-
-		@include media(lg) {
-			padding: 25px 25px 25px 35px;
-
-			[dir="rtl"] & {
-				padding: 25px 35px 25px 25px;
-			}
-		}
-	}
-
-	&__right {
-		width: 100%;
-		padding: 40px 0 0;
-
-		@include media(def) {
-			padding: 40px 12px 0 18px;
-			width: 70%;
-
-			[dir="rtl"] & {
-				padding: 40px 18px 0 12px;
-			}
-		}
-	}
-
 	&__wrap {
-		overflow-y: hidden;
-		position: absolute;
+		position: relative;
 		top: 0;
 		right: 0;
 		width: 100%;
@@ -129,35 +58,115 @@
 		display: flex;
 		flex-wrap: wrap;
 
-		@include media(sm) {
-			right: 10px;
-			width: calc(100% - 10px);
-
-			[dir="rtl"] & {
-				right: auto;
-				left:  10px;
-			}
-		}
-
-		@include media(def) {
-			right: 28px;
-			width: calc(100% - 28px);
-
-			[dir="rtl"] & {
-				right: auto;
-				left:  28px;
-			}
-		}
-
-		.open & {
-			overflow-y: auto;
-		}
-
 		[dir="rtl"] & {
 			right: auto;
 			left:  0;
 		}
+	}
 
+
+	&__left {
+		width: 100%;
+		padding: 15px;
+		background-color: #ffffff;
+		z-index: 2;
+
+		@include media(def, max) {
+			z-index: 0;
+			position: relative;
+
+			&::after {
+				position: absolute;
+				content: '';
+				width: 100%;
+				height: 1px;
+				left: 0;
+				top: calc(100% - 10px);
+				display: block;
+				box-shadow: 0 10px 4px 0 rgba(0,0,0,0.25);
+			}
+
+		}
+
+		@include media(lg) {
+			padding: 25px 35px;
+		}
+	}
+
+	&__right {
+		z-index: 1;
+		background-color: transparent;
+		height: 100%;
+		padding: 20px 15px;
+		
+		.open & {
+			background-color: rgba(250, 250, 250, 0.8);
+		}
+
+		@include media(xs) {
+			padding: 20px 20px 20px 18px;
+
+			[dir="rtl"] & {
+				padding: 20px 18px 20px 20px;
+			}
+
+		}
+
+		@include media(def) {
+			.open  & {
+				left: 100%;
+
+				[dir="rtl"] & {
+					left: auto;
+					right: 100%;
+				}
+			}
+		}
+
+
+		@include media(def) {
+			position: absolute;
+			padding: 35px 30px 25px 12px;
+			width: 240%;
+			left: -240%;
+
+
+			[dir="rtl"] & {
+				left: auto;
+				right: -240%;
+				padding: 35px 12px 25px 30px;
+			}
+		}
+
+
+	}
+
+	&__right-wrap {
+		overflow-y: hidden;
+		height: 100%;
+
+		.open & {
+			overflow-y: auto;
+			padding: 0 5px 0 0;
+
+			[dir="rtl"] & {
+				padding: 0 0 0 5px;
+			}
+
+			@include media(xs) {
+				padding: 0 13px 0 0;
+
+				[dir="rtl"] & {
+					padding: 0 0 0 13px;
+				}
+			}
+
+
+		}
+
+		[dir="rtl"] & {
+			padding: 0 13px 0 0;
+		}
 
 		&::-webkit-scrollbar-track {
 			-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
@@ -178,15 +187,38 @@
 	}
 
 	&__title {
-		padding: 30px 0;
+		padding: 15px 0;
+		text-align: center;
 
-		@include media(md) {
+		@include media(sm) {
+			padding-top: 25px;
+		}
+		
+		@include media(def) {
+			text-align: left;
 			padding: 37px 0 43px;
+
+
+			[dir="rtl"] & {
+				text-align: right;
+			}
 		}
 	}
 
+}
+
+
+.lf-time {
+	display: flex;
+	flex-wrap: wrap;
+
 	.radio {
 		margin-right: 20px;
+
+		@include media(sm, max) {
+			margin-bottom: 14px;
+			width: auto;
+		}
 
 		[dir="rtl"] & {
 			margin-right: 0;
@@ -207,18 +239,14 @@
 	}
 }
 
-.lf-time {
-	display: flex;
-	flex-wrap: wrap;
-}
-
 .lf-price {
-	margin: 25px 0 45px;
 	font-size: 12px;
 	font-weight: bold;
 	text-align: center;
+	margin: 0 0 10px;
 
-	@include media(md) {
+
+	@include media(def) {
 		margin: 40px 0 58px;
 	}
 
@@ -287,10 +315,24 @@
 	flex-direction: column;
 	align-items: flex-start;
 
-	&--comfort {
-		margin-bottom: 20px;
+	&--row {
+		@include media(def, max) {
+			flex-direction: row;
+			flex-wrap: wrap;
 
-		@include media(md) {
+			.form-check {
+				margin-right: 10px;
+
+				[dir="rtl"] & {
+					margin-right: 0;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	&--comfort {
+		@include media(def) {
 			margin-bottom: 30px;
 		}
 	}
@@ -307,6 +349,11 @@
 
 	.form-check {
 		margin-bottom: 11px;
+		@include media(def, max) {
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	span {

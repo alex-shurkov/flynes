@@ -80,12 +80,15 @@
 
 .fs-search {
 	width: 48%;
-
 	position: relative;
 
 	@include media(sm, max) {
 		&.form-group {
 			margin-top: 19px;
+		}
+
+		.fs & {
+			width: 100%;
 		}
 	}
 
@@ -189,6 +192,7 @@
 
 .search-results,
 .visitors-results,
+.nights-results,
 .fs-day-picker {
 	position: absolute;
 	top: calc(100% + 12px);
@@ -229,6 +233,14 @@
 	@include media(sm, max) {
 		max-width: rem(320);
 		min-width: rem(320);
+
+		@include media(sm, max) {
+
+			.fs & {
+				max-width: 100%;
+				min-width: 100%;
+			}
+		}
 	}
 
 	[dir="rtl"] & {
@@ -250,8 +262,6 @@
 			margin-bottom: 0;
 		}
 	}
-
-
 
 	&__icon {
 		margin-right: 5px;
@@ -362,11 +372,12 @@
 	}
 }
 
+.nights-results,
 .visitors-results {
 	max-width: 100%;
 	padding: rem(13) rem(20);
 
-	@include media(xs, max) {
+	@include media(ms, max) {
 		width: 100%;
 	}
 
@@ -469,23 +480,253 @@
 	}
 }
 
+.nights-results {
+	padding-bottom: 20px;
+	@include media(def, max) {
+		width: 250px;
+	}
+}
+
 .fs-calendar {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+
+	&--single {
+		@include media(sm) {
+			width: 48%;
+		}
+	}
+
 	@include media(md) {
 		width: 48%;
 	}
 	@include media(def) {
 		margin: 0 auto;
-		width: 42%;
+		width: 20%;
 	}
 	@include media(def, max) {
-		order: 3;
-
 		.loc-head & {
 			order: 0;
 		}
+	}
+
+	&__item,
+	&__title {
+		width: 50%;
+
+		.fs-calendar--single & {
+			width: 100%;
+		}
+	}
+
+	&__item {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding: 0 rem(20);
+		cursor: pointer;
+
+		@include media(ms) {
+			padding: 0 rem(32) 0 rem(20);
+
+			[dir="rtl"] & {
+				padding: 0 rem(20) 0 rem(32);
+			}
+		}
+
+
+
+		&:first-child {
+			position: relative;
+
+			&::after {
+				content: '';
+				display: block;
+				height: 70%;
+				width: 1px;
+				position: absolute;
+				top: 15%;
+				right: -1px;
+				background: #bdbdbd;
+
+				[dir="rtl"] & {
+					right: auto;
+					left: -1px;
+				}
+
+				.fs-calendar--single & {
+					content: none;
+				}
+			}
+		}
+	}
+
+	&__placeholder {
+		margin: 0 rem(10);
+		color: #afafaf;
+		max-height: rem(40);
+		overflow: hidden;
+
+		@include media(ms) {
+			margin: 0 rem(22);
+		}
+	}
+
+	&__icon {
+		svg {
+			fill: #afafaf;
+			height: rem(26);
+			width: rem(27);
+		}
+	}
+
+	&__group {
+		display: flex;
+		width: 100%;
+
+		&--inputs {
+			box-shadow: 0 4px 12px 0 rgba(61, 61, 61, 0.2);
+			min-height: 47px;
+			display: flex;
+			border: 1px solid transparent;
+			align-items: center;
+			border-radius: 8px;
+		}
+	}
+
+	&.open {
+		.fs-day-picker {
+			display: block;
+		}
+	}
+}
+
+.calendar-filled,
+.nights-filled {
+	line-height: rem(15);
+
+	&__start,
+	&__end {
+		cursor: pointer;
+		width: 42%;
+		text-align: center;
+		padding: 0 rem(5);
+		position: relative;
+
+		@include media(sm) {
+			padding: 0 rem(5) 0 rem(40);
+
+			.fs-nights & {
+				padding: 0 rem(5);
+			}
+		}
+
+		@include media(ms) {
+			padding-left: rem(50);
+
+			.fs-nights & {
+				padding: 0 rem(5);
+			}
+		}
+
+		[dir="rtl"] & {
+			@include media(sm) {
+				padding: 0 rem(40) 0 rem(5);
+
+
+				.fs-nights & {
+					padding: 0 5px;
+				}
+			}
+
+			@include media(ms) {
+				padding-right: rem(50);
+
+				.fs-nights & {
+					padding: 0 5px;
+				}
+			}
+		}
+
+		.fs-calendar--single & {
+			width: 100%;
+		}
+	}
+
+	&__middle {
+		width: 16%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__end {
+		width: 40%;
+	}
+
+	&__icon {
+		svg {
+			height: rem(21);
+			width: rem(21);
+			fill: #01bab4;
+		}
+	}
+
+	&__dp-icon {
+		position: absolute;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		left: rem(10);
+		width: rem(30);
+		top: rem(-2);
+
+
+		[dir="rtl"] & {
+			left: auto;
+			right: rem(10);
+		}
+
+		@include media(sm, max) {
+			display: none;
+		}
+
+		svg {
+			fill: #afafaf;
+			height: rem(26);
+			width: rem(27);
+		}
+	}
+
+	&__number {
+		display: inline-block;
+		font-size: rem(18);
+		font-weight: 700;
+		color: #01bab4;
+		margin: 0 rem(10);
+	}
+
+	@include media(ms, max) {
+		.open & {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+}
+
+.fs-nights {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	@include media(sm) {
+		width: 48%;
+	}
+
+	@include media(def) {
+		margin: 0 auto;
+		width: 20%;
 	}
 
 	&__item,
@@ -563,13 +804,13 @@
 	}
 
 	&.open {
-		.fs-day-picker {
+		.nights-results {
 			display: block;
 		}
 	}
 }
 
-.calendar-filled {
+.nights-filled {
 	line-height: rem(15);
 
 	&__start,
@@ -678,7 +919,12 @@
 .fs-visitors {
 	width: 48%;
 	position: relative;
-	z-index: 1;
+
+	.fs & {
+		@include media(sm, max) {
+			width: 100%;
+		}
+	}
 
 	@include media(sm, max) {
 		&.form-group {
@@ -749,7 +995,7 @@
 	order: 4;
 
 	@include media(xs, max) {
-		padding: 0 23%;
+		padding: 0;
 	}
 
 	@include media(ms, max) {
@@ -851,10 +1097,15 @@
 		margin-bottom: rem(10);
 
 		@include media(xs, max) {
-			width: 48%;
-			margin-right: 0;
-			text-align: left;
-			margin-bottom: 23px;
+			margin-right: 10px;
+
+			&:last-of-type {
+				margin-right: 0;
+
+				[dir="rtl"] & {
+					margin-left: 0;
+				}
+			}
 		}
 
 		[dir="rtl"] & {
@@ -864,7 +1115,7 @@
 			margin-left: rem(25);
 
 			@include media(xs, max) {
-				margin-left: 0;
+				margin-left: 10px;
 				text-align: right;
 			}
 		}
