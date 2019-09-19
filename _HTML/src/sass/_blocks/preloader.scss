@@ -101,13 +101,13 @@
 		content: '';
 		background: url(/Media/assets/images/preloader/preloader-back.png);
 		background-size: contain;
-		animation: rotate 10s linear infinite;
+		animation: rotateBack 10s linear infinite;
 		transform-origin: center center;
 		height: 350px;
 		width: 350px;
 
 		[dir="rtl"] & {
-			animation: rotateBack 10s linear infinite;
+			animation: rotate 10s linear infinite;
 		}
 
 		@include media(md, max) {

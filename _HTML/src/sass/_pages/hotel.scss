@@ -56,13 +56,99 @@
 		box-shadow: 2px 0 10px 0 rgba(62, 62, 62, 0.2);
 	}
 
+	&__hotel {
+		width: 18%;
+
+		@include media(xs, max) {
+			width: 100%;
+			justify-content: center;
+		}
+
+		@include media(ms, max) {
+			margin-bottom: 10px;
+		}
+
+		@include media(mg, max) {
+			width: 50%;
+			justify-content: flex-end;
+			padding-right: 20px;
+			position: relative;
+			top: 5px;
+			margin-bottom: 10px;
+			[dir="rtl"] & {
+				padding-left: 20px;
+				padding-right: 0;
+			}
+		}
+
+		@include media(sm, max) {
+			padding-right: 5px;
+
+			[dir="rtl"] & {
+				padding-right: 0;
+				padding-left: 5px;
+			}
+		}
+
+		&-icon {
+			svg {
+				fill: map-get($colors, main);
+				height: 30px;
+				width: 30px;
+				min-height: 30px;
+				min-width: 30px;
+
+				@include media(sm) {
+					height: 35px;
+					width: 35px;
+					min-height: 35px;
+					min-width: 35px;
+				}
+			}
+
+			&.madinah {
+				@include media(xl, max) {
+					padding-top: 5px;
+				}
+				svg {
+					position: relative;
+					top: -10px;
+					@include media(xl) {
+						transform: scale(1.3);
+					}
+				}
+			}
+
+		}
+
+		&-name {
+			font-size: 14px;
+			font-weight: 700;
+			color: #df2d69;
+			margin-left: 15px;
+			text-transform: uppercase;
+			letter-spacing: 0.3px;
+
+			[dir="rtl"] & {
+				margin-right: 15px;
+				margin-left: 0;
+			}
+
+			@include media(mg) {
+				margin-left: 23px;
+
+				[dir="rtl"] & {
+					margin-right: 23px;
+					margin-left: 0;
+				}
+
+			}
+		}
+	}
+
 	&__item {
 		display: flex;
 		align-items: center;
-
-		&--air {
-			width: 20%;
-		}
 
 		&--date {
 			width: 23%;
@@ -79,30 +165,62 @@
 		&--change {
 			width: 16%;
 			justify-content: flex-end;
+
+			.button {
+				@include media(lg) {
+					padding: 14px 31px;
+				}
+			}
 		}
 
 		@include media(mg, max) {
 			width: 25%;
+			order: 2;
 
 			&--nights {
 				width: 20%;
 			}
 
-			&--visitors {
-				width: 30%;
-			}
-
 			&:last-of-type {
 				margin-top: 10px;
+				width: 50%;
+				justify-content: flex-start;
+				order: 1;
+				padding-left: 20px;
+				margin-bottom: 10px;
+
+				[dir="rtl"] & {
+					padding-left: 0;
+					padding-right: 20px;
+				}
+			}
+		}
+
+		@include media(def, max) {
+			width: 33.33%;
+		}
+
+		@include media(ms, max) {
+			width: 50%;
+		}
+
+		@include media(sm, max) {
+			&:last-of-type {
+				padding-left: 5px;
+
+				[dir="rtl"] & {
+					padding-left: 0;
+					padding-right: 5px;
+				}
+			}
+		}
+
+		@include media(xs, max) {
+			&:last-of-type {
 				width: 100%;
 				justify-content: center;
 			}
 		}
-
-		@include media(lg, max) {
-			width: 49.9%;
-		}
-
 	}
 
 	&__content {
@@ -120,26 +238,30 @@
 		flex-wrap: wrap;
 
 		@include media(1770px, max) {
-			width: 85%;
-			max-width: 85%;
-			margin: 0;
-			margin-left: 15%;
+			//width: 85%;
+			//max-width: 85%;
+			//margin: 0;
+			//margin-left: 15%;
 
-			[dir="rtl"] & {
-				margin-left: 0;
-				margin-right: 15%;
-			}
+			//[dir="rtl"] & {
+			//	margin-left: 0;
+			//	margin-right: 15%;
+			//}
 		}
 
-		@include media(def, max) {
-			margin-left: 160px;
-			width: 100%;
-			max-width: calc(100% - 160px);
+		@include media(mg, max) {
+			justify-content: center;
+		}
 
-			[dir="rtl"] & {
-				margin-left: 0;
-				margin-right: 160px;
-			}
+			@include media(def, max) {
+			//margin-left: 160px;
+			//width: 100%;
+			//max-width: calc(100% - 160px);
+
+			//[dir="rtl"] & {
+			//	margin-left: 0;
+			//	margin-right: 160px;
+			//}
 		}
 
 		@include media(ms, max) {
@@ -155,6 +277,10 @@
 
 	&__part {
 		padding: 10px 0;
+
+		&--visitors {
+			width: auto !important;
+		}
 
 		@include media(lg, max) {
 			width: 35%;
@@ -251,6 +377,8 @@
 			font-size: 12px;
 		}
 	}
+
+
 }
 
 //HOTEL TOP SECTION

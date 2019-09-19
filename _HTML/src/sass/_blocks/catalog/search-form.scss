@@ -101,7 +101,7 @@
 	}
 
 	@include media(lg) {
-		padding-right: 0.5%;
+		padding-right: 5px;
 	}
 
 	&__icon {
@@ -147,7 +147,6 @@
 				padding-left: rem(55);
 			}
 
-
 			[dir="rtl"] & {
 				padding-left: 30px;
 				padding-right: rem(60);
@@ -170,7 +169,6 @@
 				}
 			}
 		}
-
 
 		&--noempty {
 			.fs-search__icon {
@@ -227,12 +225,17 @@
 }
 
 .search-results {
-	max-width: rem(388);
-	min-width: rem(388);
+	padding: 0;
+	max-width: 100%;
+	min-width: auto;
+	@include media(lg) {
+		min-width: calc(100% - 5px);
+		max-width: calc(100% - 5px);
+	}
 
 	@include media(sm, max) {
-		max-width: rem(320);
-		min-width: rem(320);
+		max-width: 320px;
+		min-width: 320px;
 
 		@include media(sm, max) {
 
@@ -255,11 +258,27 @@
 
 	&__item {
 		display: flex;
-		margin-bottom: rem(17);
+		padding: 8px 20px;
 		align-items: flex-start;
+		cursor: pointer;
+		&:first-child {
+			padding-top: 16px;
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
 
+		}
 		&:last-child {
 			margin-bottom: 0;
+			padding-bottom: 16px;
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+
+		&:hover {
+			background-color: #e7fffe;
+			svg {
+				fill: map-get($colors, main);
+			}
 		}
 	}
 
@@ -270,7 +289,6 @@
 		width: 17px;
 		min-height: 17px;
 		min-width: 17px;
-		align-self: start;
 
 		[dir="rtl"] & {
 			margin-right: 0;
@@ -285,72 +303,17 @@
 			fill: #8d8d8d;
 			position: relative;
 			top: -1px;
+			transition: fill 0.1s linear;
 		}
 	}
 
 	&__place {
-		width: 55%;
 		display: flex;
 		align-items: center;
 
 		@include media(sm, max) {
 			display: flex;
 			align-items: center;
-		}
-	}
-
-	&__info {
-		width: 45%;
-		text-align: right;
-
-		[dir="rtl"] & {
-			text-align: left;
-		}
-	}
-
-	&__info-btn {
-		padding: rem(6);
-		border: 1px solid #00b8b0;
-		border-radius: 5px;
-		text-transform: uppercase;
-		color: #5db9ce;
-		font-size: 10px;
-		line-height: 1;
-		min-width: 80px;
-		display: inline-block;
-		text-align: center;
-		font-weight: 600;
-		cursor: pointer;
-		transition: 0.2s linear;
-	}
-
-	&__head {
-		border-bottom: 1px solid #bdbdbd;
-	}
-
-	&__body,
-	&__foot {
-		padding: rem(15) rem(15) 0 0;
-
-		@include media(sm, max) {
-			padding-right: 0;
-		}
-
-		[dir="rtl"] & {
-			padding: rem(15) 0 0 rem(15);
-
-			@include media(sm, max) {
-				padding-left: 0;
-			}
-		}
-	}
-
-	&__head,
-	&__body {
-		padding-bottom: rem(15);
-
-		[dir="rtl"] & {
-			padding-bottom: rem(15);
 		}
 	}
 
@@ -361,14 +324,21 @@
 		}
 	}
 
-	&__foot {
-		border-top: 1px solid #bdbdbd;
+	&__info {
+		display: block;
+		font-size: 11px;
 	}
 
-	&__hotel {
+	&__code {
 		font-weight: 700;
 		color: map-get($colors, dark);
-		margin-right: rem(3);
+		text-transform: uppercase;
+		padding-right: 3px;
+	}
+
+	&__airport {
+		font-weight: 700;
+		color: #707070;
 	}
 }
 
@@ -398,7 +368,7 @@
 	&__info {
 		text-align: center;
 		font-size: 10px;
-		margin-top: rem(18);
+		margin-top: 18px;
 	}
 
 	&__info-title {
@@ -412,16 +382,23 @@
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid #bdbdbd;
-	padding: rem(11) 0;
+	padding: 11px 0;
 
 	[dir="rtl"] & {
 		flex-direction: row-reverse;
 	}
 
 	&:last-child {
-		border-bottom: none;
-		padding-bottom: 0;
+		&:not(.counter--border) {
+			padding-bottom: 0;
+			border-bottom: none;
+		}
 	}
+
+	//&.counter--border {
+	//	border-bottom: 1px solid #bdbdbd;
+	//	padding-bottom: 8px;
+	//}
 
 	&__action {
 		color: #01bab4;
@@ -468,7 +445,7 @@
 		font-size: 14px;
 		font-weight: 700;
 		color: map-get($colors, dark);
-		margin-bottom: rem(10);
+		margin-bottom: rem(7);
 	}
 
 	&__desc {
@@ -476,6 +453,11 @@
 
 		@include media(sm, max) {
 			margin-top: 4px;
+		}
+
+		&--sm {
+			font-size: 10px;
+			line-height: 1;
 		}
 	}
 }
@@ -534,8 +516,6 @@
 				padding: 0 rem(20) 0 rem(32);
 			}
 		}
-
-
 
 		&:first-child {
 			position: relative;
@@ -634,7 +614,6 @@
 			@include media(sm) {
 				padding: 0 rem(40) 0 rem(5);
 
-
 				.fs-nights & {
 					padding: 0 5px;
 				}
@@ -682,7 +661,6 @@
 		left: rem(10);
 		width: rem(30);
 		top: rem(-2);
-
 
 		[dir="rtl"] & {
 			left: auto;
@@ -868,7 +846,6 @@
 		left: rem(10);
 		width: rem(30);
 		top: rem(-2);
-
 
 		[dir="rtl"] & {
 			left: auto;

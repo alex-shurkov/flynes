@@ -729,7 +729,12 @@
 									</li>
 
 									<li class="menu-list__item">
-										<a href="location.html">Location</a>
+										<a href="mecca.html">Mecca</a>
+
+									</li>
+
+									<li class="menu-list__item">
+										<a href="medinah.html">Medinah</a>
 
 									</li>
 
@@ -2082,7 +2087,7 @@
 										<span class="form-group__label fs-label">Depature airport</span>
 										<!--todo markup for empty search input (with search icon)-->
 										<div class="form-group__wrap fs-search__wrap" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
-											<input type="text" class="form-group__input fs-input fs-search__input" value="" required placeholder="Mecca" />
+											<input type="text" class="form-group__input fs-input fs-search__input" value="" required placeholder="From" />
 											<span class="fs-search__icon">
 												<svg width="20" height="28">
 													<use href="#search"></use>
@@ -2091,114 +2096,94 @@
 										</div>
 										<!--todo markup for filled search input (add class  `fs-search__wrap--noempty`)-->
 										<!--<div class="form-group__wrap  fs-search__wrap fs-search__wrap--noempty">
-                    <input type="text" class="form-group__input fs-input fs-search__input" value="Mecca" required placeholder="Mecca" />
-                    <span class="fs-search__icon">
-                        <svg width="20" height="28"><use href="#search"></use></svg>
-                    </span>
-                </div>-->
+					<input type="text" class="form-group__input fs-input fs-search__input" value="From" required placeholder="From" />
+					<span class="fs-search__icon">
+						<svg width="20" height="28"><use href="#search"></use></svg>
+					</span>
+				</div>-->
 
 										<div class="search-results">
-											<div class="search-results__head">
-												<div class="search-results__item">
-													<div class="search-results__place">
-														<span class="search-results__icon">
-															<svg width="17" height="17">
-																<use href="#location"></use>
-															</svg>
+											<!--<div class="search-results__head">-->
+											<div class="search-results__item">
+												<div class="search-results__place">
+													<span class="search-results__icon">
+														<svg width="17" height="17">
+															<use href="#location"></use>
+														</svg>
+													</span>
+													<span class="search-results__group">
+														<span class="search-results__code">
+															AHB
 														</span>
-														<span class="search-results__group">
-															<span class="search-results__hotel">Mecca,</span>
-															<span class="search-results__city">Saudi Arabia</span>
+														<span class="search-results__airport">Abha</span>
+														<span class="search-results__info">
+															Abha, Saudi Arabia
 														</span>
-													</div>
-													<div class="search-results__info">
-														3 room, 4 adults, 2 children
-													</div>
+													</span>
 												</div>
-
 											</div>
-											<div class="search-results__body">
-												<div class="search-results__item">
-													<div class="search-results__place">
-														<span class="search-results__icon">
-															<svg width="17" height="17">
-																<use href="#location"></use>
-															</svg>
+											<div class="search-results__item">
+												<div class="search-results__place">
+													<span class="search-results__icon">
+														<svg width="17" height="17">
+															<use href="#location"></use>
+														</svg>
+													</span>
+													<span class="search-results__group">
+														<span class="search-results__code">AUH</span>
+														<span class="search-results__airport">Abu Dhabi</span>
+														<span class="search-results__info">
+															Abu Dhabi, Saudi Arabia
 														</span>
-														<span class="search-results__group">
-															<span class="search-results__hotel">Ajyad,</span>
-															<span class="search-results__city">Mecca</span>
-														</span>
-													</div>
-													<div class="search-results__info">
-														<button type="button" class="button button--secondary search-results__info-btn">Area</button>
-													</div>
+													</span>
 												</div>
-												<div class="search-results__item">
-													<div class="search-results__place">
-														<span class="search-results__icon">
-															<svg width="17" height="17">
-																<use href="#location"></use>
-															</svg>
-														</span>
-														<span class="search-results__hotel">Al Aziziyah,</span>
-														<span class="search-results__city">Mecca</span>
-													</div>
-													<div class="search-results__info">
-														<button type="button" class="button button--secondary search-results__info-btn">Area</button>
-													</div>
-												</div>
-												<div class="search-results__item">
-													<div class="search-results__place">
-														<span class="search-results__icon">
-															<svg width="17" height="17">
-																<use href="#location"></use>
-															</svg>
-														</span>
-														<span class="search-results__group">
-															<span class="search-results__hotel">Mina,</span>
-															<span class="search-results__city">Mecca</span>
-														</span>
-													</div>
-													<div class="search-results__info">
-														<button type="button" class="button button--secondary search-results__info-btn">Area</button>
-													</div>
-												</div>
-												<div class="search-results__item">
-													<div class="search-results__place">
-														<span class="search-results__icon">
-															<svg width="17" height="17">
-																<use href="#location"></use>
-															</svg>
-														</span>
-														<span class="search-results__group">
-															<span class="search-results__hotel">Al Utatbiyyah,</span>
-															<span class="search-results__city">Mecca</span>
-														</span>
-													</div>
-													<div class="search-results__info">
-														<button type="button" class="button button--secondary search-results__info-btn">Area</button>
-													</div>
-												</div>
-
 											</div>
-											<div class="search-results__foot">
-												<div class="search-results__item">
-													<div class="search-results__place">
-														<span class="search-results__icon">
-															<svg width="17" height="17">
-																<use href="#location"></use>
-															</svg>
+											<div class="search-results__item">
+												<div class="search-results__place">
+													<span class="search-results__icon">
+														<svg width="17" height="17">
+															<use href="#location"></use>
+														</svg>
+													</span>
+													<span class="search-results__group">
+														<span class="search-results__code">ADA</span>
+														<span class="search-results__airport">Adana</span>
+														<span class="search-results__info">
+															Adana, Saudi Arabia
 														</span>
-														<span class="search-results__group search-results__group--column">
-															<span class="search-results__hotel">Al Aseel Hawazen Hotel</span>
-															<span class="search-results__city">Mecca Saudi Arabie</span>
+													</span>
+												</div>
+											</div>
+											<div class="search-results__item">
+												<div class="search-results__place">
+													<span class="search-results__icon">
+														<svg width="17" height="17">
+															<use href="#location"></use>
+														</svg>
+													</span>
+													<span class="search-results__group">
+														<span class="search-results__code">CZL</span>
+														<span class="search-results__airport">Ain El Bey Airport</span>
+														<span class="search-results__info">
+															Ain El Bey, Saudi Arabia
 														</span>
-
-													</div>
-													<div class="search-results__info">
-														<button type="button" class="button button--secondary search-results__info-btn">Property</button>
-													</div>
+													</span>
+												</div>
+											</div>
+											<div class="search-results__item">
+												<div class="search-results__place">
+													<span class="search-results__icon">
+														<svg width="17" height="17">
+															<use href="#location"></use>
+														</svg>
+													</span>
+													<span class="search-results__group">
+														<span class="search-results__code">ABT</span>
+														<span class="search-results__airport">Al Baha</span>
+														<span class="search-results__info">
+															Al Baha, Saudi Arabia
+														</span>
+													</span>
 												</div>
 											</div>
 										</div>
@@ -2330,7 +2315,17 @@
 													<span class="counter__action"></span>
 													<span class="counter__value _flex _flex-column _items-center">
 														<span class="counter__amount">0</span>
-														<span class="counter__desc">Children</span>
+														<span class="counter__desc">Child</span>
+														<span class="counter__desc counter__desc--sm">2 - 12 years</span>
+													</span>
+													<span class="counter__action counter__action--plus"></span>
+												</div>
+												<div class="counter counter--border">
+													<span class="counter__action"></span>
+													<span class="counter__value _flex _flex-column _items-center">
+														<span class="counter__amount">0</span>
+														<span class="counter__desc">Infant</span>
+														<span class="counter__desc counter__desc--sm">Under 2 years</span>
 													</span>
 													<span class="counter__action counter__action--plus"></span>
 												</div>
@@ -3309,7 +3304,6 @@
     var closeMenu = modalMenu.getElementsByClassName("modal-close")[0];
     var closeRegister = modalRegister.getElementsByClassName("modal-close")[0];
     var closePass = modalPass.getElementsByClassName("modal-close")[0];
-
     var preloadTestBtn = document.getElementsByClassName("js-preload-btn");
 
     //test script to show preloader
