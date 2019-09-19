@@ -180,38 +180,6 @@
 
 	&__container {
 		max-width: 1300px;
-
-		@include media(1770px, max) {
-			width: 85%;
-			max-width: 85%;
-			margin: 0;
-			margin-left: 15%;
-
-			[dir="rtl"] & {
-				margin-left: 0;
-				margin-right: 15%;
-			}
-		}
-
-		@include media(def, max) {
-			margin-left: 160px;
-			width: 100%;
-			max-width: calc(100% - 160px);
-
-			[dir="rtl"] & {
-				margin-left: 0;
-				margin-right: 160px;
-			}
-		}
-
-		@include media(ms, max) {
-			margin: 70px 0 0;
-			max-width: 100%;
-
-			[dir="rtl"] & {
-				margin: 60px 0 0;
-			}
-		}
 	}
 
 	&__form {
