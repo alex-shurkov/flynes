@@ -4,16 +4,16 @@
 
 .summary-hotel {
 	background: #ffffff;
-	padding: 10px 15px 20px;
+	padding: 15px 15px 20px;
 	border-radius: 3px;
 	margin-bottom: 20px;
 
 	.summary-top__head {
-		margin-bottom: 12px;
+		margin-bottom: 6px;
 	}
 
 	@include media(sm) {
-		padding: 23px 20px;
+		padding: 15px 20px 20px;
 	}
 
 	@include media(def) {
@@ -39,7 +39,29 @@
 			justify-content: center;
 			flex-direction: column;
 		}
+	}
 
+	&__icon {
+		height: 37px;
+		width: 37px;
+		min-height: 37px;
+		min-width: 37px;
+		fill: map_get($colors, main);
+		margin-right: 10px;
+
+		@include media(sm) {
+			margin-right: 15px;
+		}
+
+		[dir="rtl"] & {
+			margin-right: 0;
+			margin-left: 10px;
+			transform: scale(-1, 1);
+
+			@include media(sm) {
+				margin-left: 15px;
+			}
+		}
 	}
 
 	.rating__icons {

@@ -4,15 +4,15 @@
 
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>About us</title>
+		<title>Mecca Room</title>
 		<meta name="description" lang="ru" content="description">
 		<meta name="keywords" lang="ru" content="keywords">
 
 		<!-- Open Graph -->
-		<meta property="og:title" content="About us">
+		<meta property="og:title" content="Mecca Room">
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="flynas">
-		<meta property="og:url" content="http://flynas-old/about">
+		<meta property="og:url" content="http://flynas-old/mecca-step-3">
 		<meta property="og:description" content="Краткий текст (новости, товара и т.д)">
 
 		<!-- Touch -->
@@ -37,7 +37,7 @@
 		<meta name="msapplication-config" content="media/assets/favicons/browserconfig.xml">
 		<meta name="theme-color" content="#d01400">
 
-		<link href="media/assets/css/about-styles.css" rel="stylesheet">
+		<link href="media/assets/css/room-summary-styles.css" rel="stylesheet">
 
 		<!--todo develop styles-->
 		<!--<link href="" rel="stylesheet">-->
@@ -1450,7 +1450,7 @@
 					<div class="container--full">
 						<div class="hd-wrap">
 							<div class="hd-left">
-								<a href="#" class="hd-left__logo">
+								<a href="#" class="hd-left__logo hd-left__logo--small">
 									<img alt="" src="media/assets/images/main/logo.png" />
 								</a>
 							</div>
@@ -2091,7 +2091,7 @@
 					<div class="container--full">
 						<div class="hd-wrap">
 							<div class="hd-left">
-								<a href="#" class="hd-left__logo">
+								<a href="#" class="hd-left__logo hd-left__logo--small">
 
 									<img alt="" src="media/assets/images/main/logo.png" />
 								</a>
@@ -2112,156 +2112,826 @@
 					</div>
 				</div>
 
-				<div class="about">
+				<div class="breadcrumbs">
+					<div class="container breadcrumbs__container">
+						<div class="breadcrumbs__content">
+							<!-- todo for programmer: add class 'active' for 'breadcrumbs__item' elements to show the current step / add class 'disabled' to disable element -->
+							<a class="breadcrumbs__item" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#homepage"></use>
+									</svg>
+								</span>
+								<span>Homepage</span>
+							</a>
+
+							<a class="breadcrumbs__item active" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#mecca"></use>
+									</svg>
+								</span>
+								<div>Mecca Hotel</div>
+							</a>
+
+							<a class="breadcrumbs__item disabled" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#madinah"></use>
+									</svg>
+								</span>
+								<span>Medinah Hotel</span>
+							</a>
+
+							<a class="breadcrumbs__item disabled" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#bus"></use>
+									</svg>
+								</span>
+								<span>Transportation</span>
+							</a>
+
+							<a class="breadcrumbs__item disabled" href="#">
+								<span class="breadcrumbs__icon breadcrumbs__icon--flight">
+									<svg width="27" height="27">
+										<use href="#flight"></use>
+									</svg>
+								</span>
+								<span>Flights</span>
+							</a>
+
+							<a class="breadcrumbs__item disabled" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#ground-service"></use>
+									</svg>
+								</span>
+								<span>Ground Service</span>
+							</a>
+
+							<a class="breadcrumbs__item disabled" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#passengers-details"></use>
+									</svg>
+								</span>
+								<span>Passenger Details</span>
+							</a>
+							<a class="breadcrumbs__item disabled" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#visa"></use>
+									</svg>
+								</span>
+								<span>E-visa</span>
+							</a>
+							<a class="breadcrumbs__item disabled" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#credit-cards"></use>
+									</svg>
+								</span>
+								<span>Review & Pay</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="summary">
 					<div class="container--full">
+						<div class="container">
+							<div class="grid">
+								<div class="gcell gcell--12 gcell--def-8">
 
-						<div class="about-top">
-							<div class="about-top__wrap">
-								<div class="container about-top__info">
+									<!-- summary-hotel section for summary page-->
+
+									<div class="summary-hotel">
+										<div class="summary-top">
+											<div class="summary-top__head">
+												<div class="summary-top__left">
+
+													<svg width="37" height="37">
+														<use href="#mecca"></use>
+													</svg>
+													<span>Mecca hotel</span>
+
+												</div>
+												<div class="summary-top__right">
+													<a href="#">
+														<svg width="12" height="12">
+															<use href="#change"></use>
+														</svg>
+														<span>Change Hotel</span>
+													</a>
+												</div>
+											</div>
+
+											<div class="summary-hotel__title">
+												<svg width="30" height="30" class="summary-hotel__icon _ms-show">
+													<use href="#double-bed"></use>
+												</svg>
+												<span>Swissotel Makkah</span>
+												<!--todo: put the value from 1 to 5  to `data-rating`-->
+												<span class="rating__icons" data-rating="5">
+
+													<svg width="17" height="17">
+														<use href="#star"></use>
+													</svg>
+
+													<svg width="17" height="17">
+														<use href="#star"></use>
+													</svg>
+
+													<svg width="17" height="17">
+														<use href="#star"></use>
+													</svg>
+
+													<svg width="17" height="17">
+														<use href="#star"></use>
+													</svg>
+
+													<svg width="17" height="17">
+														<use href="#star"></use>
+													</svg>
+
+												</span>
+											</div>
+
+											<div class="sm-hotel">
+												<div class="grid">
+													<div class="gcell gcell--12 gcell--ms-5">
+														<div class="sm-hotel__view">
+															<span class="sm-hotel__img">
+																<!--recommended image size:  width="268" height="358"-->
+																<img src="media/assets/images/room-summary/sm-hotel-img.png" alt="" />
+															</span>
+														</div>
+													</div>
+													<div class="gcell gcell--12 gcell--ms-7">
+														<div class="sm-hotel__table">
+															<div class="sm-hotel__cell">
+																<span class="sm-hotel__text sm-hotel__text--light">
+																	Check-in
+																</span>
+																<span class="sm-hotel__text">
+																	05 Jun 2019
+																</span>
+															</div>
+
+															<div class="sm-hotel__cell">
+																<span class="sm-hotel__text sm-hotel__text--light">
+																	Check-out
+																</span>
+																<span class="sm-hotel__text">
+																	11 Jun 2019
+																</span>
+															</div>
+															<div class="sm-hotel__cell">
+																<span class="sm-hotel__text sm-hotel__text--light">
+																	Guests
+																</span>
+																<span class="sm-hotel__text">
+																	1 adult
+																</span>
+															</div>
+															<div class="sm-hotel__cell">
+																<span class="sm-hotel__text sm-hotel__text--light">
+																	Rooms
+																</span>
+																<span class="sm-hotel__text">
+																	1 Room
+																</span>
+															</div>
+															<div class="sm-hotel__cell">
+																<span class="sm-hotel__text sm-hotel__text--light">
+																	Nights
+																</span>
+																<span class="sm-hotel__text">
+																	6 Nights
+																</span>
+															</div>
+															<div class="sm-hotel__cell">
+																<span class="sm-hotel__text sm-hotel__text--light">
+																	Room Type
+																</span>
+																<span class="sm-hotel__text">
+																	Classic Room, City View
+																</span>
+																<span class="sm-hotel__text sm-hotel__text--light">
+																	(Includes taxes and fees)
+																</span>
+															</div>
+
+															<div class="sm-hotel__cell sm-hotel__cell--full">
+																<span class="sm-hotel__text sm-hotel__text--light">
+																	Hotel features
+																</span>
+																<div class="sm-hotel__features">
+																	<div class="sm-hotel__feature sm-hotel__text">
+																		<svg width="17" height="17">
+																			<use href="#restaurant"></use>
+																		</svg>
+																		Breakfast
+																	</div>
+																	<div class="sm-hotel__feature sm-hotel__text">
+																		<svg width="17" height="17">
+																			<use href="#wifi"></use>
+																		</svg>
+																		Free Wi-Fi
+																	</div>
+																	<div class="sm-hotel__feature sm-hotel__text">
+																		<svg width="17" height="17">
+																			<use href="#bath"></use>
+																		</svg>
+																		Shower
+																	</div>
+																	<div class="sm-hotel__feature sm-hotel__text">
+																		<svg width="17" height="17">
+																			<use href="#kitchen"></use>
+																		</svg>
+																		Kitchen
+																	</div>
+																	<div class="sm-hotel__feature sm-hotel__text">
+																		<svg width="17" height="17">
+																			<use href="#air-conditioner"></use>
+																		</svg>
+																		Air conditioning
+																	</div>
+																	<div class="sm-hotel__feature sm-hotel__text">
+																		<svg width="17" height="17">
+																			<use href="#tv"></use>
+																		</svg>
+																		TV
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- summary room preferences section for summary page-->
+
+									<div class="preferences">
+										<div class="preferences__title">
+											<span>Room Preferences</span>
+											<svg width="30" height="30">
+												<use href="#question"></use>
+											</svg>
+										</div>
+										<div class="preferences__content">
+											<!--todo add class 'open' to show dropdown content-->
+
+											<div class="summary-dropdown open">
+												<span class="summary-dropdown__btn" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
+
+													<span class="summary-dropdown__icon">
+														<svg width="8" height="8" class="summary-dropdown__svg">
+															<use href="#sort-down"></use>
+														</svg>
+													</span>
+													<span>Room 1: Classic Room, City View</span>
+												</span>
+
+												<div class="summary-dropdown__content">
+													<div>
+														Please describe any special requests (for example, early check-in, high floor, etc.). TravelNow will pass your special request on to the property, but such requests are not guaranteed and may not be available in the room type and room rate requested. You may wish to directly contact the property before your stay to confirm your special request.
+													</div>
+													<form class="prf-form" method="post">
+														<div class="form-group prf-form__checkboxes">
+															<label class="form-check">
+																<input type="checkbox" name="preferences-check" value="1">
+
+																<span>Early Check-in</span>
+															</label>
+
+															<label class="form-check">
+																<input type="checkbox" name="preferences-check" value="2">
+
+																<span>Late Check-out</span>
+															</label>
+
+															<label class="form-check">
+																<input type="checkbox" name="preferences-check" value="3">
+
+																<span>Honeymoon</span>
+															</label>
+
+															<label class="form-check">
+																<input type="checkbox" name="preferences-check" value="4">
+
+																<span>Adjoining/connecting rooms</span>
+															</label>
+
+															<label class="form-check">
+																<input type="checkbox" name="preferences-check" value="5">
+
+																<span>High Floor</span>
+															</label>
+
+														</div>
+														<div class="prf-form__subtitle">Bedding Preference</div>
+														<div class="select-drop  prf-form__select" onclick="function f(el){(!el.classList.value.includes('open'))?el.classList.add('open'):el.classList.remove('open');};f(this);">
+															<span class="select-drop__text">King Bed</span>
+
+															<div class="select-drop__results">
+
+																<span class="select-drop__results-item">King Bed</span>
+
+																<span class="select-drop__results-item">King Bed 2</span>
+
+																<span class="select-drop__results-item">King Bed 3</span>
+
+																<span class="select-drop__results-item">King Double Bed</span>
+
+															</div>
+														</div>
+														<div class="prf-form__subtitle">If you have additional requests, please type below
+														</div>
+														<textarea class="form-group__textarea prf-form__textarea" placeholder="" name="details"></textarea>
+														<div>We pass on all special requests to the property, but cannot guarantee they can be accommodated. Some requests are subject to availability at check-in, and may incur additional charges.
+														</div>
+														<div class="form-group prf-form__submit">
+															<button type="button" class="button button--outline prf-form__btn">
+																cancel
+															</button>
+															<button type="submit" class="button prf-form__btn">
+																Save changes
+															</button>
+
+														</div>
+													</form>
+												</div>
+											</div>
+
+											<div class="summary-dropdown">
+												<span class="summary-dropdown__btn" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
+													<span class="summary-dropdown__icon">
+														<svg width="8" height="8" class="summary-dropdown__svg">
+															<use href="#sort-down"></use>
+														</svg>
+													</span>
+													<span>Room amenities</span>
+												</span>
+
+												<div class="summary-dropdown__content">
+													<div class="amenities preferences-amenities">
+														<div class="grid">
+															<div class="gcell gcell--12 gcell--md-4">
+																<div class="amenities__info">
+																	<div class="amenities__group">
+																		<span class="amenities__title">2 Twin Beds</span>
+																	</div>
+																	<div class="amenities__group">
+																		<span class="amenities__text">344 sq feet (32 sq meters)</span>
+																		<br>
+																	</div>
+																	<div class="amenities__group amenities__group--mt-lg">
+																		<span class="amenities__title">Internet</span>
+																		<span class="amenities__text"> - WiFi</span>
+																	</div>
+																	<div class="amenities__group">
+																		<span class="amenities__title">Entertainment</span>
+																		<span class="amenities__text"> - LCD television with digital channels</span>
+																	</div>
+																	<div class="amenities__group">
+																		<span class="amenities__title">Food & Drink</span>
+																		<span class="amenities__text"> - Refrigerator, minibar, coffee/tea maker, and 24-hour room service</span>
+																	</div>
+																	<div class="amenities__group">
+																		<span class="amenities__title">Sleep</span>
+																		<span class="amenities__text"> - Blackout drapes/curtains and turndown service</span>
+																	</div>
+																	<div class="amenities__group">
+																		<span class="amenities__title">Bathroom</span>
+																		<span class="amenities__text"> - Private bathroom, bathrobes, and a bathtub or shower with a hydromassage showerhead</span>
+																	</div>
+																	<div class="amenities__group">
+																		<span class="amenities__title">Practical</span>
+																		<span class="amenities__text"> - Safe, desk, and phone; free cribs/infant beds available on request</span>
+																	</div>
+																	<div class="amenities__group">
+																		<span class="amenities__title">Comfort</span>
+																		<span class="amenities__text">- Air conditioning and daily housekeeping</span>
+																	</div>
+																	<div class="amenities__group">
+																		<span class="amenities__title">Accessibility</span>
+																		<span class="amenities__text"> - Wheelchair accessible and doorbell/phone notification</span>
+																	</div>
+																	<div class="amenities__group amenities__group--mt-lg">
+																		<span class="amenities__text">Non-Smoking</span>
+																		<br/>
+																		<br/>
+																		<span class="amenities__text">Room is accessed via exterior corridors</span>
+																		<br/>
+																		<br/>
+																		<span class="amenities__text">Connecting/adjoining rooms can be requested, subject to availability</span>
+																	</div>
+																</div>
+															</div>
+															<div class="gcell gcell--12 gcell--md-8">
+																<div class="amenities__list">
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Access via exterior corridors
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Air conditioning
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Bathrobes
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Bathtub or shower
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Bidet
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Blackout drapes/curtains
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Coffee/tea maker
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Connecting/adjoining rooms available
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Daily housekeeping
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Desk
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Digital TV service
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Free toiletries
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			HDTV
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Hair dryer
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Hydromassage showerhead
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			In-room safe
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			LCD TV
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Minibar
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Non-Smoking
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Phone
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			PRIVATE BATHROOM
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Refrigerator
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Room service (24 hours)
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Slippers
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			Turndown service
+																		</span>
+																	</div>
+
+																	<div class="amenities__list-item">
+																		<span>
+																			WiFi (surcharge)
+																		</span>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="summary-dropdown">
+												<span class="summary-dropdown__btn" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
+													<span class="summary-dropdown__icon">
+														<svg width="8" height="8" class="summary-dropdown__svg">
+															<use href="#sort-down"></use>
+														</svg>
+													</span>
+													<span>Special check-in instructions</span>
+												</span>
+
+												<div class="summary-dropdown__content">
+													<div class="_mb-ms">
+														A valid permit to perform Hajj must be presented at the airport and hotel check-in from July 25-August 25, 2019. Guests without valid permits will not be able to check-in. For permit-related questions, please contact the hotel or airline directly. Contact information is provided on the reservation confirmation received after booking.
+													</div>
+												</div>
+											</div>
+
+											<div class="summary-dropdown open">
+												<span class="summary-dropdown__btn" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
+													<span class="summary-dropdown__icon">
+														<svg width="8" height="8" class="summary-dropdown__svg">
+															<use href="#sort-down"></use>
+														</svg>
+													</span>
+													<span>Check-in instructions </span>
+												</span>
+
+												<div class="summary-dropdown__content prf-instructions">
+													<div class="prf-instructions__title">Know Before You Go</div>
+													<ul class="menu-list prf-instructions__list">
+														<li class="menu-list__item prf-instructions__list-item">
+															<span>
+																Only Muslims are allowed to enter the holy cities of Mecca and Medina.
+															</span>
+														</li>
+														<li class="menu-list__item prf-instructions__list-item">
+															<span>
+																Local laws may restrict unmarried guests from sharing rooms. Guests are responsible for providing proof of marriage, if requested by the property.
+															</span>
+														</li>
+														<li class="menu-list__item prf-instructions__list-item">
+															<span>
+																Couples wishing to share a room must provide proof of marriage.
+															</span>
+														</li>
+														<li class="menu-list__item prf-instructions__list-item">
+															<span>
+																The property has connecting/adjoining rooms, which are subject to availability and can be requested by contacting the property using the number on the booking confirmation.
+															</span>
+														</li>
+														<li class="menu-list__item prf-instructions__list-item">
+															<span>
+																No pets and no service animals are allowed at this property.
+															</span>
+														</li>
+														<li class="menu-list__item prf-instructions__list-item">
+															<span>
+																Alcohol is not served or permitted at this property.
+															</span>
+														</li>
+													</ul>
+													<div class="prf-instructions__title">Fees</div>
+													<div class="_mb-md">The following fees and deposits are charged by the property at time of service, check-in, or check-out.</div>
+													<ul class="menu-list prf-instructions__list">
+														<li class="menu-list__item prf-instructions__list-item">
+															<span>
+																Fee for buffet breakfast: SAR 90 for adults and SAR 45 for children (approximately)
+															</span>
+														</li>
+														<li class="menu-list__item prf-instructions__list-item">
+															<span>
+																Fee for in-room wireless Internet: SAR 15 per hour (rates may vary)
+															</span>
+														</li>
+													</ul>
+													<div>
+														The above list may not be comprehensive. Fees and deposits may not include tax and are subject to change.
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- summary booking terms section for summary page-->
+
+									<div class="summary-terms">
+										<div class="summary-dropdown open">
+											<span class="summary-dropdown__btn" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
+												<span class="summary-dropdown__icon">
+													<svg width="8" height="8" class="summary-dropdown__svg">
+														<use href="#sort-down"></use>
+													</svg>
+												</span>
+												<span>Booking Terms</span>
+											</span>
+
+											<div class="summary-dropdown__content">
+												<div class="summary-terms__info">
+													<div class="summary-terms__info-wrap">
+														<div class="summary-terms__text">
+															Flynas Umrah services Terms have to be accepted by the passenger prior to payment for a holiday booking to be accepted and confirmed. All persons travelling together will be deemed to i) have understood all these booking conditions and ii) be compliant with them.
+														</div>
+														<div class="summary-terms__text">
+															Your booking is governed by the conditions below and by the terms of business under which your booking is made.
+														</div>
+														<div class="summary-terms__text">
+															Full payment is required at the time of booking.In the event of this condition not being met, booking will not be materialised.
+														</div>
+														<div class="summary-terms__text">
+															Subsequent alterations / amendments / cancellations may attract charges as per the applicable
+														</div>
+														<div class="summary-terms__text">
+															Full payment is required at the time of booking.In the event of this condition not being met, booking will not be materialised.
+														</div>
+														<div class="summary-terms__text">
+															Subsequent alterations / amendments / cancellations may attract charges as per the applicable
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- summary login form section for summary page-->
+									<div class="summary-nav">
+										<!--todo: add class 'disabled' if link/button is disabled / also tag <a> can be changed for tag <button> -->
+
+										<a href="#" title="back" class="button button--outline summary-nav__prev">
+											<span class="button__text">Back</span>
+										</a>
+										<a href="#" title="continue" class="button summary-nav__next">
+											<span class="button__text">Continue</span>
+										</a>
+									</div>
 
 								</div>
-							</div>
-						</div>
+								<div class="gcell gcell--12 gcell--def-4">
 
-						<div class="about-info">
-							<div class="about-info__container">
-								<div class="about-info__wrap">
-									<div class="about__line"></div>
-									<div class="about__title">About us</div>
-									<div class="about__text">
-										Flynas Umrah Services was established in 1439 AH / 2017 AD to serve pilgrims and visitors of the Grand Mosque, the Prophet's Mosque and the Holy ritual places. flynas Umrah services provides various packages of high-end and integrated services in order to provide pilgrims and visitors with the perfect comfort, as an initiative to realize the Kingdom’s Vision 2030, which aims to increase the number of pilgrims, establish new markets and enhance after-Umrah tourism.
-									</div>
-									<img alt="" class="section-img section-img--left" src="media/assets/images/about/flynas.png" />
-								</div>
-							</div>
-						</div>
+									<!-- aside for room page-->
 
-						<div class="about-vision">
-							<div class="about-vision__container">
-								<div class="about-vision__wrap">
-									<div class="about-vision__item about-vision__item--vision">
-										<div class="about__title">Our vision</div>
-										<div class="about__text">
-											Flynas Umrah services strives to be the leading and distinctive company in o‑ering high-quality Umrah services that are suitable for all.
+									<div class="aside">
+										<div class="aside__title">
+											Booking Summary
 										</div>
-										<div class="about__line"></div>
-									</div>
-									<div class="about-vision__item about-vision__item--services _ms-show">
-										<div class="about__title">Our Services:</div>
-										<ul class="about-list">
-											<li class="about-list__item">
-												<span>Arrival and Departure</span>
-											</li>
-											<li class="about-list__item">
-												<span>Hotels and Rooms</span>
-											</li>
-											<li class="about-list__item">
-												<span>Catering</span>
-											</li>
-											<li class="about-list__item">
-												<span>Transportation</span>
-											</li>
-											<li class="about-list__item">
-												<span>Mazarat and Touristic tours</span>
-											</li>
-										</ul>
-									</div>
 
-									<img alt="" class="section-img section-img--right" src="media/assets/images/about/vision.png" />
-								</div>
-							</div>
-						</div>
-						<div class="about-vision__item about-vision__item--services _ms-hide">
-							<div class="about__title">Our Services:</div>
-							<ul class="about-list">
-								<li class="about-list__item">
-									<span>Arrival and Departure</span>
-								</li>
-								<li class="about-list__item">
-									<span>Hotels and Rooms</span>
-								</li>
-								<li class="about-list__item">
-									<span>Catering</span>
-								</li>
-								<li class="about-list__item">
-									<span>Transportation</span>
-								</li>
-								<li class="about-list__item">
-									<span>Mazarat and Touristic tours</span>
-								</li>
-							</ul>
-						</div>
+										<div class="aside__main">
+											<span class="aside__line"></span>
 
-						<div class="about-services">
-							<div class="about-services__container">
-								<div class="about-services__wrap">
-									<div class="about-services__item">
-										<div class="about-services__icon">
-											<svg width="70" height="70">
-												<use href="#plane"></use>
-											</svg>
-										</div>
-										<div class="about-services__text">
-											<div class="about__subtitle">Arrival and Departure Service</div>
-											<div class="about__text about__text--sm">
-												Meeting and Greeting pilgrims and visitors at airports and others points of entry in di‑erent languages and provide VIP services and guest with special needs.
+											<div class="aside-hotel">
+
+												<div class="aside-hotel__item">
+													<div class="aside-hotel__title">
+														<svg width="20" height="20">
+															<use href="#mecca"></use>
+														</svg>
+														<span>Mecca Hotel</span>
+													</div>
+													<div class="aside-hotel__subtitle">
+														<svg width="20" height="20">
+															<use href="#double-bed"></use>
+														</svg>
+														<span>Swissotel Makkah</span>
+													</div>
+													<div class="aside__text aside-hotel__text">
+														<span class="aside-hotel__left">
+															<svg width="20" height="20" class="aside__text-icon">
+																<use href="#group"></use>
+															</svg>
+															Guests:
+															<span class="aside__text--dark">1 Room, 2 Adult</span>
+														</span>
+														<span class="aside-hotel__right">
+															<svg width="20" height="20" class="aside__text-icon">
+																<use href="#moon"></use>
+															</svg>
+															Nights:
+															<span class="aside__text--dark">4</span>
+														</span>
+													</div>
+													<div class="aside-hotel__tags">
+														<span class="aside-hotel__tag">
+															Refundable
+														</span>
+													</div>
+													<div class="aside-cost">
+														<span>Cost of room: </span>
+														<span class="aside-cost__currency">EUR</span>
+														<span class="aside-cost__value">1200</span>
+													</div>
+												</div>
+
 											</div>
-										</div>
-									</div>
-									<div class="about-services__item">
-										<div class="about-services__icon">
-											<svg width="70" height="70">
-												<use href="#service-2"></use>
-											</svg>
-										</div>
-										<div class="about-services__text">
-											<div class="about__subtitle">Hotels and Rooms Service</div>
-											<div class="about__text about__text--sm">
-												For your convenience, we provide various accommodation options through our Hotels and Rooms partners, which are just a few meters away from the Holy Mosque, with 24-hour services and at competitive prices.
+
+											<span class="aside__line"></span>
+
+											<div class="aside-code">
+												<form class="aside-code__form" method="post">
+													<input type="text" class="form-group__input aside-code__input" value="" placeholder="Promo code" name="promo-code" />
+
+													<button type="submit" class="button aside-code__btn">
+														<span class="button__text">Apply</span>
+													</button>
+												</form>
+												<div class="aside__text">
+													*Enter your promo code here to avail discounts
+												</div>
 											</div>
-										</div>
-									</div>
-									<div class="about-services__item">
-										<div class="about-services__icon">
-											<svg width="70" height="70">
-												<use href="#service-3"></use>
-											</svg>
-										</div>
-										<div class="about-services__text">
-											<div class="about__subtitle">Catering Service</div>
-											<div class="about__text about__text--sm">
-												To enrich your visit, we are pleased to provide ready-made meals and international cuisines buffet
-											</div>
-										</div>
-									</div>
-									<div class="about-services__item">
-										<div class="about-services__icon">
-											<svg width="70" height="70">
-												<use href="#service-4"></use>
-											</svg>
-										</div>
-										<div class="about-services__text">
-											<div class="about__subtitle">Transportation Service</div>
-											<div class="about__text about__text--sm">
-												We are pleased to provide the latest transportation, such as buses and cars of various categories from reputed transport companies, in addition to the Haramain High-Speed Railway tickets
-											</div>
-										</div>
-									</div>
-									<div class="about-services__item">
-										<div class="about-services__icon">
-											<svg width="70" height="70">
-												<use href="#service-5"></use>
-											</svg>
-										</div>
-										<div class="about-services__text">
-											<div class="about__subtitle">Mazarat and Touristic Tours</div>
-											<div class="about__text about__text--sm">
-												We are pleased to arrange visits to the most significant religious, touristic and heritage landmarks in the Kingdom of Saudi Arabia to enrich after-Umrah tourism
+
+											<span class="aside__line"></span>
+											<div class="aside-total">
+												<div class="aside__text aside-total__info">
+													<svg width="21" height="21">
+														<use href="#info"></use>
+													</svg>
+													<span>You Will Be Charged In SAR
+														<br> (SAR 7,561.92)</span>
+												</div>
+
+												<div class="aside__text _text-center">
+													The price quoted includes 5% VAT.
+												</div>
+												<div class="aside-total__price">
+													<div class="aside-total__price-item">
+														Grand Total:
+													</div>
+													<div class="aside-total__price-item">
+														<span class="aside-total__currency">EUR</span>
+														<span class="aside-total__value">3200</span>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 
-									<img alt="" class="section-img section-img--left" src="media/assets/images/about/services.png" />
 								</div>
 							</div>
 						</div>

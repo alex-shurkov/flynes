@@ -104,6 +104,12 @@
 					min-height: 35px;
 					min-width: 35px;
 				}
+
+				&.icon-lg {
+					transform: scale(1.3);
+					position: relative;
+					top: -10px;
+				}
 			}
 
 			&.madinah {

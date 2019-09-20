@@ -4,15 +4,15 @@
 
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Room Summary</title>
+		<title>Medinah Room</title>
 		<meta name="description" lang="ru" content="description">
 		<meta name="keywords" lang="ru" content="keywords">
 
 		<!-- Open Graph -->
-		<meta property="og:title" content="Room Summary">
+		<meta property="og:title" content="Medinah Room">
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="flynas">
-		<meta property="og:url" content="http://flynas-old/room-summary">
+		<meta property="og:url" content="http://flynas-old/medinah-step-3">
 		<meta property="og:description" content="Краткий текст (новости, товара и т.д)">
 
 		<!-- Touch -->
@@ -717,16 +717,6 @@
 									</li>
 
 									<li class="menu-list__item">
-										<a href="hotel.html">Hotel Card</a>
-
-									</li>
-
-									<li class="menu-list__item">
-										<a href="room-summary.html">Room Summary</a>
-
-									</li>
-
-									<li class="menu-list__item">
 										<a href="contact-and-payment.html">Contacts and Payment</a>
 
 									</li>
@@ -737,7 +727,32 @@
 									</li>
 
 									<li class="menu-list__item">
+										<a href="mecca-step-2.html">Mecca Hotel</a>
+
+									</li>
+
+									<li class="menu-list__item">
+										<a href="mecca-step-3.html">Mecca Room</a>
+
+									</li>
+
+									<li class="menu-list__item">
 										<a href="medinah.html">Medinah</a>
+
+									</li>
+
+									<li class="menu-list__item">
+										<a href="medinah-step-2.html">Medinah Hotel</a>
+
+									</li>
+
+									<li class="menu-list__item">
+										<a href="medinah-step-3.html">Medinah Room</a>
+
+									</li>
+
+									<li class="menu-list__item">
+										<a href="transportation.html">Transportation</a>
 
 									</li>
 
@@ -2097,243 +2112,97 @@
 					</div>
 				</div>
 
+				<div class="breadcrumbs">
+					<div class="container breadcrumbs__container">
+						<div class="breadcrumbs__content">
+							<!-- todo for programmer: add class 'active' for 'breadcrumbs__item' elements to show the current step / add class 'disabled' to disable element -->
+							<a class="breadcrumbs__item" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#homepage"></use>
+									</svg>
+								</span>
+								<span>Homepage</span>
+							</a>
+
+							<a class="breadcrumbs__item" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#mecca"></use>
+									</svg>
+								</span>
+								<div>Mecca Hotel</div>
+							</a>
+
+							<a class="breadcrumbs__item active" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#madinah"></use>
+									</svg>
+								</span>
+								<span>Medinah Hotel</span>
+							</a>
+
+							<a class="breadcrumbs__item disabled" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#bus"></use>
+									</svg>
+								</span>
+								<span>Transportation</span>
+							</a>
+
+							<a class="breadcrumbs__item disabled" href="#">
+								<span class="breadcrumbs__icon breadcrumbs__icon--flight">
+									<svg width="27" height="27">
+										<use href="#flight"></use>
+									</svg>
+								</span>
+								<span>Flights</span>
+							</a>
+
+							<a class="breadcrumbs__item disabled" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#ground-service"></use>
+									</svg>
+								</span>
+								<span>Ground Service</span>
+							</a>
+
+							<a class="breadcrumbs__item disabled" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#passengers-details"></use>
+									</svg>
+								</span>
+								<span>Passenger Details</span>
+							</a>
+							<a class="breadcrumbs__item disabled" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#visa"></use>
+									</svg>
+								</span>
+								<span>E-visa</span>
+							</a>
+							<a class="breadcrumbs__item disabled" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#credit-cards"></use>
+									</svg>
+								</span>
+								<span>Review & Pay</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
 				<div class="summary">
 					<div class="container--full">
 						<div class="container">
 							<div class="grid">
 								<div class="gcell gcell--12 gcell--def-8">
-
-									<!-- summary-booking info for summary page-->
-
-									<div class="summary-booking">
-										<div class="summary__title">
-											<div class="summary__title-svg">
-												<svg width="30" height="30">
-													<use href="#click-gesture"></use>
-												</svg>
-											</div>
-											<div>
-												What you have selected
-											</div>
-										</div>
-										<div class="summary-booking__info">
-											<div class="booking-flight">
-
-												<div class="summary-top__head">
-													<div class="summary-top__left">
-														<svg width="30" height="30">
-															<use href="#aeroplane"></use>
-														</svg>
-														<span>Your Flight</span>
-													</div>
-													<div class="summary-top__right">
-														<a href="#">
-															<svg width="12" height="12">
-																<use href="#change"></use>
-															</svg>
-															<span>Change</span>
-														</a>
-													</div>
-												</div>
-
-												<div>
-													<div class="flight">
-														<div class="flight__name">
-															<span>Amsterdam</span>
-															<span>
-																<svg width="15" height="15" class="flight-icon">
-																	<use href="#flight"></use>
-																</svg>
-															</span>
-															<span>Jeddah</span>
-														</div>
-														<div class="flight__table">
-															<div class="flight__column flight-departure">
-																<span class="flight__title">
-																	AMS 11:20
-																</span>
-																<span class="flight__subtitle">
-																	Flight XY 264
-																</span>
-																<span class="flight__text">
-																	Wednesday, 05 Jun 2019
-																</span>
-															</div>
-															<div class="flight__column flight-time">
-																<svg width="30" height="30">
-																	<use href="#stopwatch"></use>
-																</svg>
-
-																<span class="flight__text flight__text--dark">
-																	11h 55m
-																</span>
-															</div>
-															<div class="flight__column flight-arrival">
-																<span class="flight__title">
-																	JED 00:15
-																</span>
-																<span class="flight__text">
-																	Thursday , 06 Jun 2019
-																</span>
-															</div>
-															<div class="flight-info">
-																<div class="flight-info__item">
-																	<span class="flight__text">
-																		Class of travel (T)
-																	</span>
-																	<span class="flight__text flight__text--dark">
-																		Guest
-																	</span>
-																</div>
-																<div class="flight-info__item">
-																	<span class="flight__text">
-																		Number of stops
-																	</span>
-																	<span class="flight__text flight__text--dark">
-																		1 Stop
-																	</span>
-																</div>
-															</div>
-
-														</div>
-													</div>
-
-													<div class="flight">
-														<div class="flight__name">
-															<span>Jeddah</span>
-															<span>
-																<svg width="15" height="15" class="flight-icon">
-																	<use href="#flight"></use>
-																</svg>
-															</span>
-															<span>Amsterdam</span>
-														</div>
-														<div class="flight__table">
-															<div class="flight__column flight-departure">
-																<span class="flight__title">
-																	JED 15:00
-																</span>
-																<span class="flight__subtitle">
-																	Flight XY 263
-																</span>
-																<span class="flight__text">
-																	Tuesday, 11 Jun 2019
-																</span>
-															</div>
-															<div class="flight__column flight-time">
-																<svg width="30" height="30">
-																	<use href="#stopwatch"></use>
-																</svg>
-
-																<span class="flight__text flight__text--dark">
-																	16h 55m
-																</span>
-															</div>
-															<div class="flight__column flight-arrival">
-																<span class="flight__title">
-																	AMS 06:55
-																</span>
-																<span class="flight__text">
-																	Wednesday, 12 Jun 2019
-																</span>
-															</div>
-															<div class="flight-info">
-																<div class="flight-info__item">
-																	<span class="flight__text">
-																		Class of travel (T)
-																	</span>
-																	<span class="flight__text flight__text--dark">
-																		Guest
-																	</span>
-																</div>
-																<div class="flight-info__item">
-																	<span class="flight__text">
-																		Number of stops
-																	</span>
-																	<span class="flight__text flight__text--dark">
-																		1 Stop
-																	</span>
-																</div>
-															</div>
-
-														</div>
-													</div>
-												</div>
-
-											</div>
-											<!--todo add class 'open to show baggage dropdown'-->
-											<div class="baggage open">
-												<span class="baggage__btn" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
-													<svg width="17" height="17" class="baggage-suitcase">
-														<use href="#baggage"></use>
-													</svg>
-													<span>Baggage</span>
-													<svg width="8" height="8" class="baggage-arrow">
-														<use href="#sort-down"></use>
-													</svg>
-												</span>
-
-												<div class="baggage__content">
-													<div class="baggage__text _text-center">
-														Your baggage allowance for international flights – Guest Class
-													</div>
-
-													<div class="grid grid--2 grid--sm-4 grid--space-none baggage__table">
-														<div class="gcell order-0">
-															<div class="baggage__cell baggage__cell--title">
-																All Sectors Adult & Child
-															</div>
-														</div>
-
-														<div class="gcell">
-															<div class="baggage__cell">
-																2 Pieces, 23 KG each (50lbs)
-															</div>
-														</div>
-
-														<div class="gcell order-2">
-															<div class="baggage__cell baggage__cell--title">
-																Alfursan Gold & Silver
-																<br> and Elite & Elite Plus
-															</div>
-														</div>
-
-														<div class="gcell">
-															<div class="baggage__cell">
-																1 Piece, 10 KG (22 lbs)
-															</div>
-														</div>
-
-														<div class="gcell order-1">
-															<div class="baggage__cell baggage__cell--title">
-																Infant
-															</div>
-														</div>
-
-														<div class="gcell">
-															<div class="baggage__cell">
-																1 Extra Piece, 23 KG (50 lbs)
-															</div>
-														</div>
-
-														<div class="gcell order-3">
-															<div class="baggage__cell  baggage__cell--title">
-																Cabin Baggage
-																<br> (Carry-on bag)
-															</div>
-														</div>
-
-														<div class="gcell">
-															<div class="baggage__cell">
-																1 Piece, 7 KG (15lbs)
-															</div>
-														</div>
-
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
 
 									<!-- summary-hotel section for summary page-->
 
@@ -2341,10 +2210,12 @@
 										<div class="summary-top">
 											<div class="summary-top__head">
 												<div class="summary-top__left">
-													<svg width="30" height="30" class="icon-sm">
-														<use href="#double-bed"></use>
+
+													<svg width="37" height="37" class="icon-lg">
+														<use href="#madinah"></use>
 													</svg>
-													<span>Your Hotel</span>
+													<span>Medinah hotel</span>
+
 												</div>
 												<div class="summary-top__right">
 													<a href="#">
@@ -2357,6 +2228,9 @@
 											</div>
 
 											<div class="summary-hotel__title">
+												<svg width="30" height="30" class="summary-hotel__icon _ms-show">
+													<use href="#double-bed"></use>
+												</svg>
 												<span>Swissotel Makkah</span>
 												<!--todo: put the value from 1 to 5  to `data-rating`-->
 												<span class="rating__icons" data-rating="5">
@@ -2947,104 +2821,18 @@
 										</div>
 									</div>
 
-									<div class="_def-show">
+									<!-- summary login form section for summary page-->
+									<div class="summary-nav">
+										<!--todo: add class 'disabled' if link/button is disabled / also tag <a> can be changed for tag <button> -->
 
-										<!-- summary login form section for summary page-->
-
-										<div class="summary-register">
-											<div class="summary__title _mb-ms">
-												<div class="summary__title-svg summary__title-svg--sm">
-													<svg width="30" height="30">
-														<use href="#log-in"></use>
-													</svg>
-												</div>
-												<div>
-													Login to your account
-												</div>
-											</div>
-											<div class="summary-register__body">
-												<div class="summary-register__head _text-center">
-													<div class="summary-register__title">Would you like to create a flynas account?</div>
-													<div class="summary-register__text">Doing so means your details will be saved and it will be easier to book next time!</div>
-												</div>
-
-												<div class="grid grid--1 grid--md-2 grid--space-xl _md-flex-row-reverse">
-													<div class="gcell _pb-none _md-hide">
-														<div class="popup__title">
-															Sign In with one click
-														</div>
-													</div>
-													<div class="gcell _pb-none popup__line">
-														<div class="_md-pr-ms _pt-ms">
-															<form class="form popup__form" method="post">
-																<div class="form-group">
-																	<label class="form-group__label" for="sign-in-email">
-																		E-mail
-																		<span class="form-group__required">*</span>
-																	</label>
-																	<div class="form-group__wrap">
-																		<div class="form-group__icon">
-																			<svg width="27" height="26">
-																				<use href="#mail"></use>
-																			</svg>
-																		</div>
-																		<input type="email" class="form-group__input" value="" required placeholder="Your e-mail" name="email" id="sign-in-email" />
-																	</div>
-																</div>
-																<div class="form-group">
-																	<label class="form-group__label" for="sign-in-pass">
-																		Password
-																		<span class="form-group__required">*</span>
-																	</label>
-																	<div class="form-group__wrap">
-																		<div class="form-group__icon">
-																			<svg width="27" height="26">
-																				<use href="#icon-lock"></use>
-																			</svg>
-																		</div>
-																		<input type="password" class="form-group__input" value="" required placeholder="Create a password" name="password" id="sign-in-pass" />
-																	</div>
-																</div>
-																<div class="form-group__forgot">
-																	<button class="button button--link">Forgot your password?</button>
-																</div>
-																<div class="form-group">
-																	<button type="submit" class="button button--full-width">
-																		<span class="button__text">Sign in</span>
-																	</button>
-																</div>
-																<div class="form__policy">
-																	By signing in, I agree to
-																	<a href="">Terms of Use</a> and
-																	<a href="">Pravicy Policy
-																	</a>.
-																</div>
-															</form>
-														</div>
-													</div>
-													<div class="gcell _pb-none">
-														<div class="_md-plr-def">
-															<div class="_md-pr-lg _md-mr-md _md-pt-none">
-																<div class="popup__title _md-show">
-																	Sign In with one click
-																</div>
-																<div class="popup__image _md-show">
-																	<img src="media/assets/images/popup/sign-in.png" alt="" />
-																</div>
-																<div class="popup__sub-title">
-																	No account yet?
-																</div>
-																<button type="button" class="button button--outline button--full-width">
-																	<span class="button__text">Create account</span>
-																</button>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
+										<a href="#" title="back" class="button button--outline summary-nav__prev">
+											<span class="button__text">Back</span>
+										</a>
+										<a href="#" title="continue" class="button summary-nav__next">
+											<span class="button__text">Continue</span>
+										</a>
 									</div>
+
 								</div>
 								<div class="gcell gcell--12 gcell--def-4">
 
@@ -3055,60 +2843,96 @@
 											Booking Summary
 										</div>
 
-										<div class="aside__flight">
-											<span class="aside__flight-point">Flight XY 264</span>
-
-											<svg width="30" height="30">
-												<use href="#aeroplane"></use>
-											</svg>
-											<span class="aside__flight-point aside__flight-point--end">Flight XY 263</span>
-										</div>
 										<div class="aside__main">
-											<div class="aside-flight">
-												<div class="aside-path">
-													<span class="aside-path__item">Amsterdam</span>
-													<svg width="15" height="15" class="flight-icon aside-path__svg">
-														<use href="#flight"></use>
-													</svg>
-													<span class="aside-path__item">Jeddah</span>
-													<svg width="15" height="15" class="flight-icon aside-path__svg">
-														<use href="#flight"></use>
-													</svg>
-													<span class="aside-path__item">Amsterdam</span>
+											<span class="aside__line"></span>
+
+											<div class="aside-hotel aside-hotel--full">
+
+												<div class="aside-hotel__item">
+													<div class="aside-hotel__title">
+														<svg width="20" height="20">
+															<use href="#mecca"></use>
+														</svg>
+														<span>Mecca Hotel</span>
+													</div>
+													<div class="aside-hotel__subtitle">
+														<svg width="20" height="20">
+															<use href="#double-bed"></use>
+														</svg>
+														<span>Swissotel Makkah</span>
+													</div>
+													<div class="aside__text aside-hotel__text">
+														<span class="aside-hotel__left">
+															<svg width="20" height="20" class="aside__text-icon">
+																<use href="#group"></use>
+															</svg>
+															Guests:
+															<span class="aside__text--dark">1 Room, 2 Adult</span>
+														</span>
+														<span class="aside-hotel__right">
+															<svg width="20" height="20" class="aside__text-icon">
+																<use href="#moon"></use>
+															</svg>
+															Nights:
+															<span class="aside__text--dark">4</span>
+														</span>
+													</div>
+													<div class="aside-hotel__tags">
+														<span class="aside-hotel__tag">
+															Refundable
+														</span>
+													</div>
+													<div class="aside-cost">
+														<span>Cost of room: </span>
+														<span class="aside-cost__currency">EUR</span>
+														<span class="aside-cost__value">1200</span>
+													</div>
 												</div>
-												<div class="aside-visitors">
-													Who`s Going:
-													<span>1 Adult</span>
+
+												<div class="aside-hotel__item">
+													<div class="aside-hotel__title">
+														<svg width="20" height="20" class="icon-lg">
+															<use href="#madinah"></use>
+														</svg>
+														<span>Medinah Hotel</span>
+													</div>
+													<div class="aside-hotel__subtitle">
+														<svg width="20" height="20">
+															<use href="#double-bed"></use>
+														</svg>
+														<span>Swissotel Makkah</span>
+													</div>
+													<div class="aside__text aside-hotel__text">
+														<span class="aside-hotel__left">
+															<svg width="20" height="20" class="aside__text-icon">
+																<use href="#group"></use>
+															</svg>
+															Guests:
+															<span class="aside__text--dark">1 Room, 2 Adult</span>
+														</span>
+														<span class="aside-hotel__right">
+															<svg width="20" height="20" class="aside__text-icon">
+																<use href="#moon"></use>
+															</svg>
+															Nights:
+															<span class="aside__text--dark">4</span>
+														</span>
+													</div>
+													<div class="aside-hotel__tags">
+														<span class="aside-hotel__tag">
+															Refundable
+														</span>
+													</div>
+													<div class="aside-cost">
+														<span>Cost of room: </span>
+														<span class="aside-cost__currency">EUR</span>
+														<span class="aside-cost__value">1200</span>
+													</div>
 												</div>
-												<div class="aside-cost">
-													<span>Cost of fly:</span>
-													<span class="aside-cost__currency">EUR</span>
-													<span class="aside-cost__value">800</span>
-												</div>
+
 											</div>
 
-											<div class="aside-hotel">
-												<div class="aside-hotel__title">
-													<svg width="30" height="30">
-														<use href="#double-bed"></use>
-													</svg>
-													<span>Swissotel Makkah</span>
-												</div>
-												<div class="aside__text">
-													Guests:
-													<span class="aside__text--dark">1 Room, 1 Adult</span>
-												</div>
-												<div class="aside-hotel__tags">
-													<span class="aside-hotel__tag">
-														Refundable
-													</span>
-												</div>
-												<div class="aside-cost">
-													<span>Cost of room: </span>
-													<span class="aside-cost__currency">EUR</span>
-													<span class="aside-cost__value">1200</span>
-												</div>
-											</div>
+											<span class="aside__line"></span>
 
 											<div class="aside-code">
 												<form class="aside-code__form" method="post">
@@ -3123,17 +2947,8 @@
 												</div>
 											</div>
 
+											<span class="aside__line"></span>
 											<div class="aside-total">
-												<div class="aside-total__price">
-													<div class="aside-total__price-item">
-														Grand Total:
-													</div>
-													<div class="aside-total__price-item">
-														<span class="aside-total__currency">EUR</span>
-														<span class="aside-total__value">2000</span>
-													</div>
-												</div>
-
 												<div class="aside__text aside-total__info">
 													<svg width="21" height="21">
 														<use href="#info"></use>
@@ -3145,103 +2960,13 @@
 												<div class="aside__text _text-center">
 													The price quoted includes 5% VAT.
 												</div>
-
-											</div>
-										</div>
-									</div>
-
-								</div>
-								<div class="gcell gcell--12 _def-hide">
-
-									<!-- summary login form section for summary page-->
-
-									<div class="summary-register">
-										<div class="summary__title _mb-ms">
-											<div class="summary__title-svg summary__title-svg--sm">
-												<svg width="30" height="30">
-													<use href="#log-in"></use>
-												</svg>
-											</div>
-											<div>
-												Login to your account
-											</div>
-										</div>
-										<div class="summary-register__body">
-											<div class="summary-register__head _text-center">
-												<div class="summary-register__title">Would you like to create a flynas account?</div>
-												<div class="summary-register__text">Doing so means your details will be saved and it will be easier to book next time!</div>
-											</div>
-
-											<div class="grid grid--1 grid--md-2 grid--space-xl _md-flex-row-reverse">
-												<div class="gcell _pb-none _md-hide">
-													<div class="popup__title">
-														Sign In with one click
+												<div class="aside-total__price">
+													<div class="aside-total__price-item">
+														Grand Total:
 													</div>
-												</div>
-												<div class="gcell _pb-none popup__line">
-													<div class="_md-pr-ms _pt-ms">
-														<form class="form popup__form" method="post">
-															<div class="form-group">
-																<label class="form-group__label" for="sign-in-email">
-																	E-mail
-																	<span class="form-group__required">*</span>
-																</label>
-																<div class="form-group__wrap">
-																	<div class="form-group__icon">
-																		<svg width="27" height="26">
-																			<use href="#mail"></use>
-																		</svg>
-																	</div>
-																	<input type="email" class="form-group__input" value="" required placeholder="Your e-mail" name="email" id="sign-in-email" />
-																</div>
-															</div>
-															<div class="form-group">
-																<label class="form-group__label" for="sign-in-pass">
-																	Password
-																	<span class="form-group__required">*</span>
-																</label>
-																<div class="form-group__wrap">
-																	<div class="form-group__icon">
-																		<svg width="27" height="26">
-																			<use href="#icon-lock"></use>
-																		</svg>
-																	</div>
-																	<input type="password" class="form-group__input" value="" required placeholder="Create a password" name="password" id="sign-in-pass" />
-																</div>
-															</div>
-															<div class="form-group__forgot">
-																<button class="button button--link">Forgot your password?</button>
-															</div>
-															<div class="form-group">
-																<button type="submit" class="button button--full-width">
-																	<span class="button__text">Sign in</span>
-																</button>
-															</div>
-															<div class="form__policy">
-																By signing in, I agree to
-																<a href="">Terms of Use</a> and
-																<a href="">Pravicy Policy
-																</a>.
-															</div>
-														</form>
-													</div>
-												</div>
-												<div class="gcell _pb-none">
-													<div class="_md-plr-def">
-														<div class="_md-pr-lg _md-mr-md _md-pt-none">
-															<div class="popup__title _md-show">
-																Sign In with one click
-															</div>
-															<div class="popup__image _md-show">
-																<img src="media/assets/images/popup/sign-in.png" alt="" />
-															</div>
-															<div class="popup__sub-title">
-																No account yet?
-															</div>
-															<button type="button" class="button button--outline button--full-width">
-																<span class="button__text">Create account</span>
-															</button>
-														</div>
+													<div class="aside-total__price-item">
+														<span class="aside-total__currency">EUR</span>
+														<span class="aside-total__value">3200</span>
 													</div>
 												</div>
 											</div>

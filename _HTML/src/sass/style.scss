@@ -19,10 +19,12 @@
 @import "_pages/achievements";
 @import "_pages/hotel";
 @import "_pages/location";
+@import "_pages/transportation";
 
 //room summary page
 @import "_pages/room-summary";
-@import "_blocks/summary/aside";
+@import "_blocks/summary-nav";
+@import "_blocks/aside";
 @import "_blocks/summary/summary-hotel";
 @import "_blocks/summary/summary-preferences";
 @import "_blocks/summary/booking-terms";
@@ -30,6 +32,4 @@
 @import "_blocks/summary/contacts-and-payment";
 @import "_blocks/location/location-info";
 @import "_blocks/location/location-filter";
-
-
-
+@import "_blocks/booking-block";
