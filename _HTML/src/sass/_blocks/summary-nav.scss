@@ -1,0 +1,31 @@
+.summary-nav {
+	text-align: center;
+	margin-bottom: 40px;
+	.button {
+		padding: 12px 20px;
+		min-width: 180px;
+		margin-right: 20px;
+		text-decoration: none;
+
+		&.disabled {
+			cursor: auto;
+			pointer-events: none;
+			opacity: 0.6;
+		}
+	}
+
+	&__prev {
+		color: #909090;
+	}
+
+	&__next {
+		background-color: #64d3cf;
+		border: 2px solid #64d3cf;
+		transition: all 0.15s linear;
+
+		&:hover {
+			background-color: map-get($colors, main);
+			border-color: rgba(map-get($colors, main), 0.5);
+		}
+	}
+}

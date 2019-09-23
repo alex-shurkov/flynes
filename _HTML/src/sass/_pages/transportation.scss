@@ -1,0 +1,85 @@
+.transport {
+	padding-top: 40px;
+	background-color: #f8f8f8;
+
+	&__content {
+		@include media(def) {
+			margin-right: 10px;
+		}
+	}
+}
+
+.package {
+	border: 1px solid #f0f0f0;
+	background: #ffffff;
+
+	&__body {
+		padding: 11px 5px 30px;
+
+	}
+
+	&__list {
+		margin-top: 30px;
+	}
+
+	&__list-item {
+		padding: 2px 0 2px 52px;
+		margin-bottom: 7px;
+
+		&:nth-child(odd) {
+			background: linear-gradient(to right, rgba(254,254,254,1) 0%, rgba(254,254,254,1) 0%, rgba(246,246,246,1) 30%, rgba(254,254,254,1) 100%);
+		}
+	}
+
+	&__name {
+		color: map-get($colors, main);
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 14px;
+		margin: 56px 0 0 50px;
+	}
+}
+
+.package-types {
+	display: flex;
+	justify-content: center;
+
+	&__item {
+		padding-top: 22px;
+		height: 170px;
+		width: 165px;
+		border-radius: 8px;
+		background-color: #ffffff;
+		box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.1);
+
+		&--light {
+
+		}
+
+		&--green {
+
+		}
+
+		&--blue {
+
+		}
+	}
+
+	&__head {
+		border-radius: 8px;
+
+		padding: 0 25px;
+	}
+
+	&__title {
+		text-align: center;
+		background-color: #ffffff;
+		border-radius: 8px;
+		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+		width: 100%;
+		padding: 16px 25px;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}
