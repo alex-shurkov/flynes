@@ -1,0 +1,257 @@
+.route {
+	border: 1px solid #f0f0f0;
+	background: #ffffff;
+	margin-bottom: 19px;
+
+	&__body {
+		padding: 15px 10px;
+	}
+
+	&__item {
+		padding: 24px 8px 12px;
+		border-radius: 5px;
+		box-shadow: 0 3px 10px 0 rgba(47, 47, 47, 0.15);
+		width: 100%;
+		display: flex;
+		position: relative;
+		flex-wrap: wrap;
+
+		&:not(:last-of-type) {
+			margin-bottom: 31px;
+
+			&::after {
+				display: block;
+				content: '';
+				position: absolute;
+				height: 1px;
+				width: 98%;
+				margin: 0 auto;
+				right: 0;
+				left: 0;
+				bottom: -16px;
+				border-top: 1px dashed #b8b8b8;
+			}
+		}
+
+	}
+
+	&__btn {
+		display: flex;
+		width: 100%;
+		padding: 15px 5px;
+		justify-content: center;
+
+		@include media(ms) {
+			padding-top: 0;
+			width: 20%;
+			align-items: flex-end;
+			justify-content: flex-start;
+		}
+
+		.button {
+			background-color: #80dcd9;
+			padding: 8px 35px;
+			max-width: 100%;
+			font-size: 12px;
+			border-radius: 5px;
+			font-weight: 600;
+			transition: background-color 0.15s linear;
+			&::after {
+				content: none;
+			}
+
+			&:hover {
+				background-color: #01bab4;
+			}
+		}
+	}
+
+	&__content {
+		width: 100%;
+		position: relative;
+		padding-bottom: 10px;
+		display: flex;
+		align-items: flex-end;
+
+		@include media(ms) {
+			width: 80%;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			background: url(/Media/assets/images/transportation/route-road.png) bottom left repeat-x;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			height: 35px;
+			background-size: cover;
+
+			[dir="rtl"] & {
+				transform: scaleX(-1);
+			}
+
+			@include media(md, max) {
+				background-position-x: center;
+			}
+
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			position: absolute;
+			background: url(/Media/assets/images/transportation/route-city.png) bottom left no-repeat;
+			left: 0;
+			width: 216px;
+			bottom: 35px;
+			height: 78px;
+
+			@include media(ms, max) {
+				content: none;
+			}
+
+			[dir="rtl"] & {
+				right: 0;
+				left: auto;
+				transform: scaleX(-1);
+			}
+
+		}
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-evenly;
+		flex-grow: 1;
+	}
+
+	&__img {
+		@include media(ms, max) {
+			display: none;
+		}
+	}
+
+	&__img-item {
+		max-width: 167px;
+		max-height: 48px;
+
+		[dir="rtl"] & {
+			transform: scaleX(-1);
+		}
+	}
+
+	&__point {
+		margin-top: auto;
+		text-align: center;
+		font-weight: 700;
+		color: #313131;
+		font-size: 14px;
+		padding: 0 5px 17px;
+
+		@include media(sm, max) {
+			font-size: 12px;
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+
+			[dir="rtl"] & {
+				margin-left: 0;
+			}
+		}
+	}
+
+	&__view {
+		svg {
+			max-width: 20px;
+			max-height: 20px;
+			height: 20px;
+			width: 20px;
+			fill: #cccccc;
+			margin-bottom: 15px;
+
+			@include media(ms) {
+				max-width: 30px;
+				max-height: 30px;
+				height: 30px;
+				width: 30px;
+			}
+		}
+
+		&--lg {
+			svg {
+				transform: scale(1.2);
+			}
+		}
+
+		&--rotate {
+			svg {
+				transform: rotate(50deg);
+
+				[dir="rtl"] & {
+					transform: rotate(300deg);
+				}
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 15px;
+	}
+
+	&__marker {
+		position: relative;
+		height: 35px;
+		width: 40px;
+		margin: 0 auto;
+
+		@include media(ms, max) {
+			height: 25px;
+		}
+
+		svg {
+			fill: map-get($colors, main);
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin: 0 auto;
+			height: 35px;
+			width: 35px;
+
+			@include media(ms, max) {
+				height: 25px;
+				width: 25px;
+			}
+		}
+
+		&::before {
+			position: absolute;
+			display: block;
+			content: '';
+			bottom: -21px;
+			height: 28px;
+			width: 40px;
+			right: 0;
+			left: 0;
+			margin: 0 auto;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url(/Media/assets/images/transportation/marker-default.png);
+
+			@include media(ms, max) {
+				transform: scale(0.7);
+			}
+		}
+
+		.route__point--last & {
+			&::before {
+				background-image: url(/Media/assets/images/transportation/marker-active.png)
+			}
+		}
+	}
+
+}

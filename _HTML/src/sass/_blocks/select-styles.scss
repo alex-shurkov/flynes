@@ -16,6 +16,11 @@
 	font-size: 13px;
 	text-align: left;
 
+	[dir="rtl"] & {
+		background-position-x: 14px;
+		text-align: right;
+	}
+
 	&__text {
 		line-height: 15px;
 		max-height: 15px;
@@ -23,10 +28,6 @@
 		display: block;
 	}
 
-	[dir="rtl"] & {
-		background-position-x: 14px;
-		text-align: right;
-	}
 
 	@include media(sm) {
 		font-size: 15px;
@@ -37,6 +38,16 @@
 		[dir="rtl"] & {
 			background-position-x: 32px;
 			padding: 14px 32px 14px 48px;
+		}
+
+		&--cars {
+			background-position-x: calc(100% - 20px);
+			padding: 14px 30px 14px 20px;
+
+			[dir="rtl"] & {
+				background-position-x: 20px;
+				padding: 14px 20px 14px 30px;
+			}
 		}
 
 		.prf-form &,
@@ -66,6 +77,11 @@
 		}
 	}
 
+	&__selected {
+		color: #5db9ce;
+		letter-spacing: 0.025em;
+	}
+
 	&__results {
 		display: none;
 		background: #ffffff;
@@ -76,6 +92,28 @@
 		border-radius: 8px;
 		box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2);
 		z-index: 2;
+
+		.select-drop--cars & {
+			padding-top: 16px;
+
+			&::after {
+				content: '';
+				display: block;
+				height: 1.14286rem;
+				width: 1.14286rem;
+				position: absolute;
+				top: 0;
+				left: 1.42857rem;
+				border: 0.57143rem solid transparent;
+				border-top-color: #00b8b0;
+				border-radius: 3px;
+
+				[dir="rtl"] & {
+					left: auto;
+					right: 1.42857rem;
+				}
+			}
+		}
 	}
 
 	&__results-item {
@@ -95,6 +133,10 @@
 				font-size: 12px;
 				padding: 10px 18px;
 			}
+
+			.select-drop--cars & {
+				padding: 10px 20px;
+			}
 		}
 
 		&:last-of-type {
@@ -104,6 +146,10 @@
 
 		&:hover {
 			background-color: rgb(236, 246, 249);
+
+			.select-drop--cars & {
+				background-color: #e7fffe;
+			}
 		}
 
 	}

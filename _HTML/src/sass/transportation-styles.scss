@@ -1,6 +1,11 @@
 @import "./general-styles";
 @import "_blocks/breadcrumbs";
+@import "_blocks/rating";
+@import "_blocks/select-styles";
 @import "_pages/transportation";
+@import "_blocks/transportation/package";
+@import "_blocks/transportation/route";
+@import "_blocks/transportation/car";
 @import "_blocks/aside";
 @import "_blocks/booking-block";
 @import "_blocks/summary-nav";

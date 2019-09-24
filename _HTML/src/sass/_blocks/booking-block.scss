@@ -21,10 +21,22 @@
 		border-top: 1px dashed #b8b8b8;
 	}
 
+	&--no-sep {
+		&::after {
+			content: none;
+		}
+	}
+
+
 	&__svg {
 		svg {
 			fill: map-get($colors, main);
 			margin-right: 18px;
+
+			[dir="rtl"] & {
+				margin-right: 0;
+				margin-left: 18px;
+			}
 		}
 	}
 }
