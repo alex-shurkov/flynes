@@ -20,10 +20,15 @@
 @import "_pages/hotel";
 @import "_pages/location";
 @import "_pages/transportation";
+@import "_pages/passengers";
+@import "_pages/ground-service";
+@import "_pages/visa";
+
 
 //room summary page
 @import "_pages/room-summary";
 @import "_blocks/summary-nav";
+@import "_blocks/summary/summary-title";
 @import "_blocks/aside";
 @import "_blocks/summary/summary-hotel";
 @import "_blocks/summary/summary-preferences";

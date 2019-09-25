@@ -1,0 +1,270 @@
+.ground {
+	padding-top: 40px;
+	background: #f8f8f8;
+
+	&__content {
+		@include media(def) {
+			padding-right: 10px;
+
+			[dir="rtl"] & {
+				padding-right: 0;
+				padding-left: 10px;
+			}
+		}
+	}
+}
+
+.info-tooltip {
+	position: relative;
+	padding-left: 3px;
+	cursor: pointer;
+	display: none;
+
+	&__icon {
+		fill: #efaac3;
+		height: 12px;
+		width: 12px;
+		min-height: 12px;
+		min-width: 12px;
+		cursor: pointer;
+	}
+
+	&__content {
+		position: absolute !important;
+		left: -5px;
+		top: calc(100% + 5px);
+		max-width: 200px;
+		min-width: 120px;
+		padding: 5px;
+		background: #5db9ce;
+		color: #ffffff !important;
+		z-index: 2;
+		border-radius: 2px;
+		font-size: 10px;
+		display: none !important;
+
+		.info-tooltip:hover & {
+			display: block !important;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 5px;
+			top: -16px;
+			border: 8px solid transparent;
+			border-bottom: 8px solid #5db9ce;
+		}
+	}
+}
+
+.company {
+	display: flex;
+	color: #313131;
+	padding: 30px 15px;
+	position: relative;
+	margin: 15px 0 35px;
+	transition: 0.15s linear;
+	border-radius: 5px;
+
+	@include media(sm, max) {
+		flex-direction: column;
+		padding: 20px 15px;
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	&__img {
+		max-height: 120px;
+		max-width: 120px;
+	}
+
+	&:hover {
+		background-color: #fff;
+		box-shadow: 0 3px 10px 0 rgba(47, 47, 47, 0.15);
+	}
+
+	&::after {
+		display: block;
+		content: '';
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: -18px;
+		border-top: 1px dashed #b8b8b8;
+
+		[dir="rtl"] & {
+			right: auto;
+			left: 0;
+		}
+	}
+
+	&__view {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 20px;
+
+		@include media(sm) {
+			width: 23%;
+			justify-content: flex-start;
+			margin-bottom: 0;
+		}
+
+		@include media(ms) {
+			width: 18%;
+		}
+	}
+
+	&__info {
+		width: 100%;
+		@include media(sm) {
+			width: 77%;
+
+			padding: 0 15px 0 25px;
+
+			[dir="rtl"] & {
+				padding: 0 25px 0 15px;
+			}
+		}
+
+		@include media(ms) {
+			width: 82%;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 15px;
+		margin-bottom: 20px;
+
+		@include media(sm, max) {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__price {
+		font-weight: 700;
+		font-size: 18px;
+		margin-bottom: 20px;
+		@include media(ms) {
+			text-align: right;
+
+			[dir="rtl"] & {
+				text-align: left;
+			}
+		}
+
+		@include media(ms, max) {
+			margin-bottom: 10px;
+		}
+
+		@include media(sm, max) {
+			text-align: center;
+		}
+
+		span {
+			color: #707070;
+			font-size: 14px;
+			padding-right: 3px;
+
+			[dir="rtl"] & {
+				padding-right: 0;
+				padding-left: 3px;
+			}
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+
+		@include media(sm, max) {
+			justify-content: center;
+			flex-direction: column;
+		}
+
+		@include media(ms) {
+			margin-top: 15px;
+		}
+
+		@include media(md) {
+			margin-top: 36px;
+		}
+	}
+	&__btn {
+		display: flex;
+		padding-top: 15px;
+		transition: background-color 0.15s linear;;
+		align-items: flex-end;
+		justify-content: flex-end;
+
+		@include media(sm, max) {
+			justify-content: center;
+			width: 100%;
+		}
+
+		@include media(ms) {
+			padding-top: 0;
+			align-items: flex-end;
+			justify-content: flex-start;
+		}
+
+		.button {
+			background-color: #80dcd9;
+			padding: 8px 35px;
+			max-width: 100%;
+			min-width: 110px;
+			font-size: 12px;
+			border-radius: 5px;
+			font-weight: 600;
+			&::after {
+				content: none;
+			}
+
+			&:hover {
+				background-color: #01bab4;
+			}
+		}
+	}
+
+
+	.rating {
+		display: flex;
+		align-items: center;
+		@include media(ms, max) {
+			margin-top: 10px;
+		}
+
+		&__mark {
+			font-size: 10px;
+			text-transform: uppercase;
+			font-weight: 900;
+			color: #707070;
+		}
+	}
+
+}
+
+.companies {
+	border: 1px solid #f0f0f0;
+	background: #ffffff;
+	margin-bottom: 40px;
+
+	&__content {
+		border-radius: 8px;
+		padding: 0 10px 19px;
+
+		@include media(md) {
+			padding: 0 23px 19px;
+		}
+	}
+}

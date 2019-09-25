@@ -4,30 +4,53 @@
 	margin-bottom: 30px;
 
 	&__body {
-		padding: 11px 5px 22px;
+		padding: 30px 5px 42px;
 		display: flex;
 		flex-wrap: wrap;
+
+		@include media(ms) {
+			padding: 11px 5px 42px;
+		}
 	}
 
 	&__left {
-		width: 30%;
-
+		width: 100%;
 		padding-right: 10px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		@include media(ms, max) {
-			padding: 20px 0;
-			width: 100%;
-			align-items: center;
+
+
+		@include media(ms) {
+			width: 30%;
+
+			.package--ground & {
+				width: 35%;
+			}
+		}
+
+		@include media(md) {
+
+			.package--ground & {
+				width: 32%;
+			}
 		}
 	}
 
 	&__right {
 		width: 100%;
-
 		@include media(ms) {
 			width: 70%;
+
+			.package--ground & {
+				width: 65%;
+			}
+		}
+
+		@include media(md) {
+			.package--ground & {
+				width: 68%;
+			}
 		}
 	}
 
@@ -39,11 +62,24 @@
 		}
 	}
 
+	&__list-icon {
+		fill: #5db9ce;
+
+		.package--ground & {
+			margin-right: 5px;
+
+			[dir="rtl"] & {
+				margin-right: 0;
+				margin-left: 5px;
+			}
+		}
+	}
+
 	&__list-item {
 		padding: 2px 30px;
 		text-align: center;
-
 		margin-bottom: 7px;
+
 		@include media(ms) {
 			padding: 2px 0 2px 52px;
 			text-align: left;
@@ -52,6 +88,14 @@
 				text-align: right;
 				padding: 2px 52px 2px 0;
 			}
+		}
+
+		.package--ground & {
+			padding: 2px 0;
+			display: flex;
+			font-size: 12px;
+			color: #313131;
+			margin-bottom: 8px;
 		}
 
 		&:nth-child(odd) {
@@ -70,10 +114,20 @@
 			margin-left: 50px;
 			text-align: left;
 
+			.package--ground & {
+				margin-left: 38px;
+
+			}
+
 			[dir="rtl"] & {
 				text-align: right;
 				margin-left: 0;
 				margin-right: 50px;
+
+				.package--ground & {
+					margin-left: 0;
+					margin-right: 38px;
+				}
 			}
 		}
 
@@ -84,8 +138,8 @@
 	$item: &;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	flex-wrap: wrap;
+	align-items: center;
 
 	@include media(sm, max) {
 		flex-direction: column;
@@ -104,8 +158,19 @@
 		background-repeat: no-repeat;
 		padding: 19px 15px 0;
 
-		@include media(sm, max) {
+		#{$item}__block--lg & {
+			min-height: 70px;
+		}
+
+		@include media(ms, max) {
+			min-height: 85px;
 			background-position-y: 80%;
+			display: flex;
+			align-items: center;
+
+			#{$item}__block--lg & {
+				min-height: 85px;
+			}
 		}
 
 		@include media(md) {
@@ -115,15 +180,14 @@
 				padding: 22px 25px 0;
 			}
 		}
-
 	}
 
 	&__body {
 		flex-grow: 1;
-		padding: 15px 0 10px;
+		padding: 18px 0 0;
 
 		#{$item}__block--lg & {
-			padding: 29px 0 10px;
+			padding: 29px 0 23px;
 		}
 	}
 
@@ -133,6 +197,20 @@
 		color: #313131;
 		padding: 2px 15px;
 		margin-bottom: 8px;
+		display: flex;
+		align-items: center;
+
+		.package--ground & {
+			margin-bottom: 12px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			@include media(ms, max) {
+				align-items: flex-start;
+			}
+		}
 
 		@include media(md) {
 			padding: 2px 15px 2px 37px;
@@ -164,7 +242,7 @@
 				min-height: 16px;
 				min-width: 16px;
 				position: relative;
-				top: 2px;
+				top: -2px;
 
 				[dir="rtl"] & {
 					transform: scaleX(-1);
@@ -185,7 +263,7 @@
 		}
 
 		&--default {
-			color: #909090;
+			//color: #909090;
 
 			svg {
 				fill: #cccccc;
@@ -202,36 +280,70 @@
 		padding: 0 26px;
 		background-size: cover;
 
+		.package--ground & {
+			min-height: 43px;
+			background-position-y: 16px;
+		}
+
 		#{$item}__block--lg & {
 			min-height: 47px;
 			background-image: url(/Media/assets/images/transportation/package-footer-lg.png);
+
+			.package--ground & {
+				background-position-y: 0;
+			}
 		}
 
+	}
+
+	&__desc-info {
+		display: flex;
+	}
+
+	&__desc {
+		padding-right: 5px;
+		width: 50%;
+
+		[dir="rtl"] & {
+			padding-right: 0;
+			padding-left: 5px;
+		}
 	}
 
 	&__block {
 		display: flex;
 		flex-direction: column;
-		max-width: 200px;
 		border-radius: 8px;
 		background-color: #ffffff;
 		box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.1);
-		width: 100%;
-		margin-bottom: 33px;
+		width: 33%;
 
+		@include media(xs, max) {
+			width: 270px;
+			max-width: 270px;
+		}
 
-		@include media(sm) {
-			width: 33%;
+		@include media(sm, max) {
+			width: 80%;
+			max-width: 80%;
+		}
+
+		@include media(ms, max) {
+			width: 60%;
+			max-width: 60%;
+			margin-bottom: 40px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		@include media(ms) {
 			max-width: 165px;
-			margin-bottom: 13px;
 		}
 
 		&--lg {
 			z-index: 2;
-
-			#{$item}__head {
-				min-height: 70px;
-			}
 		}
 
 		&--light {
@@ -324,10 +436,14 @@
 		border-radius: 8px;
 		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
 		width: 100%;
-		padding: 16px 0;
+		padding: 13px 0;
 		font-size: 14px;
 		font-weight: 700;
 		text-transform: uppercase;
+
+		#{$item}__block--lg & {
+			padding: 16px 0;
+		}
 	}
 
 	&__btn {

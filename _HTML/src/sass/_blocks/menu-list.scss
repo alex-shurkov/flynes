@@ -77,6 +77,11 @@
 					left: auto;
 					right: -18px;
 				}
+
+				.menu-list--no-style & {
+					content: none;
+				}
+
 			}
 		}
 	}

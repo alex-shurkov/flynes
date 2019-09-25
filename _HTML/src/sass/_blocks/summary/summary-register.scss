@@ -3,14 +3,8 @@
 //-----------------------------
 
 .summary-register {
-	@include media(def) {
-		margin-right: 10px;
-
-		[dir="rtl"] & {
-			margin-right: 0;
-			margin-left: 10px;
-		}
-	}
+	max-width: 770px;
+	margin: 0 auto;
 
 	&__body {
 		background: #ffffff;
@@ -24,7 +18,7 @@
 		}
 
 		@include media(md, max) {
-			max-width: 80%;
+			max-width: 450px;
 		}
 
 		@include media(def, max) {

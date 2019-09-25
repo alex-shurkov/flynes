@@ -1,11 +1,39 @@
 .summary-nav {
 	text-align: center;
 	margin-bottom: 40px;
+	display: flex;
+	justify-content: center;
+
+	@include media(sm, max) {
+		flex-direction: column;
+		align-items: center;
+	}
+
 	.button {
 		padding: 12px 20px;
-		min-width: 180px;
-		margin-right: 20px;
 		text-decoration: none;
+		min-width: 180px;
+		margin-bottom: 15px;
+
+		@include media(sm) {
+			margin-right: 20px;
+
+			[dir="rtl"] & {
+				margin-right: 0;
+				margin-left: 20px;
+			}
+
+			&:last-of-type {
+				margin-right: 0;
+
+				[dir="rtl"] & {
+					margin-left: 0;
+				}
+			}
+		}
+
+
+
 
 		&.disabled {
 			cursor: auto;
@@ -16,6 +44,7 @@
 
 	&__prev {
 		color: #909090;
+		background-color: #fcfcfc;
 	}
 
 	&__next {
