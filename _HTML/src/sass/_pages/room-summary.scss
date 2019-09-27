@@ -278,7 +278,10 @@
 
 .flight {
 	letter-spacing: 0.01em;
-	margin-bottom: 33px;
+
+	&--mb {
+		margin-bottom: 33px;
+	}
 
 	&__name {
 		font-size: 15px;
