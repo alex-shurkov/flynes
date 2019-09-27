@@ -164,60 +164,6 @@
     }
   }
 
-  &__submit {
-    margin: 35px 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  &__btn {
-    padding: 14px;
-    min-width: 240px;
-    pointer-events: none;
-    background-color: #7cd9d6;
-
-    @include media(md) {
-      min-width: 43%;
-    }
-
-    .agreed & {
-      background-color: map-get($colors, main);
-      pointer-events: auto;
-    }
-  }
-
-  &__checkbox {
-    margin-bottom: 27px;
-    color: #6f6f6f;
-    font-size: 12px;
-    letter-spacing: 0.01em;
-
-
-    [dir="rtl"] & {
-      margin-bottom: 27px;
-    }
-
-    span {
-      [dir="rtl"] & {
-        text-align: center;
-      }
-
-      &::before {
-        border-color: #9ed3c8;
-      }
-    }
-
-    input {
-      &:checked {
-        & ~ span {
-          color: #6f6f6f;
-        }
-      }
-    }
-  }
-
   &__link {
     color: #72c3d6;
     text-decoration: none;

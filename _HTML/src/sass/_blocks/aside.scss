@@ -27,15 +27,23 @@
 	}
 
 	@include media(def, max) {
-		margin: 0 auto 35px;
+		margin: 0 auto 40px;
 		max-width: 50%;
+
+		.review & {
+			margin-bottom: 60px;
+		}
 	}
 
 	@include media(def) {
 		top: 15px;
 		position: sticky;
-		margin-bottom: 15px;
+		margin-bottom: 40px;
 		float: right;
+
+		.review & {
+			margin-bottom: 60px;
+		}
 
 		[dir="rtl"] & {
 			float: left;

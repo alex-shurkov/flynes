@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="ru" dir="">
+<html lang="ru">
 	<head>
 
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Contacts and Payment</title>
+		<title>Review</title>
 		<meta name="description" lang="ru" content="description">
 		<meta name="keywords" lang="ru" content="keywords">
 
 		<!-- Open Graph -->
-		<meta property="og:title" content="Contacts and Payment">
+		<meta property="og:title" content="Review">
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="flynas">
-		<meta property="og:url" content="http://flynas-old/contact-and-payment">
+		<meta property="og:url" content="http://flynas-old/review">
 		<meta property="og:description" content="Краткий текст (новости, товара и т.д)">
 
 		<!-- Touch -->
@@ -37,7 +37,7 @@
 		<meta name="msapplication-config" content="media/assets/favicons/browserconfig.xml">
 		<meta name="theme-color" content="#d01400">
 
-		<link href="media/assets/css/contacts-and-payment.css" rel="stylesheet">
+		<link href="media/assets/css/review-styles.css" rel="stylesheet">
 
 		<!--todo develop styles-->
 		<!--<link href="" rel="stylesheet">-->
@@ -717,7 +717,7 @@
 									</li>
 
 									<li class="menu-list__item">
-										<a href="contact-and-payment.html">Contacts and Payment</a>
+										<a href="review.html">Review</a>
 
 									</li>
 
@@ -2265,15 +2265,98 @@
 					</div>
 				</div>
 
-				<div class="summary">
+				<div class="breadcrumbs">
+					<div class="container breadcrumbs__container">
+						<div class="breadcrumbs__content">
+							<!-- todo for programmer: add class 'active' for 'breadcrumbs__item' elements to show the current step / add class 'disabled' to disable element -->
+							<a class="breadcrumbs__item" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#homepage"></use>
+									</svg>
+								</span>
+								<span>Homepage</span>
+							</a>
+
+							<a class="breadcrumbs__item" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#mecca"></use>
+									</svg>
+								</span>
+								<div>Mecca Hotel</div>
+							</a>
+
+							<a class="breadcrumbs__item" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#madinah"></use>
+									</svg>
+								</span>
+								<span>Medinah Hotel</span>
+							</a>
+
+							<a class="breadcrumbs__item" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#bus"></use>
+									</svg>
+								</span>
+								<span>Transportation</span>
+							</a>
+
+							<a class="breadcrumbs__item" href="#">
+								<span class="breadcrumbs__icon breadcrumbs__icon--flight">
+									<svg width="27" height="27">
+										<use href="#flight"></use>
+									</svg>
+								</span>
+								<span>Flights</span>
+							</a>
+
+							<a class="breadcrumbs__item" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#ground-service"></use>
+									</svg>
+								</span>
+								<span>Ground Service</span>
+							</a>
+
+							<a class="breadcrumbs__item" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#passengers-details"></use>
+									</svg>
+								</span>
+								<span>Passenger Details</span>
+							</a>
+							<a class="breadcrumbs__item" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#visa"></use>
+									</svg>
+								</span>
+								<span>E-visa</span>
+							</a>
+							<a class="breadcrumbs__item active" href="#">
+								<span class="breadcrumbs__icon">
+									<svg width="27" height="27">
+										<use href="#credit-cards"></use>
+									</svg>
+								</span>
+								<span>Review & Pay</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="review">
 					<div class="container--full">
 						<div class="container">
 							<div class="grid">
 								<div class="gcell gcell--12 gcell--def-8">
-
-									<!-- summary-booking info for summary page-->
-
-									<div class="summary-booking">
+									<div class="review__content">
 										<div class="summary__title">
 											<div class="summary__title-svg">
 												<svg width="30" height="30">
@@ -2284,17 +2367,210 @@
 												What you have selected
 											</div>
 										</div>
-										<div class="summary-booking__info">
-											<div class="booking-flight">
 
+										<!-- summary-hotel section for summary page-->
+
+										<div class="summary-hotel">
+											<div class="summary-top">
 												<div class="summary-top__head">
 													<div class="summary-top__left">
-														<svg width="30" height="30">
-															<use href="#aeroplane"></use>
+
+														<svg width="30" height="30" class="summary-hotel__icon _ms-show">
+															<use href="#double-bed"></use>
 														</svg>
-														<span>Your Flight</span>
+														<span>Your Hotel</span>
+
 													</div>
 													<div class="summary-top__right">
+														<a href="#">
+															<svg width="12" height="12">
+																<use href="#change"></use>
+															</svg>
+
+															<span>Change Hotels</span>
+
+														</a>
+													</div>
+												</div>
+
+												<div class="review__tabs">
+													<div class="grid grid--2 grid--space-ms">
+														<div class="gcell">
+															<!--todo: add class 'tab-active' for current tab-->
+															<div class="review__tab tab-active">
+																<svg width="37" height="37">
+																	<use href="#mecca"></use>
+																</svg>
+																<span>Mecca hotel</span>
+															</div>
+														</div>
+
+														<div class="gcell">
+															<div class="review__tab">
+																<svg width="37" height="37" class="icon-lg">
+																	<use href="#madinah"></use>
+																</svg>
+																<span>Medinah hotel</span>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="sm-hotel">
+													<div class="summary-hotel__title">
+
+														<span>Swissotel Makkah</span>
+														<!--todo: put the value from 1 to 5  to `data-rating`-->
+														<span class="rating__icons" data-rating="5">
+
+															<svg width="17" height="17">
+																<use href="#star"></use>
+															</svg>
+
+															<svg width="17" height="17">
+																<use href="#star"></use>
+															</svg>
+
+															<svg width="17" height="17">
+																<use href="#star"></use>
+															</svg>
+
+															<svg width="17" height="17">
+																<use href="#star"></use>
+															</svg>
+
+															<svg width="17" height="17">
+																<use href="#star"></use>
+															</svg>
+
+														</span>
+													</div>
+													<div class="grid">
+														<div class="gcell gcell--12 gcell--ms-5">
+															<div class="sm-hotel__view">
+																<span class="sm-hotel__img">
+																	<!--recommended image size:  width="268" height="358"-->
+																	<img src="media/assets/images/room-summary/sm-hotel-img.png" alt="" />
+																</span>
+															</div>
+														</div>
+														<div class="gcell gcell--12 gcell--ms-7">
+															<div class="sm-hotel__table">
+																<div class="sm-hotel__cell">
+																	<span class="sm-hotel__text sm-hotel__text--light">
+																		Check-in
+																	</span>
+																	<span class="sm-hotel__text">
+																		05 Jun 2019
+																	</span>
+																</div>
+
+																<div class="sm-hotel__cell">
+																	<span class="sm-hotel__text sm-hotel__text--light">
+																		Check-out
+																	</span>
+																	<span class="sm-hotel__text">
+																		11 Jun 2019
+																	</span>
+																</div>
+																<div class="sm-hotel__cell">
+																	<span class="sm-hotel__text sm-hotel__text--light">
+																		Guests
+																	</span>
+																	<span class="sm-hotel__text">
+																		1 adult
+																	</span>
+																</div>
+																<div class="sm-hotel__cell">
+																	<span class="sm-hotel__text sm-hotel__text--light">
+																		Rooms
+																	</span>
+																	<span class="sm-hotel__text">
+																		1 Room
+																	</span>
+																</div>
+																<div class="sm-hotel__cell">
+																	<span class="sm-hotel__text sm-hotel__text--light">
+																		Nights
+																	</span>
+																	<span class="sm-hotel__text">
+																		6 Nights
+																	</span>
+																</div>
+																<div class="sm-hotel__cell">
+																	<span class="sm-hotel__text sm-hotel__text--light">
+																		Room Type
+																	</span>
+																	<span class="sm-hotel__text">
+																		Classic Room, City View
+																	</span>
+																	<span class="sm-hotel__text sm-hotel__text--light">
+																		(Includes taxes and fees)
+																	</span>
+																</div>
+
+																<div class="sm-hotel__cell sm-hotel__cell--full">
+																	<span class="sm-hotel__text sm-hotel__text--light">
+																		Hotel features
+																	</span>
+																	<div class="sm-hotel__features">
+																		<div class="sm-hotel__feature sm-hotel__text">
+																			<svg width="17" height="17">
+																				<use href="#restaurant"></use>
+																			</svg>
+																			Breakfast
+																		</div>
+																		<div class="sm-hotel__feature sm-hotel__text">
+																			<svg width="17" height="17">
+																				<use href="#wifi"></use>
+																			</svg>
+																			Free Wi-Fi
+																		</div>
+																		<div class="sm-hotel__feature sm-hotel__text">
+																			<svg width="17" height="17">
+																				<use href="#bath"></use>
+																			</svg>
+																			Shower
+																		</div>
+																		<div class="sm-hotel__feature sm-hotel__text">
+																			<svg width="17" height="17">
+																				<use href="#kitchen"></use>
+																			</svg>
+																			Kitchen
+																		</div>
+																		<div class="sm-hotel__feature sm-hotel__text">
+																			<svg width="17" height="17">
+																				<use href="#air-conditioner"></use>
+																			</svg>
+																			Air conditioning
+																		</div>
+																		<div class="sm-hotel__feature sm-hotel__text">
+																			<svg width="17" height="17">
+																				<use href="#tv"></use>
+																			</svg>
+																			TV
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- summary-booking info for summary page-->
+
+										<div class="review-transport review-block">
+											<div class="review-block__info">
+												<div class="review-head">
+													<div class="review-head__left">
+														<svg width="30" height="30">
+															<use href="#route"></use>
+														</svg>
+														<span>transportation package</span>
+													</div>
+													<div class="review-head__right">
 														<a href="#">
 															<svg width="12" height="12">
 																<use href="#change"></use>
@@ -2303,61 +2579,187 @@
 														</a>
 													</div>
 												</div>
-
-												<div>
-													<div class="flight flight--mb">
-														<div class="flight__name">
-															<span>Amsterdam</span>
-															<span>
-																<svg width="15" height="15" class="flight-icon">
-																	<use href="#flight"></use>
-																</svg>
-															</span>
-															<span>Jeddah</span>
+												<div class="review__top">
+													<div class="review__selected">
+														<div class="review__selected-item">
+															<div class="review__selected-text">
+																Package type:
+															</div>
+															<div class="review__selected-label">
+																Standart
+															</div>
 														</div>
-														<div class="flight__table">
-															<div class="flight__column flight-departure">
-																<span class="flight__title">
+														<div class="review__selected-item review__selected-item--second">
+
+															<div class="review__selected-text">
+																Selected vehicle type:
+															</div>
+															<div class="review__selected-text review__selected-text--color">
+																SUVs
+															</div>
+
+														</div>
+													</div>
+													<div class="review__path">
+														<div class="review__path-item">
+															<div class="review__marker">
+																<svg width="35" height="35">
+																	<use href="#empty-marker"></use>
+																</svg>
+															</div>
+															<div class="review-transport__route">
+																<span>Jeddah</span>
+																<span>
+																	<svg width="20" height="20">
+																		<use href="#arrow-right"></use>
+																	</svg>
+																</span>
+																<span>Meccah</span>
+
+																<span>
+																	<svg width="20" height="20">
+																		<use href="#arrow-right"></use>
+																	</svg>
+																</span>
+																<span>Madina</span>
+
+																<span>
+																	<svg width="20" height="20">
+																		<use href="#arrow-right"></use>
+																	</svg>
+																</span>
+																<span>Jeddah</span>
+
+															</div>
+														</div>
+														<div class="review__path-item review-transport__quantity">
+															<span>Quantity</span>
+															<span class="review-transport__quantity-val">1</span>
+														</div>
+													</div>
+												</div>
+												<div class="review-transport__body">
+													<div class="review-car">
+														<div class="review-car__view">
+															<!--recommended image size: width: 180px height: 80-->
+															<img src="media/assets/images/transportation/SUVs.png" class="review-car__img" alt="">
+														</div>
+														<div class="review-car__info">
+															<div class="review-car__title">Company xyz for pilgrims and tourism transportation service... name in two lines
+															</div>
+															<span class="rating review-car__rating">
+																<!--todo: put the value from 1 to 5  to `data-rating`-->
+																<span class="rating__icons" data-rating="5">
+
+																	<svg width="17" height="17">
+																		<use href="#star"></use>
+																	</svg>
+
+																	<svg width="17" height="17">
+																		<use href="#star"></use>
+																	</svg>
+
+																	<svg width="17" height="17">
+																		<use href="#star"></use>
+																	</svg>
+
+																	<svg width="17" height="17">
+																		<use href="#star"></use>
+																	</svg>
+
+																	<svg width="17" height="17">
+																		<use href="#star"></use>
+																	</svg>
+
+																</span>
+																<span class="rating__mark">Very Good</span>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- summary-booking info for summary page-->
+
+										<div class="summary-booking">
+											<div class="summary-booking__info">
+												<div class="booking-flight">
+
+													<div class="review-head">
+														<div class="review-head__left">
+															<svg width="30" height="30">
+																<use href="#aeroplane"></use>
+															</svg>
+															<span>Flight details</span>
+														</div>
+														<div class="review-head__right">
+															<a href="#">
+																<svg width="12" height="12">
+																	<use href="#change"></use>
+																</svg>
+																<span>Change</span>
+															</a>
+														</div>
+													</div>
+
+													<div class="sm-flight">
+														<div class="sm-flight__head">
+															<div class="sm-flight__name">
+																<span>Amsterdam</span>
+																<span>
+																	<svg width="15" height="15" class="sm-flight-icon">
+																		<use href="#flight"></use>
+																	</svg>
+																</span>
+																<span>Jeddah</span>
+															</div>
+															<div class="sm-flight__label">Economy</div>
+														</div>
+														<div class="sm-flight__table">
+															<div class="sm-flight__column sm-flight-departure">
+																<span class="sm-flight__title">
 																	AMS 11:20
 																</span>
-																<span class="flight__subtitle">
+																<span class="sm-flight__subtitle">
 																	Flight XY 264
 																</span>
-																<span class="flight__text">
+																<span class="sm-flight__text">
 																	Wednesday, 05 Jun 2019
 																</span>
 															</div>
-															<div class="flight__column flight-time">
+
+															<div class="sm-flight__column sm-flight-time">
 																<svg width="30" height="30">
 																	<use href="#stopwatch"></use>
 																</svg>
 
-																<span class="flight__text flight__text--dark">
+																<span class="sm-flight__text sm-flight__text--dark">
 																	11h 55m
 																</span>
 															</div>
-															<div class="flight__column flight-arrival">
-																<span class="flight__title">
+															<div class="sm-flight__column sm-flight-arrival">
+																<span class="sm-flight__title">
 																	JED 00:15
 																</span>
-																<span class="flight__text">
+																<span class="sm-flight__text">
 																	Thursday , 06 Jun 2019
 																</span>
 															</div>
-															<div class="flight-info">
-																<div class="flight-info__item">
-																	<span class="flight__text">
+															<div class="sm-flight-info">
+																<div class="sm-flight-info__item">
+																	<span class="sm-flight__text">
 																		Class of travel (T)
 																	</span>
-																	<span class="flight__text flight__text--dark">
+																	<span class="sm-flight__text sm-flight__text--dark">
 																		Guest
 																	</span>
 																</div>
-																<div class="flight-info__item">
-																	<span class="flight__text">
+																<div class="sm-flight-info__item">
+																	<span class="sm-flight__text">
 																		Number of stops
 																	</span>
-																	<span class="flight__text flight__text--dark">
+																	<span class="sm-flight__text sm-flight__text--dark">
 																		1 Stop
 																	</span>
 																</div>
@@ -2365,60 +2767,63 @@
 
 														</div>
 													</div>
-
-													<div class="flight  flight--mb">
-														<div class="flight__name">
-															<span>Jeddah</span>
-															<span>
-																<svg width="15" height="15" class="flight-icon">
-																	<use href="#flight"></use>
-																</svg>
-															</span>
-															<span>Amsterdam</span>
+													<div class="sm-flight">
+														<div class="sm-flight__head">
+															<div class="sm-flight__name">
+																<span>Jeddah</span>
+																<span>
+																	<svg width="15" height="15" class="sm-flight-icon">
+																		<use href="#flight"></use>
+																	</svg>
+																</span>
+																<span>Amsterdam</span>
+															</div>
+															<div class="sm-flight__label">Economy</div>
 														</div>
-														<div class="flight__table">
-															<div class="flight__column flight-departure">
-																<span class="flight__title">
+														<div class="sm-flight__table">
+															<div class="sm-flight__column sm-flight-departure">
+																<span class="sm-flight__title">
 																	JED 15:00
 																</span>
-																<span class="flight__subtitle">
+																<span class="sm-flight__subtitle">
 																	Flight XY 263
 																</span>
-																<span class="flight__text">
+																<span class="sm-flight__text">
 																	Tuesday, 11 Jun 2019
 																</span>
 															</div>
-															<div class="flight__column flight-time">
+
+															<div class="sm-flight__column sm-flight-time">
 																<svg width="30" height="30">
 																	<use href="#stopwatch"></use>
 																</svg>
 
-																<span class="flight__text flight__text--dark">
+																<span class="sm-flight__text sm-flight__text--dark">
 																	16h 55m
 																</span>
 															</div>
-															<div class="flight__column flight-arrival">
-																<span class="flight__title">
+															<div class="sm-flight__column sm-flight-arrival">
+																<span class="sm-flight__title">
 																	AMS 06:55
 																</span>
-																<span class="flight__text">
+																<span class="sm-flight__text">
 																	Wednesday, 12 Jun 2019
 																</span>
 															</div>
-															<div class="flight-info">
-																<div class="flight-info__item">
-																	<span class="flight__text">
+															<div class="sm-flight-info">
+																<div class="sm-flight-info__item">
+																	<span class="sm-flight__text">
 																		Class of travel (T)
 																	</span>
-																	<span class="flight__text flight__text--dark">
+																	<span class="sm-flight__text sm-flight__text--dark">
 																		Guest
 																	</span>
 																</div>
-																<div class="flight-info__item">
-																	<span class="flight__text">
+																<div class="sm-flight-info__item">
+																	<span class="sm-flight__text">
 																		Number of stops
 																	</span>
-																	<span class="flight__text flight__text--dark">
+																	<span class="sm-flight__text sm-flight__text--dark">
 																		1 Stop
 																	</span>
 																</div>
@@ -2427,869 +2832,491 @@
 														</div>
 													</div>
 												</div>
+												<!--todo add class 'open to show baggage dropdown'-->
+												<div class="baggage open">
+													<span class="baggage__btn" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
+														<svg width="17" height="17" class="baggage-suitcase">
+															<use href="#baggage"></use>
+														</svg>
+														<span>Baggage</span>
+														<svg width="8" height="8" class="baggage-arrow">
+															<use href="#sort-down"></use>
+														</svg>
+													</span>
 
-											</div>
-											<!--todo add class 'open to show baggage dropdown'-->
-											<div class="baggage open">
-												<span class="baggage__btn" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
-													<svg width="17" height="17" class="baggage-suitcase">
-														<use href="#baggage"></use>
-													</svg>
-													<span>Baggage</span>
-													<svg width="8" height="8" class="baggage-arrow">
-														<use href="#sort-down"></use>
-													</svg>
-												</span>
+													<div class="baggage__content">
+														<div class="baggage__text _text-center">
+															Your baggage allowance for international flights – Guest Class
+														</div>
 
-												<div class="baggage__content">
-													<div class="baggage__text _text-center">
-														Your baggage allowance for international flights – Guest Class
+														<div class="grid grid--2 grid--sm-4 grid--space-none baggage__table">
+															<div class="gcell order-0">
+																<div class="baggage__cell baggage__cell--title">
+																	All Sectors Adult & Child
+																</div>
+															</div>
+
+															<div class="gcell">
+																<div class="baggage__cell">
+																	2 Pieces, 23 KG each (50lbs)
+																</div>
+															</div>
+
+															<div class="gcell order-2">
+																<div class="baggage__cell baggage__cell--title">
+																	Alfursan Gold & Silver
+																	<br> and Elite & Elite Plus
+																</div>
+															</div>
+
+															<div class="gcell">
+																<div class="baggage__cell">
+																	1 Piece, 10 KG (22 lbs)
+																</div>
+															</div>
+
+															<div class="gcell order-1">
+																<div class="baggage__cell baggage__cell--title">
+																	Infant
+																</div>
+															</div>
+
+															<div class="gcell">
+																<div class="baggage__cell">
+																	1 Extra Piece, 23 KG (50 lbs)
+																</div>
+															</div>
+
+															<div class="gcell order-3">
+																<div class="baggage__cell  baggage__cell--title">
+																	Cabin Baggage
+																	<br> (Carry-on bag)
+																</div>
+															</div>
+
+															<div class="gcell">
+																<div class="baggage__cell">
+																	1 Piece, 7 KG (15lbs)
+																</div>
+															</div>
+
+														</div>
 													</div>
+												</div>
+											</div>
+										</div>
 
-													<div class="grid grid--2 grid--sm-4 grid--space-none baggage__table">
-														<div class="gcell order-0">
-															<div class="baggage__cell baggage__cell--title">
-																All Sectors Adult & Child
+										<!-- summary-booking info for summary page-->
+
+										<div class="review-ground review-block">
+											<div class="review-block__info">
+												<div class="review-head">
+													<div class="review-head__left">
+														<svg width="30" height="30">
+															<use href="#ground-service"></use>
+														</svg>
+														<span>Ground Service</span>
+													</div>
+													<div class="review-head__right">
+														<a href="#">
+															<svg width="12" height="12">
+																<use href="#change"></use>
+															</svg>
+															<span>Change</span>
+														</a>
+													</div>
+												</div>
+												<div class="review__top">
+													<div class="review__selected">
+														<div class="review__selected-item">
+															<div class="review__selected-text">
+																Selected type:
+															</div>
+															<div class="review__selected-label">
+																Premium
+															</div>
+														</div>
+													</div>
+													<div class="review__company">
+														<div class="review-ground__view">
+															<!--recommended image size: 50x50 -->
+															<div class="review-ground__img">
+																<img src="media/assets/images/ground/company.png" alt="company-logo">
+															</div>
+														</div>
+														<div class="review-ground__text">Company xyz for pilgrims and tourism service and other stuff.</div>
+													</div>
+												</div>
+												<div class="review-ground__body">
+													<div class="grid grid--1 grid--xs-2 grid--md-3 grid--hspace-md">
+														<div class="gcell">
+															<div class="review-ground__item">
+																<svg width="14" height="14" class="review-ground__icon">
+																	<use href="#route"></use>
+																</svg>
+																<span>Reception and welcome in hotel</span>
 															</div>
 														</div>
 
 														<div class="gcell">
-															<div class="baggage__cell">
-																2 Pieces, 23 KG each (50lbs)
-															</div>
-														</div>
-
-														<div class="gcell order-2">
-															<div class="baggage__cell baggage__cell--title">
-																Alfursan Gold & Silver
-																<br> and Elite & Elite Plus
+															<div class="review-ground__item">
+																<svg width="14" height="14" class="review-ground__icon">
+																	<use href="#telephone"></use>
+																</svg>
+																<span>
+																	Customer Service phone:
+																	<span class="review-ground__subtext">24 hrs</span>
+																</span>
 															</div>
 														</div>
 
 														<div class="gcell">
-															<div class="baggage__cell">
-																1 Piece, 10 KG (22 lbs)
-															</div>
-														</div>
-
-														<div class="gcell order-1">
-															<div class="baggage__cell baggage__cell--title">
-																Infant
-															</div>
-														</div>
-
-														<div class="gcell">
-															<div class="baggage__cell">
-																1 Extra Piece, 23 KG (50 lbs)
-															</div>
-														</div>
-
-														<div class="gcell order-3">
-															<div class="baggage__cell  baggage__cell--title">
-																Cabin Baggage
-																<br> (Carry-on bag)
+															<div class="review-ground__item">
+																<svg width="14" height="14" class="review-ground__icon">
+																	<use href="#fruits"></use>
+																</svg>
+																<span>Fruit Basket</span>
 															</div>
 														</div>
 
 														<div class="gcell">
-															<div class="baggage__cell">
-																1 Piece, 7 KG (15lbs)
+															<div class="review-ground__item">
+																<svg width="14" height="14" class="review-ground__icon">
+																	<use href="#information-desk"></use>
+																</svg>
+																<span>Housing procedures</span>
 															</div>
 														</div>
 
+														<div class="gcell">
+															<div class="review-ground__item">
+																<svg width="14" height="14" class="review-ground__icon">
+																	<use href="#verification"></use>
+																</svg>
+																<span>Notifications and newsletters</span>
+															</div>
+														</div>
+
+														<div class="gcell">
+															<div class="review-ground__item">
+																<svg width="14" height="14" class="review-ground__icon">
+																	<use href="#meeting"></use>
+																</svg>
+																<span>Moaatemer welcome pack</span>
+															</div>
+														</div>
+
+														<div class="gcell">
+															<div class="review-ground__item">
+																<svg width="14" height="14" class="review-ground__icon">
+																	<use href="#followers"></use>
+																</svg>
+																<span>Follow-up</span>
+															</div>
+														</div>
+
+														<div class="gcell">
+															<div class="review-ground__item">
+																<svg width="14" height="14" class="review-ground__icon">
+																	<use href="#help"></use>
+																</svg>
+																<span>
+																	Complaints answer:
+																	<span class="review-ground__subtext">Within 2 hrs</span>
+																</span>
+															</div>
+														</div>
+
+														<div class="gcell">
+															<div class="review-ground__item">
+																<svg width="14" height="14" class="review-ground__icon">
+																	<use href="#settings"></use>
+																</svg>
+																<span>Emergency Services</span>
+															</div>
+														</div>
+
+														<div class="gcell">
+															<div class="review-ground__item">
+																<svg width="14" height="14" class="review-ground__icon">
+																	<use href="#businessman-2"></use>
+																</svg>
+																<span>Inquiries for different services</span>
+															</div>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
 
-									<!-- summary-hotel section for summary page-->
+										<!-- summary-booking info for summary page-->
 
-									<div class="summary-hotel">
-										<div class="summary-top">
-											<div class="summary-top__head">
-												<div class="summary-top__left">
-
-													<svg width="37" height="37" class="icon-lg">
-														<use href="#madinah"></use>
-													</svg>
-													<span>Medinah hotel</span>
-
-												</div>
-												<div class="summary-top__right">
-													<a href="#">
-														<svg width="12" height="12">
-															<use href="#change"></use>
+										<div class="review-passengers review-block">
+											<div class="review-block__info">
+												<div class="review-head">
+													<div class="review-head__left">
+														<svg width="30" height="30">
+															<use href="#group"></use>
 														</svg>
-														<span>Change Hotel</span>
-													</a>
+														<span>Who's going</span>
+														<span class="review-passengers__text _sm-show">2 Adults</span>
+													</div>
+													<div class="review-head__right">
+														<a href="#">
+															<svg width="12" height="12">
+																<use href="#change"></use>
+															</svg>
+															<span>Change</span>
+														</a>
+													</div>
 												</div>
-											</div>
-
-											<div class="summary-hotel__title">
-												<svg width="30" height="30" class="summary-hotel__icon _ms-show">
-													<use href="#double-bed"></use>
-												</svg>
-												<span>Swissotel Makkah</span>
-												<!--todo: put the value from 1 to 5  to `data-rating`-->
-												<span class="rating__icons" data-rating="5">
-
-													<svg width="17" height="17">
-														<use href="#star"></use>
-													</svg>
-
-													<svg width="17" height="17">
-														<use href="#star"></use>
-													</svg>
-
-													<svg width="17" height="17">
-														<use href="#star"></use>
-													</svg>
-
-													<svg width="17" height="17">
-														<use href="#star"></use>
-													</svg>
-
-													<svg width="17" height="17">
-														<use href="#star"></use>
-													</svg>
-
-												</span>
-											</div>
-
-											<div class="sm-hotel">
-												<div class="grid">
-													<div class="gcell gcell--12 gcell--ms-5">
-														<div class="sm-hotel__view">
-															<span class="sm-hotel__img">
-																<!--recommended image size:  width="268" height="358"-->
-																<img src="media/assets/images/room-summary/sm-hotel-img.png" alt="" />
-															</span>
+												<div class="review-passengers__body">
+													<div class="review-passengers__item">
+														<div class="review-passengers__text">
+															Guest 1, Adult
+														</div>
+														<div class="review-passengers__text review-passengers__text--md">
+															Mr. Jim Morrison, 14.09.89 EP789866 12/07/06, Ukraine
 														</div>
 													</div>
-													<div class="gcell gcell--12 gcell--ms-7">
-														<div class="sm-hotel__table">
-															<div class="sm-hotel__cell">
-																<span class="sm-hotel__text sm-hotel__text--light">
-																	Check-in
-																</span>
-																<span class="sm-hotel__text">
-																	05 Jun 2019
-																</span>
-															</div>
+													<div class="review-passengers__item">
+														<div class="review-passengers__text">
+															Guest 1, Adult
+														</div>
+														<div class="review-passengers__text review-passengers__text--md">
+															Ms. Jianna Morrison, 12.05.93 EP788742 24/11/09, Ukraine
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 
-															<div class="sm-hotel__cell">
-																<span class="sm-hotel__text sm-hotel__text--light">
-																	Check-out
-																</span>
-																<span class="sm-hotel__text">
-																	11 Jun 2019
-																</span>
-															</div>
-															<div class="sm-hotel__cell">
-																<span class="sm-hotel__text sm-hotel__text--light">
-																	Guests
-																</span>
-																<span class="sm-hotel__text">
-																	1 adult
-																</span>
-															</div>
-															<div class="sm-hotel__cell">
-																<span class="sm-hotel__text sm-hotel__text--light">
-																	Rooms
-																</span>
-																<span class="sm-hotel__text">
-																	1 Room
-																</span>
-															</div>
-															<div class="sm-hotel__cell">
-																<span class="sm-hotel__text sm-hotel__text--light">
-																	Nights
-																</span>
-																<span class="sm-hotel__text">
-																	6 Nights
-																</span>
-															</div>
-															<div class="sm-hotel__cell">
-																<span class="sm-hotel__text sm-hotel__text--light">
-																	Room Type
-																</span>
-																<span class="sm-hotel__text">
-																	Classic Room, City View
-																</span>
-																<span class="sm-hotel__text sm-hotel__text--light">
-																	(Includes taxes and fees)
-																</span>
-															</div>
+										<div class="visa__group">
+											<div class="visa__head">
+												<div class="visa__title visa__title--bold">E-VISA</div>
+											</div>
 
-															<div class="sm-hotel__cell sm-hotel__cell--full">
-																<span class="sm-hotel__text sm-hotel__text--light">
-																	Hotel features
+											<div class="visa__body">
+												<div class="visa__item">
+													<div class="grid">
+														<div class="gcell gcell--12 gcell--xs-7 gcell--sm-8">
+															<div class="visa__left">
+																<span class="visa__status"></span>
+																<span class="visa__title">
+																	Full Name visitor
 																</span>
-																<div class="sm-hotel__features">
-																	<div class="sm-hotel__feature sm-hotel__text">
-																		<svg width="17" height="17">
-																			<use href="#restaurant"></use>
-																		</svg>
-																		Breakfast
+															</div>
+														</div>
+														<div class="gcell gcell--12 gcell--xs-5 gcell--sm-4">
+															<div class="visa__right">
+																<span class="visa__text visa__text--md">Cost :</span>
+																<span class="visa__price">
+																	<span class="visa__currency">SAR</span>
+																	<span class="visa__value">2000</span>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<!--todo: add class is loading -->
+
+												<div class="visa__item">
+													<div class="grid">
+														<div class="gcell gcell--12 gcell--xs-7 gcell--sm-8">
+															<div class="visa__left">
+																<span class="visa__status"></span>
+																<span class="visa__title">
+																	Full Name visitor
+																</span>
+															</div>
+														</div>
+														<div class="gcell gcell--12 gcell--xs-5 gcell--sm-4">
+															<div class="visa__right">
+																<span class="visa__text visa__text--md">Cost :</span>
+																<span class="visa__price">
+																	<span class="visa__currency">SAR</span>
+																	<span class="visa__value">88.90</span>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+										<!--  contacts and payment section for summary page-->
+
+										<div class="review__payment">
+											<div class="summary__title">
+												<div class="summary__title-svg summary__title-svg--sm">
+													<svg width="30" height="30">
+														<use href="#wallet"></use>
+													</svg>
+												</div>
+												<div>
+													How would you like to pay?
+												</div>
+											</div>
+
+											<div class="sm-contacts__group">
+												<div class="sm-contacts__head">
+													<div class="sm-contacts__title sm-contacts__title--bold">How we use your information?</div>
+													<div class="sm-contacts__text">
+														<span>Note: All the information provided by the users is protected by the GDPR and will only be used within the </span>
+														<span>Terms & Conditions and Privacy Statement of Saudia Holidays.</span>
+													</div>
+												</div>
+
+												<div class="sm-contacts__body">
+													<div class="sm-contacts__title sm-contacts__title--md _mb-md">
+														by Visa or MasterCard Credit Card
+													</div>
+
+													<div class="sm-payment">
+														<div class="grid grid--hspace-def">
+															<div class="gcell gcell--12 gcell--md-7">
+																<div class="sm-payment__left">
+																	<div class="sm-payment__card">
+																		<span class="form-group__label">
+																			Credit Card No.
+																		</span>
+																		<div class="grid grid--2 grid--sm-4 grid--space-ms">
+
+																			<div class="gcell">
+																				<div class="form-group">
+																					<div class="form-group__wrap">
+																						<input type="text" class="form-group__input" value="" placeholder="____" name="card-number-1" id="card-number-1" />
+																					</div>
+																				</div>
+																			</div>
+
+																			<div class="gcell">
+																				<div class="form-group">
+																					<div class="form-group__wrap form-group__wrap--no-line">
+																						<input type="text" class="form-group__input" value="" placeholder="____" name="card-number-2" id="card-number-2" />
+																					</div>
+																				</div>
+																			</div>
+
+																			<div class="gcell">
+																				<div class="form-group">
+																					<div class="form-group__wrap form-group__wrap--no-line">
+																						<input type="text" class="form-group__input" value="" placeholder="____" name="card-number-3" id="card-number-3" />
+																					</div>
+																				</div>
+																			</div>
+
+																			<div class="gcell">
+																				<div class="form-group">
+																					<div class="form-group__wrap form-group__wrap--no-line">
+																						<input type="text" class="form-group__input" value="" placeholder="____" name="card-number-4" id="card-number-4" />
+																					</div>
+																				</div>
+																			</div>
+
+																		</div>
+
+																		<div class="grid grid--2 grid--sm-4 _mt-ms grid--space-sm">
+																			<div class="gcell">
+																				<div class="form-group">
+																					<span class="form-group__label">Expiry date</span>
+																					<div class="form-group__wrap">
+																						<input type="text" class="form-group__input" value="" placeholder="MM" name="expiry-month" id="expiry-month" />
+																					</div>
+																				</div>
+																			</div>
+																			<div class="gcell">
+																				<div class="form-group">
+																					<div class="form-group__wrap form-group__wrap--no-line">
+																						<input type="text" class="form-group__input" value="" placeholder="YY" name="expiry-year" id="expiry-year" />
+																					</div>
+																				</div>
+																			</div>
+																			<div class="gcell _sm-show"></div>
+
+																			<div class="gcell _mt-md _sm-mt-auto">
+																				<div class="form-group">
+																					<label class="form-group__label" for="cvv">
+																						CVV
+																					</label>
+																					<div class="form-group__wrap">
+																						<input type="text" class="form-group__input" value="" placeholder="000" name="cvv" id="cvv" />
+																					</div>
+																				</div>
+																			</div>
+																		</div>
 																	</div>
-																	<div class="sm-hotel__feature sm-hotel__text">
-																		<svg width="17" height="17">
-																			<use href="#wifi"></use>
-																		</svg>
-																		Free Wi-Fi
+																	<div class="sm-payment__holder">
+																		<div class="form-group">
+																			<span class="form-group__label" for="card-holder">Cardholder Name</span>
+																			<div class="form-group__wrap">
+																				<input type="text" class="form-group__input" value="" placeholder="Enter Cardholder Name" name="card-holder" id="card-holder" />
+																			</div>
+																		</div>
 																	</div>
-																	<div class="sm-hotel__feature sm-hotel__text">
-																		<svg width="17" height="17">
-																			<use href="#bath"></use>
-																		</svg>
-																		Shower
+																</div>
+															</div>
+															<div class="gcell gcell--12 gcell--md-5">
+																<div class="sm-payment__right">
+																	<div class="sm-payment__images">
+																		<div class="sm-payment__img">
+																			<!--recommended image size:  width="268" height="358"-->
+																			<img src="media/assets/images/payment/visa.png" alt="" />
+																		</div>
+																		<div class="sm-payment__img">
+																			<!--recommended image size:  width="268" height="358"-->
+																			<img src="media/assets/images/payment/verified-by-visa.png" alt="" />
+																		</div>
+																		<div class="sm-payment__img">
+																			<!--recommended image size:  width="268" height="358"-->
+																			<img src="media/assets/images/payment/mastercard.png" alt="" />
+																		</div>
+																		<div class="sm-payment__img">
+																			<!--recommended image size:  width="268" height="358"-->
+																			<img src="media/assets/images/payment/securecode.png" alt="" />
+																		</div>
 																	</div>
-																	<div class="sm-hotel__feature sm-hotel__text">
-																		<svg width="17" height="17">
-																			<use href="#kitchen"></use>
+																	<div class="sm-payment__icon">
+																		<svg width="43" height="43">
+																			<use href="#shield"></use>
 																		</svg>
-																		Kitchen
 																	</div>
-																	<div class="sm-hotel__feature sm-hotel__text">
-																		<svg width="17" height="17">
-																			<use href="#air-conditioner"></use>
-																		</svg>
-																		Air conditioning
+																	<div class="sm-contacts__text">
+																		We use secure transmission and encrypted storage to protect your personal information.
 																	</div>
-																	<div class="sm-hotel__feature sm-hotel__text">
-																		<svg width="17" height="17">
-																			<use href="#tv"></use>
-																		</svg>
-																		TV
+																	<div class="sm-payment__validate">
+																		<button type="button" class="button button--full-width">
+																			Validate my credit card
+																		</button>
 																	</div>
+
 																</div>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-										</div>
-									</div>
 
-									<!-- summary room preferences section for summary page-->
-
-									<div class="preferences">
-										<div class="preferences__title">
-											<span>Room Preferences</span>
-											<svg width="30" height="30">
-												<use href="#question"></use>
-											</svg>
-										</div>
-										<div class="preferences__content">
-											<!--todo add class 'open' to show dropdown content-->
-
-											<div class="summary-dropdown open">
-												<span class="summary-dropdown__btn" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
-
-													<span class="summary-dropdown__icon">
-														<svg width="8" height="8" class="summary-dropdown__svg">
-															<use href="#sort-down"></use>
-														</svg>
+											<!-- todo add class 'agreed' for 'sm-contacts__submit' to make the submit button enabled -->
+											<div class="form-group sm-contacts__submit">
+												<label class="form-check sm-contacts__checkbox" for="sm-cnt-agreement">
+													<input type="checkbox" name="sm-cnt-agreement" value="1" id="sm-cnt-agreement">
+													<span onclick="function f(el){(!el.parentNode.parentNode.classList.value.includes('agreed'))?el.parentNode.parentNode.classList.add('agreed'):el.parentNode.parentNode.classList.remove('agreed');};f(this);">
+														Yes, I accept the
+														<a href="#" class="sm-contacts__link">Terms of Use</a> and the
+														<a href="#" class="sm-contacts__link">Pravicy Policy</a>.
 													</span>
-													<span>Room 1: Classic Room, City View</span>
-												</span>
+												</label>
 
-												<div class="summary-dropdown__content">
-													<div>
-														Please describe any special requests (for example, early check-in, high floor, etc.). TravelNow will pass your special request on to the property, but such requests are not guaranteed and may not be available in the room type and room rate requested. You may wish to directly contact the property before your stay to confirm your special request.
-													</div>
-													<form class="prf-form" method="post">
-														<div class="form-group prf-form__checkboxes">
-															<label class="form-check">
-																<input type="checkbox" name="preferences-check" value="1">
-
-																<span>Early Check-in</span>
-															</label>
-
-															<label class="form-check">
-																<input type="checkbox" name="preferences-check" value="2">
-
-																<span>Late Check-out</span>
-															</label>
-
-															<label class="form-check">
-																<input type="checkbox" name="preferences-check" value="3">
-
-																<span>Honeymoon</span>
-															</label>
-
-															<label class="form-check">
-																<input type="checkbox" name="preferences-check" value="4">
-
-																<span>Adjoining/connecting rooms</span>
-															</label>
-
-															<label class="form-check">
-																<input type="checkbox" name="preferences-check" value="5">
-
-																<span>High Floor</span>
-															</label>
-
-														</div>
-														<div class="prf-form__subtitle">Bedding Preference</div>
-														<div class="select-drop  prf-form__select" onclick="function f(el){(!el.classList.value.includes('open'))?el.classList.add('open'):el.classList.remove('open');};f(this);">
-															<span class="select-drop__text">King Bed</span>
-
-															<div class="select-drop__results">
-
-																<span class="select-drop__results-item">King Bed</span>
-
-																<span class="select-drop__results-item">King Bed 2</span>
-
-																<span class="select-drop__results-item">King Bed 3</span>
-
-																<span class="select-drop__results-item">King Double Bed</span>
-
-															</div>
-														</div>
-														<div class="prf-form__subtitle">If you have additional requests, please type below
-														</div>
-														<textarea class="form-group__textarea prf-form__textarea" placeholder="" name="details"></textarea>
-														<div>We pass on all special requests to the property, but cannot guarantee they can be accommodated. Some requests are subject to availability at check-in, and may incur additional charges.
-														</div>
-														<div class="form-group prf-form__submit">
-															<button type="button" class="button button--outline prf-form__btn">
-																cancel
-															</button>
-															<button type="submit" class="button prf-form__btn">
-																Save changes
-															</button>
-
-														</div>
-													</form>
-												</div>
-											</div>
-
-											<div class="summary-dropdown">
-												<span class="summary-dropdown__btn" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
-													<span class="summary-dropdown__icon">
-														<svg width="8" height="8" class="summary-dropdown__svg">
-															<use href="#sort-down"></use>
-														</svg>
-													</span>
-													<span>Room amenities</span>
-												</span>
-
-												<div class="summary-dropdown__content">
-													<div class="amenities preferences-amenities">
-														<div class="grid">
-															<div class="gcell gcell--12 gcell--md-4">
-																<div class="amenities__info">
-																	<div class="amenities__group">
-																		<span class="amenities__title">2 Twin Beds</span>
-																	</div>
-																	<div class="amenities__group">
-																		<span class="amenities__text">344 sq feet (32 sq meters)</span>
-																		<br>
-																	</div>
-																	<div class="amenities__group amenities__group--mt-lg">
-																		<span class="amenities__title">Internet</span>
-																		<span class="amenities__text"> - WiFi</span>
-																	</div>
-																	<div class="amenities__group">
-																		<span class="amenities__title">Entertainment</span>
-																		<span class="amenities__text"> - LCD television with digital channels</span>
-																	</div>
-																	<div class="amenities__group">
-																		<span class="amenities__title">Food & Drink</span>
-																		<span class="amenities__text"> - Refrigerator, minibar, coffee/tea maker, and 24-hour room service</span>
-																	</div>
-																	<div class="amenities__group">
-																		<span class="amenities__title">Sleep</span>
-																		<span class="amenities__text"> - Blackout drapes/curtains and turndown service</span>
-																	</div>
-																	<div class="amenities__group">
-																		<span class="amenities__title">Bathroom</span>
-																		<span class="amenities__text"> - Private bathroom, bathrobes, and a bathtub or shower with a hydromassage showerhead</span>
-																	</div>
-																	<div class="amenities__group">
-																		<span class="amenities__title">Practical</span>
-																		<span class="amenities__text"> - Safe, desk, and phone; free cribs/infant beds available on request</span>
-																	</div>
-																	<div class="amenities__group">
-																		<span class="amenities__title">Comfort</span>
-																		<span class="amenities__text">- Air conditioning and daily housekeeping</span>
-																	</div>
-																	<div class="amenities__group">
-																		<span class="amenities__title">Accessibility</span>
-																		<span class="amenities__text"> - Wheelchair accessible and doorbell/phone notification</span>
-																	</div>
-																	<div class="amenities__group amenities__group--mt-lg">
-																		<span class="amenities__text">Non-Smoking</span>
-																		<br/>
-																		<br/>
-																		<span class="amenities__text">Room is accessed via exterior corridors</span>
-																		<br/>
-																		<br/>
-																		<span class="amenities__text">Connecting/adjoining rooms can be requested, subject to availability</span>
-																	</div>
-																</div>
-															</div>
-															<div class="gcell gcell--12 gcell--md-8">
-																<div class="amenities__list">
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Access via exterior corridors
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Air conditioning
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Bathrobes
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Bathtub or shower
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Bidet
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Blackout drapes/curtains
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Coffee/tea maker
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Connecting/adjoining rooms available
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Daily housekeeping
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Desk
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Digital TV service
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Free toiletries
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			HDTV
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Hair dryer
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Hydromassage showerhead
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			In-room safe
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			LCD TV
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Minibar
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Non-Smoking
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Phone
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			PRIVATE BATHROOM
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Refrigerator
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Room service (24 hours)
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Slippers
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			Turndown service
-																		</span>
-																	</div>
-
-																	<div class="amenities__list-item">
-																		<span>
-																			WiFi (surcharge)
-																		</span>
-																	</div>
-
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="summary-dropdown">
-												<span class="summary-dropdown__btn" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
-													<span class="summary-dropdown__icon">
-														<svg width="8" height="8" class="summary-dropdown__svg">
-															<use href="#sort-down"></use>
-														</svg>
-													</span>
-													<span>Special check-in instructions</span>
-												</span>
-
-												<div class="summary-dropdown__content">
-													<div class="_mb-ms">
-														A valid permit to perform Hajj must be presented at the airport and hotel check-in from July 25-August 25, 2019. Guests without valid permits will not be able to check-in. For permit-related questions, please contact the hotel or airline directly. Contact information is provided on the reservation confirmation received after booking.
-													</div>
-												</div>
-											</div>
-
-											<div class="summary-dropdown open">
-												<span class="summary-dropdown__btn" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
-													<span class="summary-dropdown__icon">
-														<svg width="8" height="8" class="summary-dropdown__svg">
-															<use href="#sort-down"></use>
-														</svg>
-													</span>
-													<span>Check-in instructions </span>
-												</span>
-
-												<div class="summary-dropdown__content prf-instructions">
-													<div class="prf-instructions__title">Know Before You Go</div>
-													<ul class="menu-list prf-instructions__list">
-														<li class="menu-list__item prf-instructions__list-item">
-															<span>
-																Only Muslims are allowed to enter the holy cities of Mecca and Medina.
-															</span>
-														</li>
-														<li class="menu-list__item prf-instructions__list-item">
-															<span>
-																Local laws may restrict unmarried guests from sharing rooms. Guests are responsible for providing proof of marriage, if requested by the property.
-															</span>
-														</li>
-														<li class="menu-list__item prf-instructions__list-item">
-															<span>
-																Couples wishing to share a room must provide proof of marriage.
-															</span>
-														</li>
-														<li class="menu-list__item prf-instructions__list-item">
-															<span>
-																The property has connecting/adjoining rooms, which are subject to availability and can be requested by contacting the property using the number on the booking confirmation.
-															</span>
-														</li>
-														<li class="menu-list__item prf-instructions__list-item">
-															<span>
-																No pets and no service animals are allowed at this property.
-															</span>
-														</li>
-														<li class="menu-list__item prf-instructions__list-item">
-															<span>
-																Alcohol is not served or permitted at this property.
-															</span>
-														</li>
-													</ul>
-													<div class="prf-instructions__title">Fees</div>
-													<div class="_mb-md">The following fees and deposits are charged by the property at time of service, check-in, or check-out.</div>
-													<ul class="menu-list prf-instructions__list">
-														<li class="menu-list__item prf-instructions__list-item">
-															<span>
-																Fee for buffet breakfast: SAR 90 for adults and SAR 45 for children (approximately)
-															</span>
-														</li>
-														<li class="menu-list__item prf-instructions__list-item">
-															<span>
-																Fee for in-room wireless Internet: SAR 15 per hour (rates may vary)
-															</span>
-														</li>
-													</ul>
-													<div>
-														The above list may not be comprehensive. Fees and deposits may not include tax and are subject to change.
-													</div>
-												</div>
+												<button type="submit" form="contact-payment-form" class="button sm-contacts__btn">
+													Complete booking
+												</button>
 											</div>
 										</div>
+
 									</div>
-
-									<!-- summary booking terms section for summary page-->
-
-									<div class="summary-terms">
-										<div class="summary-dropdown open">
-											<span class="summary-dropdown__btn" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
-												<span class="summary-dropdown__icon">
-													<svg width="8" height="8" class="summary-dropdown__svg">
-														<use href="#sort-down"></use>
-													</svg>
-												</span>
-												<span>Booking Terms</span>
-											</span>
-
-											<div class="summary-dropdown__content">
-												<div class="summary-terms__info">
-													<div class="summary-terms__info-wrap">
-														<div class="summary-terms__text">
-															Flynas Umrah services Terms have to be accepted by the passenger prior to payment for a holiday booking to be accepted and confirmed. All persons travelling together will be deemed to i) have understood all these booking conditions and ii) be compliant with them.
-														</div>
-														<div class="summary-terms__text">
-															Your booking is governed by the conditions below and by the terms of business under which your booking is made.
-														</div>
-														<div class="summary-terms__text">
-															Full payment is required at the time of booking.In the event of this condition not being met, booking will not be materialised.
-														</div>
-														<div class="summary-terms__text">
-															Subsequent alterations / amendments / cancellations may attract charges as per the applicable
-														</div>
-														<div class="summary-terms__text">
-															Full payment is required at the time of booking.In the event of this condition not being met, booking will not be materialised.
-														</div>
-														<div class="summary-terms__text">
-															Subsequent alterations / amendments / cancellations may attract charges as per the applicable
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<!--  contacts and payment section for summary page-->
-
-									<div class="sm-contacts">
-										<div class="summary__title">
-											<div class="summary__title-svg summary__title-svg--sm">
-												<svg width="30" height="30">
-													<use href="#wallet"></use>
-												</svg>
-											</div>
-											<div>
-												How would you like to pay?
-											</div>
-										</div>
-
-										<div class="sm-contacts__group">
-											<div class="sm-contacts__head">
-												<div class="sm-contacts__title sm-contacts__title--bold">How we use your information?</div>
-												<div class="sm-contacts__text">
-													<span>Note: All the information provided by the users is protected by the GDPR and will only be used within the </span>
-													<span>Terms & Conditions and Privacy Statement of Saudia Holidays.</span>
-												</div>
-											</div>
-
-											<div class="sm-contacts__body">
-												<div class="sm-contacts__title sm-contacts__title--md _mb-md">
-													by Visa or MasterCard Credit Card
-												</div>
-
-												<div class="sm-payment">
-													<div class="grid grid--hspace-def">
-														<div class="gcell gcell--12 gcell--md-7">
-															<div class="sm-payment__left">
-																<div class="sm-payment__card">
-																	<span class="form-group__label">
-																		Credit Card No.
-																	</span>
-																	<div class="grid grid--2 grid--sm-4 grid--space-ms">
-
-																		<div class="gcell">
-																			<div class="form-group">
-																				<div class="form-group__wrap">
-																					<input type="text" class="form-group__input" value="" placeholder="____" name="card-number-1" id="card-number-1" />
-																				</div>
-																			</div>
-																		</div>
-
-																		<div class="gcell">
-																			<div class="form-group">
-																				<div class="form-group__wrap form-group__wrap--no-line">
-																					<input type="text" class="form-group__input" value="" placeholder="____" name="card-number-2" id="card-number-2" />
-																				</div>
-																			</div>
-																		</div>
-
-																		<div class="gcell">
-																			<div class="form-group">
-																				<div class="form-group__wrap form-group__wrap--no-line">
-																					<input type="text" class="form-group__input" value="" placeholder="____" name="card-number-3" id="card-number-3" />
-																				</div>
-																			</div>
-																		</div>
-
-																		<div class="gcell">
-																			<div class="form-group">
-																				<div class="form-group__wrap form-group__wrap--no-line">
-																					<input type="text" class="form-group__input" value="" placeholder="____" name="card-number-4" id="card-number-4" />
-																				</div>
-																			</div>
-																		</div>
-
-																	</div>
-
-																	<div class="grid grid--2 grid--sm-4 _mt-ms grid--space-sm">
-																		<div class="gcell">
-																			<div class="form-group">
-																				<span class="form-group__label">Expiry date</span>
-																				<div class="form-group__wrap">
-																					<input type="text" class="form-group__input" value="" placeholder="MM" name="expiry-month" id="expiry-month" />
-																				</div>
-																			</div>
-																		</div>
-																		<div class="gcell">
-																			<div class="form-group">
-																				<div class="form-group__wrap form-group__wrap--no-line">
-																					<input type="text" class="form-group__input" value="" placeholder="YY" name="expiry-year" id="expiry-year" />
-																				</div>
-																			</div>
-																		</div>
-																		<div class="gcell _sm-show"></div>
-
-																		<div class="gcell _mt-md _sm-mt-auto">
-																			<div class="form-group">
-																				<label class="form-group__label" for="cvv">
-																					CVV
-																				</label>
-																				<div class="form-group__wrap">
-																					<input type="text" class="form-group__input" value="" placeholder="000" name="cvv" id="cvv" />
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="sm-payment__holder">
-																	<div class="form-group">
-																		<span class="form-group__label" for="card-holder">Cardholder Name</span>
-																		<div class="form-group__wrap">
-																			<input type="text" class="form-group__input" value="" placeholder="Enter Cardholder Name" name="card-holder" id="card-holder" />
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="gcell gcell--12 gcell--md-5">
-															<div class="sm-payment__right">
-																<div class="sm-payment__images">
-																	<div class="sm-payment__img">
-																		<!--recommended image size:  width="268" height="358"-->
-																		<img src="media/assets/images/payment/visa.png" alt="" />
-																	</div>
-																	<div class="sm-payment__img">
-																		<!--recommended image size:  width="268" height="358"-->
-																		<img src="media/assets/images/payment/verified-by-visa.png" alt="" />
-																	</div>
-																	<div class="sm-payment__img">
-																		<!--recommended image size:  width="268" height="358"-->
-																		<img src="media/assets/images/payment/mastercard.png" alt="" />
-																	</div>
-																	<div class="sm-payment__img">
-																		<!--recommended image size:  width="268" height="358"-->
-																		<img src="media/assets/images/payment/securecode.png" alt="" />
-																	</div>
-																</div>
-																<div class="sm-payment__icon">
-																	<svg width="43" height="43">
-																		<use href="#shield"></use>
-																	</svg>
-																</div>
-																<div class="sm-contacts__text">
-																	We use secure transmission and encrypted storage to protect your personal information.
-																</div>
-																<div class="sm-payment__validate">
-																	<button type="button" class="button button--full-width">
-																		Validate my credit card
-																	</button>
-																</div>
-
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!-- todo add class 'agreed' for 'sm-contacts__submit' to make the submit button enabled -->
-										<div class="form-group sm-contacts__submit">
-											<label class="form-check sm-contacts__checkbox" for="sm-cnt-agreement">
-												<input type="checkbox" name="sm-cnt-agreement" value="1" id="sm-cnt-agreement">
-												<span onclick="function f(el){(!el.parentNode.parentNode.classList.value.includes('agreed'))?el.parentNode.parentNode.classList.add('agreed'):el.parentNode.parentNode.classList.remove('agreed');};f(this);">
-													Yes, I accept the
-													<a href="#" class="sm-contacts__link">Terms of Use</a> and the
-													<a href="#" class="sm-contacts__link">Pravicy Policy</a>.
-												</span>
-											</label>
-
-											<button type="submit" form="contact-payment-form" class="button sm-contacts__btn">
-												Complete booking
-											</button>
-										</div>
-									</div>
-
 								</div>
 								<div class="gcell gcell--12 gcell--def-4">
 
@@ -3301,6 +3328,229 @@
 										</div>
 										<div class="aside__main">
 											<span class="aside__line"></span>
+
+											<div class="aside-hotel aside-hotel--full">
+
+												<div class="aside-hotel__item">
+													<div class="aside-hotel__title">
+														<svg width="20" height="20">
+															<use href="#mecca"></use>
+														</svg>
+														<span>Mecca Hotel</span>
+													</div>
+													<div class="aside-hotel__subtitle">
+														<svg width="20" height="20">
+															<use href="#double-bed"></use>
+														</svg>
+														<span>Swissotel Makkah</span>
+													</div>
+													<div class="aside__text aside-hotel__text">
+														<span class="aside-hotel__left">
+															<svg width="20" height="20" class="aside__text-icon">
+																<use href="#group"></use>
+															</svg>
+															Guests:
+															<span class="aside__text--dark">1 Room, 2 Adult</span>
+														</span>
+														<span class="aside-hotel__right">
+															<svg width="20" height="20" class="aside__text-icon">
+																<use href="#moon"></use>
+															</svg>
+															Nights:
+															<span class="aside__text--dark">4</span>
+														</span>
+													</div>
+													<div class="aside__tags">
+														<span class="aside__tag">
+															Refundable
+														</span>
+													</div>
+													<div class="aside-cost">
+														<span>Cost of room: </span>
+														<span class="aside-cost__currency">EUR</span>
+														<span class="aside-cost__value">1200</span>
+													</div>
+												</div>
+
+												<div class="aside-hotel__item">
+													<div class="aside-title">
+														<svg width="20" height="20" class="icon-lg">
+															<use href="#madinah"></use>
+														</svg>
+														<span>Medinah Hotel</span>
+													</div>
+													<div class="aside-hotel__subtitle">
+														<svg width="20" height="20">
+															<use href="#double-bed"></use>
+														</svg>
+														<span>Swissotel Makkah</span>
+													</div>
+													<div class="aside__text aside-hotel__text">
+														<span class="aside-hotel__left">
+															<svg width="20" height="20" class="aside__text-icon">
+																<use href="#group"></use>
+															</svg>
+															Guests:
+															<span class="aside__text--dark">1 Room, 2 Adult</span>
+														</span>
+														<span class="aside-hotel__right">
+															<svg width="20" height="20" class="aside__text-icon">
+																<use href="#moon"></use>
+															</svg>
+															Nights:
+															<span class="aside__text--dark">4</span>
+														</span>
+													</div>
+													<div class="aside__tags">
+														<span class="aside__tag">
+															Refundable
+														</span>
+													</div>
+													<div class="aside-cost">
+														<span>Cost of room: </span>
+														<span class="aside-cost__currency">EUR</span>
+														<span class="aside-cost__value">1200</span>
+													</div>
+												</div>
+
+											</div>
+
+											<div class="aside-transport">
+												<div class="aside-title">
+													<svg width="20" height="20" class="icon-xl">
+														<use href="#car-4"></use>
+													</svg>
+													<span>Transportation</span>
+												</div>
+												<div class="aside__text">
+													<svg width="20" height="20" class="aside__text-icon">
+														<use href="#clipboard"></use>
+													</svg>
+													Transportation package:
+													<span class="aside__text--dark">STANDART</span>
+												</div>
+												<div class="aside__text">
+													<svg width="20" height="20" class="aside__text-icon">
+														<use href="#empty-marker"></use>
+													</svg>
+													Route:
+													<span class="aside__text--dark">
+														Jeddah
+														<span class="aside__text--blue">/</span>
+														Mecca
+														<span class="aside__text--blue">/</span>
+														Madinah
+														<span class="aside__text--blue">/</span>
+														Jeddah
+													</span>
+												</div>
+
+												<div class="aside__text">
+													<svg width="20" height="20" class="aside__text-icon">
+														<use href="#group"></use>
+													</svg>
+													Route:
+													<span class="aside__text--dark">Selected vehicle: SUVs, 2 Adult</span>
+												</div>
+												<div class="aside__tags">
+													<span class="aside__tag">
+														Changeable
+													</span>
+												</div>
+												<div class="aside-cost">
+													<span>Cost: </span>
+													<span class="aside-cost__currency">EUR</span>
+													<span class="aside-cost__value">1345</span>
+												</div>
+											</div>
+
+											<div class="aside-flight">
+												<div class="aside-title">
+													<svg width="20" height="20" class="aside-flight__icon">
+														<use href="#flight"></use>
+													</svg>
+													<span>Your flight</span>
+												</div>
+												<div class="aside__flight">
+
+													<span class="aside__flight-point">Flight XY 264</span>
+
+													<svg width="30" height="30">
+														<use href="#aeroplane"></use>
+													</svg>
+													<span class="aside__flight-point aside__flight-point--end">Flight XY 263</span>
+												</div>
+												<div class="aside-flight__body">
+													<div class="aside-path">
+														<span class="aside-path__item">Amsterdam</span>
+														<svg width="15" height="15" class="flight-icon aside-path__svg">
+															<use href="#flight"></use>
+														</svg>
+														<span class="aside-path__item">Jeddah</span>
+														<svg width="15" height="15" class="flight-icon aside-path__svg">
+															<use href="#flight"></use>
+														</svg>
+														<span class="aside-path__item">Amsterdam</span>
+													</div>
+													<div class="aside-visitors">
+														Who`s Going:
+														<span>1 Adult</span>
+													</div>
+													<div class="aside-cost">
+														<span>Cost of fly:</span>
+														<span class="aside-cost__currency">EUR</span>
+														<span class="aside-cost__value">800</span>
+													</div>
+												</div>
+											</div>
+
+											<div class="aside-ground">
+												<div class="aside-title">
+													<svg width="20" height="20">
+														<use href="#ground-service"></use>
+													</svg>
+													<span>Ground Service</span>
+												</div>
+												<div class="aside__text">
+													<svg width="20" height="20" class="aside__text-icon">
+														<use href="#clipboard"></use>
+													</svg>
+													Package type:
+													<span class="aside__text--dark">PREMIUM</span>
+												</div>
+
+												<div class="aside__tags">
+													<span class="aside__tag">
+														Changeable
+													</span>
+												</div>
+												<div class="aside-cost">
+													<span>Cost: </span>
+													<span class="aside-cost__currency">EUR</span>
+													<span class="aside-cost__value">200</span>
+												</div>
+											</div>
+
+											<div class="aside-visa">
+												<div class="aside-title">
+													<svg width="20" height="20">
+														<use href="#visa"></use>
+													</svg>
+													<span>E-VISA status</span>
+												</div>
+												<div class="aside__text">
+													<svg width="20" height="20" class="aside__text-icon">
+														<use href="#group"></use>
+													</svg>
+													Visitors:
+													<span class="aside__text--dark">2 Adult</span>
+												</div>
+												<div class="aside-cost">
+													<span>Cost: </span>
+													<span class="aside-cost__currency">EUR</span>
+													<span class="aside-cost__value">1345</span>
+												</div>
+											</div>
 
 											<span class="aside__line"></span>
 											<div class="aside-total">
@@ -3324,6 +3574,10 @@
 														<span class="aside-total__value">3200</span>
 													</div>
 												</div>
+											</div>
+
+											<div class="aside-confirm">
+												<button class="button button--full-width">Confirm payment</button>
 											</div>
 
 										</div>

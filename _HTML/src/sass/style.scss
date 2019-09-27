@@ -24,17 +24,19 @@
 @import "_pages/ground-service";
 @import "_pages/visa";
 @import "_pages/flight";
+@import "_pages/review";
 
 //room summary page
 @import "_pages/room-summary";
 @import "_blocks/summary-nav";
 @import "_blocks/summary/summary-title";
+@import "_blocks/summary/summary-flight";
 @import "_blocks/aside";
 @import "_blocks/summary/summary-hotel";
 @import "_blocks/summary/summary-preferences";
 @import "_blocks/summary/booking-terms";
 @import "_blocks/summary/summary-register";
-@import "_blocks/summary/contacts-and-payment";
+@import "_blocks/summary/summary-payment";
 @import "_blocks/location/location-info";
 @import "_blocks/location/location-filter";
 @import "_blocks/booking-block";

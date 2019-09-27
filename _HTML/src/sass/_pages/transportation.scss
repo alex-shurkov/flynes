@@ -5,6 +5,11 @@
 	&__content {
 		@include media(def) {
 			margin-right: 10px;
+
+			[dir="rtl"] & {
+				margin-right: 0;
+				margin-left: 10px;
+			}
 		}
 	}
 }
