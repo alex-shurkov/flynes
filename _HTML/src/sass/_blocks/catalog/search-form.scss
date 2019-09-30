@@ -1103,32 +1103,35 @@
 	width: 100%;
 	display: flex;
 
-	@include media(xs, max) {
-		order: 3;
-		justify-content: center;
-	}
-
-	@include media(md, max) {
-		order: 5;
-		justify-content: center;
-	}
-
-	@include media(md) {
-		align-items: flex-end;
-		width: 48%;
-
-	}
-
 	@include media(def, max) {
-		order: 3;
+		justify-content: center;
+		order: 5;
 		text-align: center;
+		width: 100%;
 	}
+
 	@include media(def) {
+		align-items: flex-end;
 		width: 18%;
 		padding-left: rem(13);
 
 		[dir="rtl"] & {
 			padding-right: rem(13);
+		}
+	}
+
+	&__btn {
+		max-width: 100%;
+
+		@include media(lg, max) {
+			width: 100%;
+			padding: 14px 20px;
+		}
+
+		@include media(def, max) {
+			width: auto;
+			min-width: 190px;
+			padding: 14px 20px;
 		}
 	}
 }
