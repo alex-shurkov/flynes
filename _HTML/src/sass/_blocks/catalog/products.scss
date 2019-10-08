@@ -2,7 +2,7 @@
 	background-color: #f8f8f8;
 	min-height: 600px;
 	padding-bottom: 50px;
-	padding-top: 15px;
+	padding-top: 20px;
 
 	@include media(sm, max) {
 		padding-bottom: 28px;
@@ -21,6 +21,19 @@
 			@include media(def) {
 				padding-bottom: 45px;
 			}
+		}
+	}
+
+	&__main-title {
+		font-size: 23px;
+		color: #5db9ce;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		font-weight: 600;
+
+		@include media(sm) {
+			font-size: 30px;
 		}
 	}
 
