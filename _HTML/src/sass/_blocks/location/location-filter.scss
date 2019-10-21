@@ -7,7 +7,6 @@
 	font-size: 14px;
 	line-height: 1.2;
 	position: relative;
-	height: 100%;
 	color: #313131;
 	background-color: #ffffff;
 	z-index: 0;
@@ -18,6 +17,8 @@
 		top: 0;
 		left: -300px;
 		width: 320px;
+		height: 100%;
+
 
 		[dir="rtl"] & {
 			left: auto;
@@ -98,7 +99,7 @@
 		background-color: transparent;
 		height: 100%;
 		padding: 20px 15px;
-		
+
 		.open & {
 			background-color: rgba(250, 250, 250, 0.8);
 		}
@@ -193,7 +194,7 @@
 		@include media(sm) {
 			padding-top: 25px;
 		}
-		
+
 		@include media(def) {
 			text-align: left;
 			padding: 37px 0 43px;

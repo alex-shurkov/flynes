@@ -1,12 +1,21 @@
 .loc {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+
 	&__container {
 		padding: 0;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
 	}
 
 	&__content {
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
+		flex-grow: 1;
 	}
 
 	&__map {
