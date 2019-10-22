@@ -1,0 +1,86 @@
+.marker {
+	display: inline-block;
+}
+
+.map-marker {
+	max-width: 150px;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+
+	img {
+		height: 40px;
+		width: 40px;
+	}
+
+	&__price {
+		display: inline-block;
+		border-radius: 5px;
+		padding: 5px 10px 14px;
+		box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+		background: #fff;
+		z-index: 3;
+		max-width: 150px;
+	}
+
+	&__icon {
+		display: inline-block;
+		z-index: 4;
+		margin-top: -10px;
+	}
+
+	&--decorated {
+		border-radius: 50%;
+
+
+		&::after {
+			content: '';
+			display: block;
+			background-color: rgba(1, 186, 180, 0.1);
+			border-radius: 50%;
+			position: absolute;
+			bottom: -13px;
+			width: 86px;
+			height: 86px;
+			z-index: 2;
+			transform: scale(1);
+			animation: pulse 1.5s infinite;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			background-color: rgba(1, 186, 180, 0.1);
+			border-radius: 50%;
+			position: absolute;
+			bottom: -30px;
+			width: 120px;
+			height: 120px;
+			z-index: 1;
+			transform: scale(1);
+			animation: pulse 1.5s infinite;
+		}
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.9);
+		background-color: rgba(1, 186, 180, 0.15);
+	}
+
+	70% {
+		transform: scale(1);
+		background-color: rgba(1, 186, 180, 0.1);
+	}
+
+	100% {
+		transform: scale(0.9);
+		background-color: rgba(1, 186, 180, 0.15);
+	}
+}
