@@ -1019,9 +1019,14 @@
 
 .room-item {
 	padding: 14px 12px;
+	border: 1px dashed transparent;
 
 	&:last-of-type {
 		margin-bottom: 0;
+	}
+
+	&.active {
+		border-color: #b8b8b8;
 	}
 
 	&--dark {
@@ -1030,26 +1035,43 @@
 }
 
 .room-guests {
-	@include media(lg, max) {
+	&__select {
+		padding-top: 8px;
 		text-align: center;
 	}
 
-	&__icons {
-		padding-top: 8px;
-		@include media(lg, max) {
+	.room-column {
+		&__title {
 			text-align: center;
 		}
 	}
 
-	svg {
-		fill: map-get($colors, main);
-		min-width: 18px;
-		min-height: 18px;
-		margin-right: 2px;
+	.select-drop {
+		display: inline-block;
+		width: 58px !important;
+		box-shadow: none;
+		border: 1px solid rgb(215, 215, 215);
+		border-radius: 3px;
+		background-position-x: calc(100% - 10px);
+		padding: 6px 18px 6px 12px;
+		background-image: url(/Media/assets/images/static-svg/select-arrow-grey.svg);
 
 		[dir="rtl"] & {
-			margin-left: 2px;
-			margin-right: 0;
+			background-position-x: 10px;
+			padding: 6px 12px 6px 18px;
+		}
+
+		&__results {
+			border-radius: 3px;
+		}
+
+		&__results-item {
+			padding: 7px 12px;
+		}
+
+		&__text {
+			color: #9c9c9c;
+			font-size: 14px;
 		}
 	}
 }
@@ -1142,6 +1164,15 @@
 }
 
 .room-total {
+	@include media(lg, max) {
+		padding-left: 5px;
+
+		[dir="rtl"] & {
+			padding-left: 0;
+			padding-right: 5px;
+		}
+	}
+
 	&__text {
 		font-size: 12px;
 		color: #8d8d8d;
@@ -1206,6 +1237,14 @@
 	.button {
 		padding: 10px 23px;
 		font-size: 12px;
+
+		.room-item.active & {
+			background: map-get($colors, secondary);
+		}
+
+		&.disabled {
+			pointer-events: none;
+		}
 	}
 }
 

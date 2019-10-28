@@ -5,6 +5,8 @@
 	border-radius: 9px;
 	letter-spacing: 0.025em;
 	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
 
 	&--triangle {
 		position: relative;
