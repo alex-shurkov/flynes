@@ -962,11 +962,21 @@
 
 		[dir="rtl"] & {
 			@include media(sm) {
-				padding: 0 rem(40) 0 rem(5);
+				padding: 0 rem(5);
+
+				.fs-calendar & {
+					padding: 0 rem(40) 0 rem(5);
+				}
 			}
 
 			@include media(ms) {
-				padding-right: rem(50);
+				//padding-right: rem(50);
+				padding: 0 rem(5);
+
+				.fs-calendar & {
+					padding-right: rem(50);
+
+				}
 			}
 		}
 	}
