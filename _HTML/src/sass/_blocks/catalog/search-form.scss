@@ -1291,16 +1291,19 @@
 
 	&__btn {
 		max-width: 100%;
+		padding: 14px 20px;
 
 		@include media(lg, max) {
 			width: 100%;
-			padding: 14px 20px;
 		}
 
 		@include media(def, max) {
 			width: auto;
 			min-width: 190px;
-			padding: 14px 20px;
+		}
+
+		@include media(def) {
+			width: 100%;
 		}
 	}
 }

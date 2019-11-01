@@ -117,6 +117,9 @@
   .form-group {
     &__label {
       margin-bottom: 11px;
+		[dir="rtl"] & {
+			justify-content: flex-start;
+		}
     }
 
     &__icon {
