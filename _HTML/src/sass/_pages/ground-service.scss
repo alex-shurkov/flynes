@@ -12,6 +12,17 @@
 			}
 		}
 	}
+
+	.menu-list {
+		&.package__list {
+			padding-left: 18px;
+
+			[dir="rtl"] & {
+				padding-left: 0;
+				padding-right: 18px;
+			}
+		}
+	}
 }
 
 .info-tooltip {
