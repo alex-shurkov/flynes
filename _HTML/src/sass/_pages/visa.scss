@@ -110,6 +110,12 @@
 			}
 
 		}
+
+		.is-canceled & {
+			&::before {
+				background-image:  url(/Media/assets/images/static-svg/close.svg);
+			}
+		}
 	}
 
 	&__right {
@@ -165,6 +171,10 @@
 
 		&:nth-child(even) {
 			background-color: #f2fcff;
+		}
+
+		&.is-canceled {
+			background: rgba(227, 5, 15, 0.05);
 		}
 	}
 
