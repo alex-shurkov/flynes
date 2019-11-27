@@ -4,15 +4,15 @@
 
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Contacts</title>
+		<title>Personal Cabinet Profile</title>
 		<meta name="description" lang="ru" content="description">
 		<meta name="keywords" lang="ru" content="keywords">
 
 		<!-- Open Graph -->
-		<meta property="og:title" content="Contacts">
+		<meta property="og:title" content="Personal Cabinet Profile">
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="flynas">
-		<meta property="og:url" content="http://flynas-old/contacts">
+		<meta property="og:url" content="http://flynas-old/personal-profile">
 		<meta property="og:description" content="Краткий текст (новости, товара и т.д)">
 
 		<!-- Touch -->
@@ -37,7 +37,7 @@
 		<meta name="msapplication-config" content="media/assets/favicons/browserconfig.xml">
 		<meta name="theme-color" content="#d01400">
 
-		<link href="media/assets/css/contacts-styles.css" rel="stylesheet">
+		<link href="media/assets/css/personal-cabinet-styles.css" rel="stylesheet">
 
 		<!--todo develop styles-->
 		<!--	<link href="" rel="stylesheet">-->
@@ -1730,7 +1730,7 @@
 
 			<!--desktop header markup-->
 			<!--todo 27.11.19: need to add class for header at 'pesonal cabinet profile' and 'pesonal cabinet booking' pages -->
-			<div class="header hd _def-show">
+			<div class="header hd _def-show header--personal">
 				<div class="container--full">
 					<div class="hd-wrap">
 						<div class="hd-left">
@@ -2353,9 +2353,12 @@
 								</div>
 								<div class="gcell gcell--12 gcell--md-6">
 
-									<div class="hd-login">
-										<span class="hd-login__sign-in hd-sign-in">Sign in</span>
-										<span class="hd-login__sign-up hd-sign-up">Create account</span>
+									<!-- todo 27.11.19: need to change markup for this block if the user has already logged in -->
+									<div class="hd-login hd-login--logged">
+										<a href="#" class="hd-login__sign-in hd-sign-in-link">
+											<img alt="" src="media/assets/images/personal-cabinet/man-small.png" class="hd-login__img" /> Full User Name
+										</a>
+										<span class="hd-login__sign-up hd-sign-up">Log out</span>
 									</div>
 
 								</div>
@@ -2398,156 +2401,123 @@
 
 			<div class="section _flex-grow main">
 
-				<div class="contacts">
-					<div class="contacts-top">
-						<div class="container contacts-top__container">
-							<div class="contacts-info">
-								<div class="contacts-info__title">Contact Us</div>
-								<div class="contacts-info__subtitle">Welcome to Flynas! What can we do for you?</div>
+				<div class="pc">
+					<div class="pc__container">
+						<div class="pc__content">
+							<div class="pc-aside">
+								<div class="pc-aside__wrap">
+									<div class="pc-aside__title">Account details</div>
+									<div class="pc-aside__list">
+										<span class="pc-aside__link active">My profile</span>
+										<a class="pc-aside__link" href="#">My Booking</a>
+									</div>
+								</div>
 							</div>
-							<div class="contacts-select">
-								<div class="select-drop" onclick="function f(el){(!el.classList.value.includes('open'))?el.classList.add('open'):el.classList.remove('open');};f(this);">
-									<span class="select-drop__text">Select an option</span>
-
-									<div class="select-drop__results">
-
-										<span class="select-drop__results-item">I did not receive a booking confirmation</span>
-
-										<span class="select-drop__results-item">I’d like to cancel my booking</span>
-
-										<span class="select-drop__results-item">I’d like to get more information about the property or destination</span>
-
-										<span class="select-drop__results-item">I’d like to receive or share a copy of my booking confirmation</span>
-
-										<span class="select-drop__results-item">I’d like to receive an e-receipt for my booking</span>
-
-										<span class="select-drop__results-item">I’d like to send a special request to the property</span>
-
-										<span class="select-drop__results-item">I’d like to change check-in or check-out date</span>
-
-										<span class="select-drop__results-item">I'd like to modify the name of the lead guest</span>
-
-										<span class="select-drop__results-item">I’d like to modify another detail of my booking</span>
-
-										<span class="select-drop__results-item">I have a question related to payment</span>
-
-										<span class="select-drop__results-item">I have a question about my booking</span>
-
-										<span class="select-drop__results-item">I'd like to follow up with my refund</span>
-
-										<span class="select-drop__results-item">Other</span>
-
+							<div class="pc-profile">
+								<div class="container">
+									<div class="pc-breadcrumbs">
+										<a href="#" class="pc-breadcrumbs__link">Account</a>
+										/
+										<span class="pc-breadcrumbs__link active">My profile </span>
 									</div>
 								</div>
 
-								<div class="contacts-select__text">
-									For more personalized help,
-									<a href="#" class="contacts__link">sign in </a> or
-									<a href="#" class="contacts__link"> create an account</a>.
-								</div>
-							</div>
-							<div class="contacts-booking">
-								<div class="contacts-booking__head">Manage your booking online</div>
-								<div class="contacts-booking__body">
-									<p>Most bookings change requests can be fulfilled online by yourself, using Flynas self-service booking management page.</p>
-									<button class="button contacts-booking__btn">Manage my booking</button>
-								</div>
+								<div class="pc-profile__content">
+									<div class="container">
+										<div class="grid grid--hspace-def">
+											<div class="gcell gcell--12 gcell--ms-3 gcell--def-2">
+												<div class="pc-profile__view">
+													<div class="pc-profile__img">
+														<img alt="" src="media/assets/images/personal-cabinet/man.png" />
+													</div>
+													<a href="#" class="pc-profile__change-photo">
+														Change photo
+													</a>
+												</div>
+											</div>
+											<div class="gcell gcell--12 gcell--ms-7 gcell--md-6 gcell--def-7">
+												<div class="pc-profile__info">
+													<!-- todo: 'is-editing' class for item which is being edited  -->
+													<div class="pc-profile__info-it is-editing">
+														<div class="pc-profile__info-name">Name:</div>
 
-							</div>
-						</div>
-					</div>
-					<div class="container contacts-main">
-						<div class="contacts-form">
-							<div class="contacts-form__head">
-								<div class="contacts-form__head-left">
-									Pro tip
-								</div>
-								<div class="contacts-form__head-right">
-									Our customer service team is happy to help you at any time. However, for basic booking management, it`s faster and easier to use our
-									<a href="#" class="contacts__link">self-service tool</a>.
-								</div>
-							</div>
-							<form class="form cnt-form" method="post">
+														<!--todo: markup for inactive item  -->
+														<!--<div class="pc-profile__info-text">Ahmed Hassan Ahmed</div>-->
 
-								<div class="cnt-form__half-group">
-									<div class="form-group">
-										<span class="form-group__label">
-											First name
-											<span class="form-group__required">*</span>
-										</span>
-										<div class="form-group__wrap">
-											<input type="text" class="form-group__input" value="" required placeholder="Enter your data" name="name" />
+														<!-- todo: markup for item which is being edited  -->
+														<div class="pc-profile__info-text">
+															<div class="form-group">
+																<div class="form-group__wrap">
+																	<input type="text" class="form-group__input" value="Ahmed Hassan Ahmed" required="" placeholder="" name="profile-name" id="profile-name">
+																</div>
+															</div>
+														</div>
+
+														<div class="pc-profile__info-edit">
+															<button class="pc-profile__info-link">
+																<svg width="16" height="16">
+																	<use href="#checked-arrow"></use>
+																</svg>
+															</button>
+														</div>
+													</div>
+													<div class="pc-profile__info-it">
+														<div class="pc-profile__info-name">E-mail:</div>
+														<div class="pc-profile__info-text">test_mail@gmail.com</div>
+														<!--                                        <div class="pc-profile__info-text">-->
+														<!--                                            <div class="form-group">-->
+														<!--                                                <div class="form-group__wrap">-->
+														<!--                                                    <input type="email" class="form-group__input"-->
+														<!--                                                           value="test_mail@gmail.com" required="" placeholder=""-->
+														<!--                                                           name="profile-email" id="profile-email">-->
+														<!--                                                </div>-->
+														<!--                                            </div>-->
+														<!--                                        </div>-->
+														<div class="pc-profile__info-edit">
+															<button class="pc-profile__info-link">
+																<svg width="16" height="16">
+																	<use href="#edit"></use>
+																</svg>
+															</button>
+														</div>
+													</div>
+													<div class="pc-profile__info-it">
+														<div class="pc-profile__info-name">Phone:</div>
+														<div class="pc-profile__info-text">+2020209919903</div>
+														<!--                                        <div class="pc-profile__info-text">-->
+														<!--                                            <div class="form-group">-->
+														<!--                                                <div class="form-group__wrap">-->
+														<!--                                                    <input type="text" class="form-group__input"-->
+														<!--                                                           value="+2020209919903" required="" placeholder=""-->
+														<!--                                                           name="profile-phone" id="profile-phone">-->
+														<!--                                                </div>-->
+														<!--                                            </div>-->
+														<!--                                        </div>-->
+														<div class="pc-profile__info-edit">
+															<button class="pc-profile__info-link">
+																<svg width="16" height="16">
+																	<use href="#edit"></use>
+																</svg>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="gcell gcell--12 gcell--ms-2 gcell--md-3">
+												<div class="pc-profile__change">
+													<button class="pc-profile__change-pass js-change-pass">
+														Change Password
+													</button>
+													<!--                                    <a> can be changed to <button> if needed-->
+													<a href="#" class="pc-profile__change-acc">
+														Sign out
+													</a>
+												</div>
+											</div>
 										</div>
 									</div>
-
-									<div class="form-group">
-										<span class="form-group__label">
-											Last name
-											<span class="form-group__required">*</span>
-										</span>
-										<div class="form-group__wrap">
-											<input type="text" class="form-group__input" value="" required placeholder="Enter your data" name="lastname" />
-										</div>
-									</div>
 								</div>
-
-								<div class="form-group">
-									<span class="form-group__label">
-										E-mail
-										<span class="form-group__required">*</span>
-									</span>
-									<div class="form-group__wrap">
-										<input type="email" class="form-group__input" value="" required placeholder="Your e-mail" name="email" />
-									</div>
-								</div>
-
-								<div class="form-group">
-									<span class="form-group__label">
-										Confirm E-mail
-										<span class="form-group__required">*</span>
-									</span>
-									<div class="form-group__wrap">
-										<input type="email" class="form-group__input" value="" required placeholder="Repeat your e-mail" name="email-repeat" />
-									</div>
-								</div>
-
-								<div class="form-group">
-									<span class="form-group__label">
-										Booking ID
-										<span class="form-group__available">(if available)</span>
-									</span>
-									<div class="form-group__wrap">
-										<input type="text" class="form-group__input" value="" placeholder="Your ID" name="booking-id" />
-									</div>
-								</div>
-
-								<div class="form-group">
-									<span class="form-group__label">
-										Summarize your inquiry
-										<span class="form-group__required">*</span>
-									</span>
-									<div class="form-group__wrap">
-										<input type="text" class="form-group__input" value="" required placeholder="I did not receive a booking confirmation" name="summ-injury" />
-									</div>
-								</div>
-
-								<div class="form-group">
-									<span class="form-group__label">
-										Inquiry
-										<span class="form-group__required">*</span>
-									</span>
-									<textarea class="form-group__textarea" required placeholder="Please type your request here, including any additional information or details." name="details"></textarea>
-								</div>
-								<div class="cnt-form__foot _text-center">
-									<div>Required fields indicated with
-										<span class="form-group__required">*</span>
-									</div>
-
-									<button type="submit" class="button cnt-form__btn">Send email</button>
-
-								</div>
-
-							</form>
+							</div>
 						</div>
 					</div>
 				</div>

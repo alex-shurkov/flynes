@@ -14,6 +14,39 @@
 		box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
 	}
 
+	&--pc {
+		@include media(def) {
+			max-width: 420px;
+		}
+	}
+
+	&--cp {
+		@include media(def) {
+			box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+
+			padding: 30px 45px 40px;
+			max-width: 420px;
+
+			.form-group {
+				margin-top: 15px;
+
+				&:last-child {
+					margin-top: 40px;
+				}
+			}
+		}
+
+		.form {
+			width: 100%;
+			max-width: 420px;
+			margin: 0 auto;
+		}
+
+		.button {
+			padding: 14px 20px;
+		}
+	}
+
 	&-logo {
 		color: map-get($colors, main);
 		font-family: 'Lato', sans-serif;
@@ -48,6 +81,11 @@
 		padding: 0 0 rem(14);
 		text-align: center;
 
+		&--md {
+			font-size: rem(32);
+			font-weight: 500;
+		}
+
 		&--strong {
 			font-size: rem(50);
 			text-align: left;
@@ -69,12 +107,21 @@
 		line-height: rem(18);
 		text-align: center;
 		padding: rem(16) 0 rem(26);
+
+		.popup--pc & {
+			font-size: rem(15);
+			font-weight: 600;
+		}
 	}
 
 	&__image {
 		img {
 			display: block;
 			margin: 0 auto;
+		}
+
+		.popup--cp & {
+			margin: 10px 0 15px;
 		}
 	}
 

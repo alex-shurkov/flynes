@@ -3,6 +3,14 @@
 	color: map-get($colors, dark);
 	font-weight: 600;
 	z-index: 2;
+
+	&--personal {
+		& > .container--full {
+			@include media(1920px) {
+				max-width: 100%;
+			}
+		}
+	}
 }
 
 .hd-wrap {
@@ -12,6 +20,13 @@
 .hd-left {
 	width: 20%;
 	height: 60px;
+
+	.header--personal & {
+		@include media(def) {
+			width: 19%;
+			min-width: 19%;
+		}
+	}
 
 	&__logo {
 		margin-left: 10%;
@@ -23,6 +38,22 @@
 			margin-left: 0;
 			margin-right: 10%;
 		}
+
+		.header--personal & {
+			@include media(def) {
+				margin: 0 5%;
+			}
+
+			@include media(mg) {
+				margin-left: 10%;
+
+				[dir="rtl"] & {
+					margin-left: 0;
+					margin-right: 10%;
+				}
+			}
+		}
+
 
 		img {
 			max-width: 100%;
@@ -44,6 +75,7 @@
 .hd-langs,
 .hd-currency,
 .hd-sign-in,
+.hd-sign-in-link,
 .hd-sign-up {
 	cursor: pointer;
 	display: block;
@@ -54,6 +86,10 @@
 	&:hover {
 		color: map-get($colors, main);
 	}
+}
+
+.hd-sign-in-link {
+	text-decoration: none;
 }
 
 .hd-langs-curr {
@@ -232,6 +268,28 @@
 		}
 	}
 
+	&--logged {
+		align-items: center;
+
+		.hd-sign-in-link,
+		.hd-sign-up {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+
+	&__img {
+		margin-right: 18px;
+		border-radius: 50%;
+		max-width: 31px;
+		max-height: 31px;
+
+		[dir="rtl"] & {
+			margin-right: 0;
+			margin-left: 18px;
+		}
+	}
+
 	.popup & {
 		font-size: 16px;
 		font-weight: 600;
@@ -246,6 +304,16 @@
 	&__sign-in {
 		color: #e3050f;
 		position: relative;
+
+		.hd-login--logged & {
+			display: flex;
+			align-items: center;
+			color: map-get($colors, main);
+
+			&:hover {
+				color: #e3050f;
+			}
+		}
 
 		&::after {
 			content: '';
