@@ -2744,6 +2744,38 @@
 						</form>
 					</div>
 
+					<!--    todo 02.12.2019 : dropdowns for DayPicker -->
+					<div class="DayPicker-Dropdowns">
+						<!--     todo: for month / need to add class 'open' for DayPicker-Dropdown to show the dropdown body-->
+						<div class="DayPicker-Dropdown DayPicker-Dropdown--month">
+							<div class="DayPicker-Dropdown__text" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
+								<span>January</span>
+							</div>
+							<div class="DayPicker-DropItem">
+								<div class="DayPicker-DropItem__list">
+									<div class="DayPicker-DropItem__item active">January</div>
+									<div class="DayPicker-DropItem__item">February</div>
+									<div class="DayPicker-DropItem__item">March</div>
+									<div class="DayPicker-DropItem__item">November</div>
+								</div>
+							</div>
+						</div>
+						<!--     todo: for year -->
+						<div class="DayPicker-Dropdown DayPicker-Dropdown--year">
+							<div class="DayPicker-Dropdown__text" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
+								<span>2018</span>
+							</div>
+							<div class="DayPicker-DropItem">
+								<div class="DayPicker-DropItem__list">
+									<div class="DayPicker-DropItem__item active">2018</div>
+									<div class="DayPicker-DropItem__item">2019</div>
+									<div class="DayPicker-DropItem__item">2020</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--    todo end -->
+
 					<!--markup for catalog products-->
 
 					<div class="products">
@@ -3566,6 +3598,7 @@
 						</span>
 					</div>
 				</div>
+
 			</div>
 			<div class="section">
 
