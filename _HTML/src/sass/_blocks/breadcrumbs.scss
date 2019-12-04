@@ -61,6 +61,27 @@
 		padding: 19px 7px 15px;
 		display: flex;
 		flex-wrap: wrap;
+		position: relative;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			height: 4px;
+			width: calc(100% - 100px);
+			left: 50px;
+			top: 35px;
+			background: #e3e3e3;
+
+			[dir="rtl"] & {
+				left: auto;
+				right: 50px;
+			}
+
+			@include media(def, max) {
+				content: none;
+			}
+		}
+
 
 		@include media(ms, max) {
 			justify-content: center;
@@ -146,36 +167,6 @@
 			svg {
 				height: 27px;
 				width: 27px;
-			}
-		}
-
-		&::after {
-			content: '';
-			display: block;
-			position: absolute;
-			height: 4px;
-			width: 113px;
-			left: 100%;
-			background: #e3e3e3;
-			z-index: -1;
-
-			[dir="rtl"] & {
-				left: 0;
-				right: 100%;
-			}
-
-			@include media(lg, max) {
-				width: 83px;
-			}
-
-			@include media(def, max) {
-				content: none;
-			}
-		}
-
-		.breadcrumbs__item:last-child & {
-			&::after {
-				content: none !important;
 			}
 		}
 
