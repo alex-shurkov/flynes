@@ -1,0 +1,298 @@
+.t-form {
+	border: 1px solid #f0f0f0;
+	background: #ffffff;
+	margin-bottom: 30px;
+	padding: 30px 22px 22px;
+
+	&__group {
+		position: relative;
+		width: 100%;
+
+		@include media(sm, max) {
+			&.form-group {
+				margin-top: 19px;
+			}
+		}
+
+		@include media(lg) {
+			padding-right: 5px;
+		}
+
+		&.open {
+			.tf-results {
+				display: block;
+			}
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: rem(60);
+		height: 100%;
+		display: none;
+		align-items: center;
+		justify-content: center;
+
+		[dir="rtl"] & {
+			left: auto;
+			right: 0;
+		}
+
+		svg {
+			position: relative;
+			fill: #afafaf;
+			height: 28px;
+			width: 20px;
+			@include media(lg) {
+				top: rem(-3);
+			}
+		}
+
+	}
+
+	&__wrap {
+		position: relative;
+		display: block;
+
+		.t-form__icon {
+			display: flex;
+		}
+
+		.tf-input {
+			padding-left: rem(60);
+			outline: none;
+
+			@include media(ms, max) {
+				padding-left: rem(55);
+			}
+
+			[dir="rtl"] & {
+				padding-left: 30px;
+				padding-right: rem(60);
+
+				@include media(ms, max) {
+					padding-right: rem(55);
+				}
+			}
+
+			&:focus {
+				padding-left: rem(20);
+
+				[dir="rtl"] & {
+					padding-left: 30px;
+					padding-right: rem(20);
+				}
+
+				& + .t-form__icon {
+					display: none;
+				}
+			}
+		}
+
+		&--noempty {
+			.t-form__icon {
+				display: none;
+			}
+
+			.tf-input {
+				padding-left: rem(20);
+			}
+		}
+	}
+
+
+
+	&__submit {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		align-items: flex-end;
+
+		@include media(def, max) {
+			justify-content: center;
+			text-align: center;
+		}
+
+	}
+
+	&__submit-btn {
+		max-width: 100%;
+		padding: 14px 20px;
+
+		@include media(lg, max) {
+			width: 100%;
+		}
+
+		@include media(def, max) {
+			width: auto;
+			min-width: 190px;
+		}
+
+		@include media(def) {
+			width: 100%;
+		}
+
+		@include media(sm, max) {
+			padding: 8px 35px;
+			font-size: 12px;
+			min-width: auto;
+		}
+
+
+		@include media(ms) {
+			min-width: auto;
+			width: 100%;
+		}
+	}
+
+}
+
+.tf-results {
+	position: absolute;
+	top: calc(100% + 12px);
+	left: 0;
+	box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.35);
+	background: #ffffff;
+	z-index: 3;
+	border-radius: rem(8);
+	font-size: 12px;
+	line-height: rem(15);
+	color: #8d8d8d;
+	display: none;
+	width: 100%;
+	padding: 0;
+	max-width: 100%;
+	min-width: auto;
+	max-height: 305px;
+	overflow-y: auto;
+
+	[dir="rtl"] & {
+		left: auto;
+		right: 0;
+
+		&::after {
+			left: auto;
+			right: rem(20);
+		}
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		height: rem(16);
+		width: rem(16);
+		position: absolute;
+		top: 0;
+		left: rem(20);
+		border: rem(8) solid transparent;
+		border-top-color: #00b8b0;
+		border-radius: 3px;
+	}
+
+
+	@include media(md) {
+		max-height: 330px;
+	}
+
+	&::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+		border-radius: 8px;
+		background-color: #F5F5F5;
+	}
+
+	&::-webkit-scrollbar {
+		width: 6px;
+		background-color: #F5F5F5;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 8px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+		background-color: rgba(#afafaf, .3);
+	}
+
+	@include media(lg) {
+		min-width: calc(100% - 5px);
+		max-width: calc(100% - 5px);
+	}
+
+	@include media(sm, max) {
+		max-width: 100%;
+		min-width: 100%;
+	}
+
+	&__item {
+		display: flex;
+		padding: 8px 20px;
+		align-items: flex-start;
+		cursor: pointer;
+
+		&:first-child {
+			padding-top: 16px;
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
+
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 16px;
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+
+		&:hover {
+			background-color: #e7fffe;
+
+			svg {
+				fill: map-get($colors, main);
+			}
+		}
+	}
+
+	&__icon {
+		margin-right: 5px;
+		display: inline-block;
+		height: 17px;
+		width: 17px;
+		min-height: 17px;
+		min-width: 17px;
+
+		[dir="rtl"] & {
+			margin-right: 0;
+			margin-left: 5px;
+		}
+
+		svg {
+			height: 17px;
+			width: 17px;
+			min-height: 17px;
+			min-width: 17px;
+			fill: #8d8d8d;
+			position: relative;
+			top: -1px;
+			transition: fill 0.1s linear;
+		}
+	}
+
+	&__place {
+		display: flex;
+		align-items: center;
+
+		@include media(sm, max) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__code {
+		font-size: 14px;
+		font-weight: 400;
+		color: map-get($colors, dark);
+		padding-right: 3px;
+	}
+}
+

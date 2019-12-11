@@ -44,6 +44,25 @@
 		left: 0;
 		background-color: rgba(250, 250, 250, 0.8);
 
+		@include media(def) {
+			margin-right: calc( 21% * 2.4);
+
+			[dir="rtl"] & {
+				margin-left: calc( 21% * 2.4);
+				margin-right: 0;
+			}
+
+		}
+
+		@include media(xl) {
+			margin-right: 720px;
+
+			[dir="rtl"] & {
+				margin-left: 720px;
+				margin-right: 0;
+			}
+		}
+
 		[dir="rtl"] & {
 			left: auto;
 			right: 0;

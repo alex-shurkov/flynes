@@ -2886,12 +2886,18 @@
 
 						</div>
 
-						<div class="loc__content">
+						<!--todo 11/12/19  add class 'right-f-open' for map if right aside is open -->
+						<!--todo 11/12/19  add class 'left-f-open' for map if left aside is open -->
+						<div class="loc__content left-f-open">
 							<!--right aside block with filter-->
 							<!-- todo: add class 'open' to show the right aside block-->
 
 							<div class="loc-filter open">
-								<div class="loc__arrow loc__arrow--left" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
+								<div class="loc__arrow loc__arrow--left" onclick="
+					function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');
+							//todo 11/12/19 need to add class 'left-f-open' for loc__content if left aside is open
+							!el.parentNode.parentNode.classList.value.includes('left-f-open')?el.parentNode.parentNode.classList.add('left-f-open'):el.parentNode.parentNode.classList.remove('left-f-open')
+					};f(this);">
 									<svg width="15" height="15">
 										<use href="#arrow"></use>
 									</svg>
@@ -3534,7 +3540,11 @@
 							<!--left aside block with booking info-->
 							<!-- todo: add class 'open' to show the left aside block-->
 							<div class="loc-info">
-								<div class="loc__arrow loc__arrow--right" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
+								<div class="loc__arrow loc__arrow--right" onclick="function f(el){(
+							!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');
+							//todo 11/12/19 need to add class 'right-f-open' for loc__content if the right aside is open
+							!el.parentNode.parentNode.classList.value.includes('right-f-open')?el.parentNode.parentNode.classList.add('right-f-open'):el.parentNode.parentNode.classList.remove('right-f-open')
+						};f(this);">
 									<svg width="15" height="15">
 										<use href="#arrow"></use>
 									</svg>

@@ -27,6 +27,38 @@
 			height: 940px;
 			width: 100%;
 		}
+
+		.right-f-open & {
+			margin-right: 270px;
+
+			[dir="rtl"] & {
+				margin-left: 270px;
+				margin-right: 0;
+			}
+		}
+
+		.left-f-open & {
+			@include media(xs, max) {
+				margin-left: 260px;
+
+				[dir="rtl"] & {
+					margin-left: 0;
+					margin-right: 260px;
+				}
+			}
+
+			@include media(def, max) {
+				margin-left: 320px;
+
+				[dir="rtl"] & {
+					margin-left: 0;
+					margin-right: 320px;
+				}
+			}
+
+		}
+
+
 	}
 
 	&__arrow {

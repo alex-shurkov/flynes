@@ -2827,6 +2827,178 @@
 											</div>
 										</div>
 
+										<div class="t-form">
+											<form class="form fs tf" method="post">
+												<div class="grid grid--space-def">
+													<div class="gcell gcell--12 gcell--sm-6 gcell--ms-4">
+														<div class="form-group t-form__group">
+															<span class="form-group__label">Nationality</span>
+															<!--todo markup for empty search input (with search icon)-->
+															<div class="form-group__wrap t-form__wrap" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
+																<input type="text" class="form-group__input tf-input t-form__input" value="" required placeholder="Nationality" />
+																<span class="t-form__icon">
+																	<svg width="20" height="28">
+																		<use href="#search"></use>
+																	</svg>
+																</span>
+															</div>
+															<!--todo markup for filled search input (add class  `t-form__wrap--noempty`)-->
+															<!--                                            <div class="form-group__wrap  t-form__wrap t-form__wrap&#45;&#45;noempty">-->
+															<!--                                                <input type="text" class="form-group__input tf-input t-form__input" value="Ukrainian" required placeholder="Nationality" />-->
+															<!--                                                <span class="t-form__icon">-->
+															<!--                                                    <svg width="20" height="28"><use href="#search"></use></svg>-->
+															<!--                                                </span>-->
+															<!--                                            </div>-->
+
+															<div class="tf-results">
+																<div class="tf-results__item">
+																	<div class="tf-results__place">
+																		<span class="tf-results__icon">
+																			<svg width="17" height="17">
+																				<use href="#users"></use>
+																			</svg>
+																		</span>
+																		<span class="tf-results__group">
+																			<span class="tf-results__code">
+																				Canadian
+																			</span>
+																		</span>
+																	</div>
+																</div>
+																<div class="tf-results__item">
+																	<div class="tf-results__place">
+																		<span class="tf-results__icon">
+																			<svg width="17" height="17">
+																				<use href="#users"></use>
+																			</svg>
+																		</span>
+																		<span class="tf-results__group">
+																			<span class="tf-results__code">
+																				Ukrainian
+																			</span>
+																		</span>
+																	</div>
+																</div>
+																<div class="tf-results__item">
+																	<div class="tf-results__place">
+																		<span class="tf-results__icon">
+																			<svg width="17" height="17">
+																				<use href="#users"></use>
+																			</svg>
+																		</span>
+																		<span class="tf-results__group">
+																			<span class="tf-results__code">
+																				Chinese
+																			</span>
+																		</span>
+																	</div>
+																</div>
+																<div class="tf-results__item">
+																	<div class="tf-results__place">
+																		<span class="tf-results__icon">
+																			<svg width="17" height="17">
+																				<use href="#users"></use>
+																			</svg>
+																		</span>
+																		<span class="tf-results__group">
+																			<span class="tf-results__code">
+																				Chilean
+																			</span>
+																		</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="gcell gcell--12 gcell--sm-6 gcell--ms-4">
+														<div class="form-group t-form__group">
+															<span class="form-group__label fs-label">Country of residence</span>
+															<!--todo markup for empty search input (with search icon)-->
+															<div class="form-group__wrap t-form__wrap" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
+																<input type="text" class="form-group__input tf-input t-form__input" value="" required placeholder="Country" />
+																<span class="t-form__icon">
+																	<svg width="20" height="28">
+																		<use href="#search"></use>
+																	</svg>
+																</span>
+															</div>
+															<!--todo markup for filled search input (add class  `t-form__wrap--noempty`)-->
+															<!--                                            <div class="form-group__wrap  t-form__wrap t-form__wrap&#45;&#45;noempty">-->
+															<!--                                                <input type="text" class="form-group__input tf-input t-form__input" value="Ukraine" required placeholder="Country" />-->
+															<!--                                                <span class="t-form__icon">-->
+															<!--                                                    <svg width="20" height="28"><use href="#search"></use></svg>-->
+															<!--                                                </span>-->
+															<!--                                            </div>-->
+
+															<div class="tf-results">
+																<div class="tf-results__item">
+																	<div class="tf-results__place">
+																		<span class="tf-results__icon">
+																			<svg width="17" height="17">
+																				<use href="#location"></use>
+																			</svg>
+																		</span>
+																		<span class="tf-results__group">
+																			<span class="tf-results__code">
+																				Saudi Arabia
+																			</span>
+																		</span>
+																	</div>
+																</div>
+																<div class="tf-results__item">
+																	<div class="tf-results__place">
+																		<span class="tf-results__icon">
+																			<svg width="17" height="17">
+																				<use href="#location"></use>
+																			</svg>
+																		</span>
+																		<span class="tf-results__group">
+																			<span class="tf-results__code">
+																				Ukraine
+																			</span>
+																		</span>
+																	</div>
+																</div>
+																<div class="tf-results__item">
+																	<div class="tf-results__place">
+																		<span class="tf-results__icon">
+																			<svg width="17" height="17">
+																				<use href="#location"></use>
+																			</svg>
+																		</span>
+																		<span class="tf-results__group">
+																			<span class="tf-results__code">
+																				USA
+																			</span>
+																		</span>
+																	</div>
+																</div>
+																<div class="tf-results__item">
+																	<div class="tf-results__place">
+																		<span class="tf-results__icon">
+																			<svg width="17" height="17">
+																				<use href="#location"></use>
+																			</svg>
+																		</span>
+																		<span class="tf-results__group">
+																			<span class="tf-results__code">
+																				Germany
+																			</span>
+																		</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="gcell gcell--12 gcell--sm-12 gcell--ms-4">
+														<div class="form-group t-form__submit">
+															<button type="submit" class="button t-form__submit-btn">search</button>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+
 										<div class="route">
 											<div class="booking-block">
 												<div class="booking-block__svg">
