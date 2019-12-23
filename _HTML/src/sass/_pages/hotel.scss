@@ -38,6 +38,12 @@
 			}
 		}
 	}
+
+	.breadcrumbs__container {
+		@include media(lg) {
+			max-width: 1248px;
+		}
+	}
 }
 
 //HOTEL FILTER
@@ -169,7 +175,7 @@
 		}
 
 		&--change {
-			width: 16%;
+			width: 18%;
 			justify-content: flex-end;
 
 			.button {
@@ -732,14 +738,68 @@
 			margin-bottom: 47px;
 		}
 	}
+
+	&__head {
+		background-color: #fff;
+		padding: 15px 17px 11px;
+
+		@include media(ms) {
+			padding-top: 20px;
+		}
+	}
+
+	&__info {
+		color: #8d8d8d;
+		font-size: 15px;
+		line-height: 20px;
+		font-weight: 400;
+		display: flex;
+		align-items: center;
+
+		svg {
+			width: 30px;
+			height: 30px;
+			min-height: 30px;
+			min-width: 30px;
+			fill: map-get($colors, main);
+			margin-right: 10px;
+
+			[dir="rtl"] & {
+				margin-left: 10px;
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__content {
+		padding-bottom: 20px;
+	}
 }
 
 .room {
-	padding: 20px 17px 11px;
+	padding: 20px 17px;
 	background: #ffffff;
 	color: #9c9c9c;
-	border-radius: 8px;
-	margin-bottom: 25px;
+	border: 1px dashed transparent;
+	border-top: 1px dashed #b8b8b8;
+
+	&.selected {
+		border: 1px dashed map-get($colors, main);
+
+		& + .room {
+			border-top: none;
+		}
+	}
+
+	&:first-of-type {
+		&:not(.selected) {
+			border-top: none;
+		}
+	}
+
+	&:nth-of-type(even) {
+		background-color: #f8f8f8;
+	}
 
 	&__title {
 		font-size: 18px;
@@ -768,7 +828,6 @@
 
 	&__view {
 		width: 100%;
-		background: #ffffff;
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
 		display: block;
@@ -1004,10 +1063,15 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: 12px;
-		padding: 5px 10px 16px;
+		padding: 7px 0;
 
-		@include media(sm, max) {
-			padding-bottom: 10px;
+		.hotel-rooms__head & {
+			@include media(ms) {
+				padding: 7px 10px;
+			}
+		}
+
+		@include media(ms, max) {
 			font-size: 14px;
 		}
 
@@ -1018,19 +1082,11 @@
 }
 
 .room-item {
-	padding: 14px 12px;
+	padding: 14px 5px;
 	border: 1px dashed transparent;
 
 	&:last-of-type {
 		margin-bottom: 0;
-	}
-
-	&.active {
-		border-color: #b8b8b8;
-	}
-
-	&--dark {
-		background-color: #f8f8f8;
 	}
 }
 
@@ -1223,7 +1279,7 @@
 
 .room-submit {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: flex-end;
 	@include media(lg) {
 		padding-right: 22px;
@@ -1237,9 +1293,13 @@
 	.button {
 		padding: 10px 23px;
 		font-size: 12px;
+		@include media(def) {
+			margin-top: 24px;
+		}
 
-		.room-item.active & {
+		.room.selected & {
 			background: map-get($colors, secondary);
+
 		}
 
 		&.disabled {

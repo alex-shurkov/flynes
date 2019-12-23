@@ -100,12 +100,12 @@
 		margin-bottom: 7px;
 
 		@include media(ms) {
-			padding: 2px 0 2px 52px;
+			padding: 5px 0 5px 52px;
 			text-align: left;
 
 			[dir="rtl"] & {
 				text-align: right;
-				padding: 2px 52px 2px 0;
+				padding: 5px 52px 5px 0;
 			}
 		}
 
@@ -117,7 +117,8 @@
 			margin-bottom: 8px;
 
 			@include media(ms) {
-				padding: 2px 0;
+
+				padding: 5px 0;
 			}
 		}
 
@@ -298,7 +299,7 @@
 		font-size: 12px;
 		font-weight: 500;
 		color: #313131;
-		padding: 2px 15px;
+		padding: 5px 15px;
 		margin-bottom: 8px;
 		display: flex;
 		align-items: center;
@@ -316,10 +317,10 @@
 		}
 
 		@include media(md) {
-			padding: 2px 15px 2px 37px;
+			padding: 5px 15px 5px 37px;
 
 			[dir="rtl"] & {
-				padding: 2px 37px 2px 15px;
+				padding: 5px 37px 5px 15px;
 			}
 		}
 

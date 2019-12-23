@@ -18,6 +18,12 @@
 		flex-grow: 1;
 	}
 
+	.breadcrumbs__container {
+		@include media(lg) {
+			max-width: 1248px;
+		}
+	}
+
 	&__map {
 		flex-grow: 1;
 		@include media(sm, max) {
@@ -204,9 +210,6 @@
 	padding: 19px 0;
 	position: relative;
 
-	@include media(ms, max) {
-		padding: 80px 0 15px;
-	}
 
 	@include media(xl, max) {
 		padding: 10px 0 15px;
@@ -224,7 +227,16 @@
 	}
 
 	&__container {
-		max-width: 1300px;
+
+		&--abs {
+			display: none;
+			@include media(1920px) {
+				display: block;
+				position: absolute;
+				left: 310px;
+				margin-top: 6px;
+			}
+		}
 	}
 
 	&__form {
@@ -239,10 +251,19 @@
 		@include media(xl, max) {
 			justify-content: center;
 		}
+
+		@include media(1920px) {
+			justify-content: flex-end;
+
+			.loc-head__hotel {
+				display: none;
+			}
+		}
 	}
 
 	&__hotel {
 		flex-grow: 1;
+		display: flex;
 
 		@include media(ms, max) {
 			margin-bottom: 10px;
@@ -349,8 +370,12 @@
 				padding: 14px;
 			}
 		}
+		@include media(def) {
+			width: auto;
+			max-width: 18%;
+		}
 
-	}
+		}
 
 	.fs-visitors {
 		background: #ffffff;

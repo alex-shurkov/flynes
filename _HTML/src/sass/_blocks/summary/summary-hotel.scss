@@ -10,6 +10,14 @@
 
 	.summary-top__head {
 		margin-bottom: 6px;
+
+		&--border {
+			position: relative;
+			border-bottom: 1px dashed #a7a7a7;
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+		}
+
 	}
 
 	@include media(sm) {

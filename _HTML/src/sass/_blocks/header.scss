@@ -18,7 +18,7 @@
 }
 
 .hd-left {
-	width: 20%;
+	width: 19%;
 	height: 60px;
 
 	.header--personal & {
@@ -87,6 +87,7 @@
 		color: map-get($colors, main);
 	}
 }
+
 
 .hd-sign-in-link {
 	text-decoration: none;
@@ -233,6 +234,10 @@
 .hd-langs {
 	position: relative;
 	margin-right: 2px;
+	padding-left: 0;
+	@include media(def) {
+		padding-left: 0;
+	}
 
 	&__icon {
 		display: inline-block;
@@ -261,11 +266,7 @@
 	justify-content: flex-end;
 	padding: 15px 0;
 	@include media(def) {
-		padding: 15px rem(19) 14px 0;
-
-		[dir="rtl"] & {
-			padding: 15px 0 14px rem(19);
-		}
+		padding: 15px 0 14px;
 	}
 
 	&--logged {
