@@ -16,11 +16,11 @@
 	cursor: pointer;
 	background-color: map-get($colors, light-blue);
 	transition: fill $t, background-color $t, border-color $t, opacity $t, visibility $t;
+	border-radius: 100%;
 
 	[dir="rtl"] & {
 		left: 2rem;
 		right: auto;
-
 	}
 
 	&--show {
@@ -38,5 +38,11 @@
 		line-height: 0;
 		font-size: 0;
 		display: inline-block;
+
+		svg {
+			width: 17px;
+			height: 17px;
+			transform: rotate(-90deg);
+		}
 	}
 }
