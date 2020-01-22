@@ -429,7 +429,7 @@
 		background-size: cover;
 		border-bottom-left-radius: 8px;
 		border-bottom-right-radius: 8px;
-		background: url(/Media/assets/images/transportation/package-footer.png) bottom center no-repeat;
+		background: url(../images/transportation/package-footer.png) bottom center no-repeat;
 		padding: 0 26px;
 		background-size: cover;
 
@@ -440,7 +440,7 @@
 
 		#{$item}__block--lg & {
 			min-height: 47px;
-			background-image: url(/Media/assets/images/transportation/package-footer-lg.png);
+			background-image: url(../images/transportation/package-footer-lg.png);
 
 			.package--ground & {
 				background-position-y: 0;
@@ -564,7 +564,7 @@
 
 			#{$item} {
 				&__head {
-					background-image: url(/Media/assets/images/transportation/light-head.png);
+					background-image: url(../images/transportation/light-head.png);
 				}
 
 				&__btn {
@@ -582,7 +582,7 @@
 		&--green {
 			#{$item} {
 				&__head {
-					background-image: url(/Media/assets/images/transportation/green-head.png);
+					background-image: url(../images/transportation/green-head.png);
 					position: relative;
 
 					&::after {
@@ -622,7 +622,7 @@
 
 			#{$item} {
 				&__head {
-					background-image: url(/Media/assets/images/transportation/blue-head.png);
+					background-image: url(../images/transportation/blue-head.png);
 				}
 
 				&__btn {
@@ -832,4 +832,10 @@
 			cursor: default;
 		}
 	}
+}
+
+.ie {
+  .package__left {
+    padding-top: 50px;
+  }
 }
