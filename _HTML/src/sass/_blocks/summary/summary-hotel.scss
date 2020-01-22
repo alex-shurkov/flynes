@@ -184,14 +184,16 @@
 	}
 
 	&__cell {
-		width: 50%;
-		min-width: 50%;
+		width: 100%;
+		min-width: 100%;
 		padding: 10px 15px;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
 		min-height: 80px;
-		border: 1px solid #72c3d6;
+    border-left: 1px solid #72c3d6;
+    border-right: 1px solid #72c3d6;
+    border-top: 1px solid #72c3d6;
 		background: #ffffff;
 		z-index: 2;
 		@include media(sm) {
@@ -204,6 +206,7 @@
 		&:last-child {
 			border-bottom-left-radius: 3px;
 			border-bottom-right-radius: 3px;
+      border-bottom: 1px solid #72c3d6;
 		}
 
 		&:first-child {
@@ -212,23 +215,6 @@
 				border-top-left-radius: 0;
 				border-top-right-radius: 3px;
 			}
-		}
-
-		&:nth-of-type(2n) {
-			border-left: none;
-			border-top-right-radius: 3px;
-
-			[dir="rtl"] & {
-				border-left: 1px solid #72c3d6;
-				border-right: none;
-				border-top-right-radius: 0;
-				border-top-left-radius: 3px;
-
-			}
-		}
-
-		&:nth-of-type(n + 3) {
-			border-top: none;
 		}
 
 		&--full {
