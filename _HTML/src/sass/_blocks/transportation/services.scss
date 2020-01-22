@@ -237,3 +237,10 @@
 		}
 	}
 }
+
+.ie {
+  .t-counter__action--plus::after {
+    top: 1px;
+    left: 12px;
+  }
+}
