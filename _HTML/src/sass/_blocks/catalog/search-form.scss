@@ -488,6 +488,16 @@
 		}
 	}
 
+  .ie &__action {
+    display: block;
+    &--plus {
+      &:before {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
 	&__amount {
 		font-size: 14px;
 		font-weight: 700;
