@@ -95,7 +95,7 @@
 			width: 100%;
 			top: 0;
 			left: 0;
-			background:  url(/Media/assets/images/static-svg/tick.svg) no-repeat;
+			background:  url(../images/static-svg/tick.svg) no-repeat;
 			background-size: contain;
 			background-position: center;
 		}
@@ -106,14 +106,14 @@
 				animation-duration: 1500ms;
 				animation-iteration-count: infinite;
 				animation-timing-function: linear;
-				background-image:  url(/Media/assets/images/static-svg/preloader.svg);
+				background-image:  url(../images/static-svg/preloader.svg);
 			}
 
 		}
 
 		.is-canceled & {
 			&::before {
-				background-image:  url(/Media/assets/images/static-svg/close.svg);
+				background-image:  url(../images/static-svg/close.svg);
 			}
 		}
 	}

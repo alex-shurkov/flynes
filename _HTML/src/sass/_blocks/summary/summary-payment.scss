@@ -39,7 +39,7 @@
 	&__card {
 		min-height: 220px;
 		background-color: #dbfbfa;
-		background-image: url(/Media/assets/images/payment/card-bg.png);
+		background-image: url(../images/payment/card-bg.png);
 		border-radius: 8px;
 		position: relative;
 		padding: 20px 15px;
@@ -60,7 +60,7 @@
 			right: 24px;
 			height: 18px;
 			width: 57px;
-			background: url(/Media/assets/images/payment/card-img.png);
+			background: url(../images/payment/card-img.png);
 			background-size: contain;
 
 			[dir="rtl"] & {

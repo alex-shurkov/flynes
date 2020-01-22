@@ -4,7 +4,7 @@
 
 .faq-top {
 	&__wrap {
-		background: url(/Media/assets/images/faq/faq-main-bg.jpg);
+		background: url(../images/faq/faq-main-bg.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center bottom;
@@ -12,7 +12,7 @@
 		position: relative;
 
 		@include media(xs, max) {
-			background-image: url(/Media/assets/images/faq/faq-mb-bg.jpg);
+			background-image: url(../images/faq/faq-mb-bg.jpg);
 			height: 389px;
 			min-height: 389px;
 		}

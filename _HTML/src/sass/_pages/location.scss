@@ -3,6 +3,10 @@
 	flex-direction: column;
 	flex-grow: 1;
 
+  .ie & {
+    display: block;
+  }
+
 	&__container {
 		padding: 0;
 		height: 100%;
