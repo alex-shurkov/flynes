@@ -2510,9 +2510,16 @@
 			<div class="section _flex-grow main">
 
 				<div class="container _text-center">
-					<button type="button" class="button js-preload-btn" style="margin: 200px 0">
-						<span class="button__text">Call preloader</span>
-					</button>
+          <div style="margin: 200px 0">
+            <button type="button" class="button js-preload-btn">
+              <span class="button__text">Call preloader</span>
+            </button>
+            <br>
+            <br>
+            <button type="button" class="button js-preload-with-error-btn">
+              <span class="button__text">Call preloader with error</span>
+            </button>
+          </div>
 				</div>
 
 			</div>
@@ -2611,6 +2618,18 @@
 			<div class="preloader-back"></div>
 		</div>
 
+    <div class="preloader-error-wrapper">
+      <div class="preloader-error">
+        <div class="preloader-error__title">An error has occurred</div>
+        <div class="preloader-error__text">Please click try again or go back to previous page</div>
+        <div class="preloader-error__buttons">
+          <!--              t-form__submit-btn-->
+          <button type="submit" class="button button--sm">try again</button>
+          <button type="submit" class="button button--sm">Go back</button>
+        </div>
+      </div>
+    </div>
+
 		<div class="js-init scroll-up scroll-up--show">
 			<span class="svg">
 				<svg width="17" height="17">
@@ -2637,6 +2656,7 @@
 	var closeRegister = modalRegister.getElementsByClassName("modal-close")[0];
 	var closePass = modalPass.getElementsByClassName("modal-close")[0];
 	var preloadTestBtn = document.getElementsByClassName("js-preload-btn");
+	var preloadTestBtnWithError = document.getElementsByClassName("js-preload-with-error-btn");
 
 	var modalPassChange = document.getElementById("js-open-change-pass");
 	var closeChangePass = modalPassChange.getElementsByClassName("modal-close")[0];
@@ -2654,6 +2674,18 @@
 			}, 5000);
 		};
 	}
+
+	if(preloadTestBtnWithError.length) {
+		preloadTestBtnWithError[0].onclick = function () {
+			document.getElementsByClassName("preloader")[0].classList.add('preloader--visible');
+			document.getElementsByClassName("preloader-error-wrapper")[0].classList.add('active');
+			var t = setTimeout(function() {
+				document.getElementsByClassName("preloader")[0].classList.remove('preloader--visible');
+				document.getElementsByClassName("preloader-error-wrapper")[0].classList.remove('active');
+				clearTimeout(t);
+			}, 5000);
+		};
+  }
 
 	if(btnChangePass.length) {
 		btnChangePass[0].onclick = function () {
