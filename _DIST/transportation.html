@@ -3376,79 +3376,84 @@
 
 											<div class="car__content">
 												<div class="car__tabs">
-													<div class="car__tab active">
+													<div data-tab="#tab-body-1" class="car__tab active">
 														<svg width="35" height="35">
 															<use href="#car-1"></use>
 														</svg>
 														<span>SUVs</span>
 													</div>
-													<div class="car__tab">
+													<div data-tab="#tab-body-2" class="car__tab">
 														<svg width="35" height="35">
 															<use href="#car-2"></use>
 														</svg>
 														<span>MINI VAN</span>
 													</div>
-													<div class="car__tab">
+													<div data-tab="#tab-body-3" class="car__tab">
 														<svg width="35" height="35">
 															<use href="#car-3"></use>
 														</svg>
 														<span>Coaster Bus</span>
 													</div>
-													<div class="car__tab">
+													<div data-tab="#tab-body-4" class="car__tab">
 														<svg width="35" height="35">
 															<use href="#car-4"></use>
 														</svg>
 														<span>BUS</span>
 													</div>
 												</div>
-												<div class="car__body">
-													<div class="car-info">
-														<div class="car-info__left">
-															<div class="car-info__item">
-																<svg width="18" height="18" class="car-info__svg">
-																	<use href="#car-seat"></use>
-																</svg>
-																<span>7 Seats</span>
-															</div>
+												<div id="tab-body-1" class="car__body active">
+													<div class="car-notification">
+                            <span>At the moment, the car class CUV is not available.</span>
+													</div>
+												</div>
+                        <div id="tab-body-2" class="car__body">
+                          <div class="car-info">
+                            <div class="car-info__left">
+                              <div class="car-info__item">
+                                <svg width="18" height="18" class="car-info__svg">
+                                  <use href="#car-seat"></use>
+                                </svg>
+                                <span>7 Seats</span>
+                              </div>
 
-															<div class="car-info__item">
-																<svg width="18" height="18" class="car-info__svg">
-																	<use href="#car-door"></use>
-																</svg>
-																<span>4 Doors</span>
-															</div>
+                              <div class="car-info__item">
+                                <svg width="18" height="18" class="car-info__svg">
+                                  <use href="#car-door"></use>
+                                </svg>
+                                <span>4 Doors</span>
+                              </div>
 
-															<div class="car-info__item">
-																<svg width="18" height="18" class="car-info__svg">
-																	<use href="#briefcase"></use>
-																</svg>
-																<span>2 Large bags</span>
-															</div>
+                              <div class="car-info__item">
+                                <svg width="18" height="18" class="car-info__svg">
+                                  <use href="#briefcase"></use>
+                                </svg>
+                                <span>2 Large bags</span>
+                              </div>
 
-															<div class="car-info__item">
-																<svg width="18" height="18" class="car-info__svg">
-																	<use href="#briefcase-2"></use>
-																</svg>
-																<span>1 Small bag</span>
-															</div>
+                              <div class="car-info__item">
+                                <svg width="18" height="18" class="car-info__svg">
+                                  <use href="#briefcase-2"></use>
+                                </svg>
+                                <span>1 Small bag</span>
+                              </div>
 
-															<div class="car-info__item">
-																<svg width="18" height="18" class="car-info__svg">
-																	<use href="#air-conditioning"></use>
-																</svg>
-																<span>Air Conditioning</span>
-															</div>
-															<div class="car-info__item">
-																<svg width="18" height="18" class="car-info__svg">
-																	<use href="#gearbox"></use>
-																</svg>
-																<span>Automatic gearbox</span>
-															</div>
+                              <div class="car-info__item">
+                                <svg width="18" height="18" class="car-info__svg">
+                                  <use href="#air-conditioning"></use>
+                                </svg>
+                                <span>Air Conditioning</span>
+                              </div>
+                              <div class="car-info__item">
+                                <svg width="18" height="18" class="car-info__svg">
+                                  <use href="#gearbox"></use>
+                                </svg>
+                                <span>Automatic gearbox</span>
+                              </div>
 
-														</div>
-														<div class="car-info__right">
-															<div class="form-group__wrap">
-																<div class="select-drop select-drop--cars car-info__select" onclick="function f(el){(!el.classList.value.includes('open'))?el.classList.add('open'):el.classList.remove('open');};f(this);">
+                            </div>
+                            <div class="car-info__right">
+                              <div class="form-group__wrap">
+                                <div class="select-drop select-drop--cars car-info__select" onclick="function f(el){(!el.classList.value.includes('open'))?el.classList.add('open'):el.classList.remove('open');};f(this);">
 																	<span class="select-drop__text">
 																		Sort by:
 																		<span class="select-drop__selected">Best Match</span>
@@ -3465,26 +3470,26 @@
 																				<span class="select-drop__results-item">Price: High to Low</span>
 
 																			</div>
-																</div>
-															</div>
+                                </div>
+                              </div>
 
-														</div>
-													</div>
+                            </div>
+                          </div>
 
-													<div class="car__products">
+                          <div class="car__products">
 
-														<!--				todo 21.12.19:  add class 'selected' if the car is selected -->
-														<div class="car-product">
-															<div class="car-product__view">
-																<!--recommended image size: width: 180px height: 80-->
-																<img src="media/assets/images/transportation/SUVs.png" class="car-product__img" alt="">
-															</div>
-															<div class="car-product__info">
-																<div class="car-product__title">Company xyz for pilgrims and tourism transportation service
-																</div>
-																<div class="car-product__price">
-																	<span>SAR</span> 2,500.78</div>
-																<div class="car-product__bottom">
+                            <!--				todo 21.12.19:  add class 'selected' if the car is selected -->
+                            <div class="car-product">
+                              <div class="car-product__view">
+                                <!--recommended image size: width: 180px height: 80-->
+                                <img src="media/assets/images/transportation/SUVs.png" class="car-product__img" alt="">
+                              </div>
+                              <div class="car-product__info">
+                                <div class="car-product__title">Company xyz for pilgrims and tourism transportation service
+                                </div>
+                                <div class="car-product__price">
+                                  <span>SAR</span> 2,500.78</div>
+                                <div class="car-product__bottom">
 																	<span class="rating car-product__rating">
 																		<!--todo: put the value from 1 to 5  to `data-rating`-->
 																		<span class="rating__icons" data-rating="5">
@@ -3512,9 +3517,9 @@
 																		</span>
 																		<span class="rating__mark">Very Good</span>
 																	</span>
-																	<div class="car-product__amount">
-																		<div class="car-product__amount-text">QTY</div>
-																		<div class="select-drop car-product__select" onclick="function f(el){(!el.classList.value.includes('open'))?el.classList.add('open'):el.classList.remove('open');};f(this);">
+                                  <div class="car-product__amount">
+                                    <div class="car-product__amount-text">QTY</div>
+                                    <div class="select-drop car-product__select" onclick="function f(el){(!el.classList.value.includes('open'))?el.classList.add('open'):el.classList.remove('open');};f(this);">
 																			<span class="select-drop__text">
 																				1
 																				<span>
@@ -3529,29 +3534,29 @@
 																						<span class="select-drop__results-item">4</span>
 
 																					</div>
-																		</div>
-																	</div>
-																	<div class="car-product__btn">
-																		<button class="button">
-																			Select
-																		</button>
-																	</div>
-																</div>
-															</div>
-														</div>
+                                    </div>
+                                  </div>
+                                  <div class="car-product__btn">
+                                    <button class="button">
+                                      Select
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
 
-														<!--				todo 21.12.19:  add class 'selected' if the car is selected -->
-														<div class="car-product">
-															<div class="car-product__view">
-																<!--recommended image size: width: 180px height: 80-->
-																<img src="media/assets/images/transportation/SUVs.png" class="car-product__img" alt="">
-															</div>
-															<div class="car-product__info">
-																<div class="car-product__title">Company xyz for pilgrims and tourism transportation service
-																</div>
-																<div class="car-product__price">
-																	<span>SAR</span> 2,500.78</div>
-																<div class="car-product__bottom">
+                            <!--				todo 21.12.19:  add class 'selected' if the car is selected -->
+                            <div class="car-product">
+                              <div class="car-product__view">
+                                <!--recommended image size: width: 180px height: 80-->
+                                <img src="media/assets/images/transportation/SUVs.png" class="car-product__img" alt="">
+                              </div>
+                              <div class="car-product__info">
+                                <div class="car-product__title">Company xyz for pilgrims and tourism transportation service
+                                </div>
+                                <div class="car-product__price">
+                                  <span>SAR</span> 2,500.78</div>
+                                <div class="car-product__bottom">
 																	<span class="rating car-product__rating">
 																		<!--todo: put the value from 1 to 5  to `data-rating`-->
 																		<span class="rating__icons" data-rating="5">
@@ -3579,9 +3584,9 @@
 																		</span>
 																		<span class="rating__mark">Very Good</span>
 																	</span>
-																	<div class="car-product__amount">
-																		<div class="car-product__amount-text">QTY</div>
-																		<div class="select-drop car-product__select" onclick="function f(el){(!el.classList.value.includes('open'))?el.classList.add('open'):el.classList.remove('open');};f(this);">
+                                  <div class="car-product__amount">
+                                    <div class="car-product__amount-text">QTY</div>
+                                    <div class="select-drop car-product__select" onclick="function f(el){(!el.classList.value.includes('open'))?el.classList.add('open'):el.classList.remove('open');};f(this);">
 																			<span class="select-drop__text">
 																				1
 																				<span>
@@ -3596,29 +3601,29 @@
 																						<span class="select-drop__results-item">4</span>
 
 																					</div>
-																		</div>
-																	</div>
-																	<div class="car-product__btn">
-																		<button class="button">
-																			Select
-																		</button>
-																	</div>
-																</div>
-															</div>
-														</div>
+                                    </div>
+                                  </div>
+                                  <div class="car-product__btn">
+                                    <button class="button">
+                                      Select
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
 
-														<!--				todo 21.12.19:  add class 'selected' if the car is selected -->
-														<div class="car-product">
-															<div class="car-product__view">
-																<!--recommended image size: width: 180px height: 80-->
-																<img src="media/assets/images/transportation/SUVs.png" class="car-product__img" alt="">
-															</div>
-															<div class="car-product__info">
-																<div class="car-product__title">Company xyz for pilgrims and tourism transportation service
-																</div>
-																<div class="car-product__price">
-																	<span>SAR</span> 2,500.78</div>
-																<div class="car-product__bottom">
+                            <!--				todo 21.12.19:  add class 'selected' if the car is selected -->
+                            <div class="car-product">
+                              <div class="car-product__view">
+                                <!--recommended image size: width: 180px height: 80-->
+                                <img src="media/assets/images/transportation/SUVs.png" class="car-product__img" alt="">
+                              </div>
+                              <div class="car-product__info">
+                                <div class="car-product__title">Company xyz for pilgrims and tourism transportation service
+                                </div>
+                                <div class="car-product__price">
+                                  <span>SAR</span> 2,500.78</div>
+                                <div class="car-product__bottom">
 																	<span class="rating car-product__rating">
 																		<!--todo: put the value from 1 to 5  to `data-rating`-->
 																		<span class="rating__icons" data-rating="5">
@@ -3646,9 +3651,9 @@
 																		</span>
 																		<span class="rating__mark">Very Good</span>
 																	</span>
-																	<div class="car-product__amount">
-																		<div class="car-product__amount-text">QTY</div>
-																		<div class="select-drop car-product__select" onclick="function f(el){(!el.classList.value.includes('open'))?el.classList.add('open'):el.classList.remove('open');};f(this);">
+                                  <div class="car-product__amount">
+                                    <div class="car-product__amount-text">QTY</div>
+                                    <div class="select-drop car-product__select" onclick="function f(el){(!el.classList.value.includes('open'))?el.classList.add('open'):el.classList.remove('open');};f(this);">
 																			<span class="select-drop__text">
 																				1
 																				<span>
@@ -3663,19 +3668,29 @@
 																						<span class="select-drop__results-item">4</span>
 
 																					</div>
-																		</div>
-																	</div>
-																	<div class="car-product__btn">
-																		<button class="button">
-																			Select
-																		</button>
-																	</div>
-																</div>
-															</div>
-														</div>
+                                    </div>
+                                  </div>
+                                  <div class="car-product__btn">
+                                    <button class="button">
+                                      Select
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
 
-													</div>
-												</div>
+                          </div>
+                        </div>
+                        <div id="tab-body-3" class="car__body">
+                          <div class="car-notification">
+                            <span>At the moment, the car class CUV is not available.</span>
+                          </div>
+                        </div>
+                        <div id="tab-body-4" class="car__body">
+                          <div class="car-notification">
+                            <span>At the moment, the car class CUV is not available.</span>
+                          </div>
+                        </div>
 											</div>
 										</div>
 
@@ -4057,6 +4072,26 @@
 </script>
 
 		<!-- todo _demo react calendar -->
+    <script>
+      if(document.querySelector('.car__tabs')) {
+        var carTabs = document.querySelectorAll('.car__tab');
+        var carBodes = document.querySelectorAll('.car__body');
+        for(var i = 0; i < carTabs.length; i++) {
+          var tab = carTabs[i];
 
+          tab.addEventListener('click', function() {
+            for(var j = 0; j < carTabs.length; j++) {
+              if (carTabs[j]) carTabs[j].classList.remove('active');
+							if (carBodes[j]) carBodes[j].classList.remove('active');
+            }
+
+            var thisTab = this;
+						var thisTabBody = document.querySelector(thisTab.getAttribute('data-tab'));
+            if(thisTab) thisTab.classList.add('active');
+            if(thisTabBody) thisTabBody.classList.add('active');
+          });
+        }
+      }
+    </script>
 	</body>
 </html>

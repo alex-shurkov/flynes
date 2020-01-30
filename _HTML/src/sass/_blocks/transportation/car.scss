@@ -117,8 +117,13 @@
 	}
 
 	&__body {
+    display: none;
 		padding: 0 12px 16px;
 		box-shadow: 0 3px 10px 0 rgba(80, 80, 80, 0.2);
+
+    &.active {
+      display: block;
+    }
 	}
 }
 
@@ -448,5 +453,17 @@
 		}
 	}
 
+}
+
+.car-notification {
+  padding: 35px 9px 18px;
+  font-size: 13px;
+  letter-spacing: .025em;
+  font-weight: 600;
+  color: map_get($colors, 'secondary');
+
+  @include media(sm) {
+    padding: 45px 19px 28px;
+  }
 }
 
