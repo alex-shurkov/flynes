@@ -17,8 +17,12 @@ _HTML/src/js/
 _DIST/media/assets/js
 _DIST/404.html
 _DIST/sitemap.html
+_DIST/media/assets/css/maps
 
-
+# -------------------------------------------------
+# Node Modules
+# -------------------------------------------------
+node_modules
 
 # -------------------------------------------------
 # JetBrains
