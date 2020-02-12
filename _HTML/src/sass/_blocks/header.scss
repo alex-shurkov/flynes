@@ -21,6 +21,17 @@
 	width: 19%;
 	height: 60px;
 
+
+	.ie & {
+		width: 19%;
+		@include media(1200px) {
+			width: 16%;
+		}
+		@include media(1700px) {
+			width: 19%;
+		}
+	}
+
 	.header--personal & {
 		@include media(def) {
 			width: 19%;
@@ -57,6 +68,7 @@
 
 		img {
 			max-width: 100%;
+			width: 100%;
 			border-bottom-right-radius: 8%;
 			border-bottom-left-radius: 8%;
 		}
