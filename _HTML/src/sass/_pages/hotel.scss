@@ -43,6 +43,10 @@
 		@include media(lg) {
 			max-width: 1248px;
 		}
+
+		@media (min-width: 1830px) {
+			max-width: 1368px;
+		}
 	}
 }
 

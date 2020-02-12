@@ -44,7 +44,6 @@
 			}
 		}
 
-
 		@include media(ms, max) {
 			padding-top: 60px;
 			max-width: 100%;
@@ -54,6 +53,10 @@
 			[dir="rtl"] & {
 				margin-right: 0;
 			}
+		}
+
+		@media (min-width: 1830px) {
+			max-width: 1368px;
 		}
 	}
 
@@ -67,8 +70,8 @@
 			display: block;
 			position: absolute;
 			height: 4px;
-			width: calc(100% - 100px);
-			left: 50px;
+			width: calc(100% - 120px);
+			left: 60px;
 			top: 35px;
 			background: #e3e3e3;
 
