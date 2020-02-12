@@ -188,3 +188,18 @@
 	}
 
 }
+
+.ie {
+	.breadcrumbs__content::before {
+		width: calc(100% - 150px);
+		left: 90px;
+	}
+}
+
+[dir="rtl"] {
+	.ie {
+		.breadcrumbs__content::before {
+			right: 90px;
+		}
+	}
+}
