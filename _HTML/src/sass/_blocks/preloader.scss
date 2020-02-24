@@ -1,7 +1,7 @@
 .preloader {
 	justify-content: center;
 	align-items: center;
-	background: url(../images/preloader/preloader-bg.png);
+	background: url(/Media/assets/images/preloader/preloader-bg.png);
 	display: none;
 	top: 0;
 	left: 0;
@@ -22,7 +22,7 @@
 		top: 0;
 		height: 100%;
 		width: 50%;
-		background: #ffffff url(../images/preloader/preloader-flynas.png) no-repeat;
+		background: #ffffff url(/Media/assets/images/preloader/preloader-flynas.png) no-repeat;
 		background-position-x: calc(100% - 215px);
 		background-position-y: center;
 		box-shadow: 10px 0 15px 0 rgba(68, 68, 68, 0.1);
@@ -51,7 +51,7 @@
 		content: '';
 		height: 240px;
 		width: 240px;
-		background: url(../images/preloader/preloader-front.png);
+		background: url(/Media/assets/images/preloader/preloader-front.png);
 		background-size: contain;
 		animation: rotate 10s linear infinite;
 		z-index: 3;
@@ -66,15 +66,15 @@
 		}
 	}
 
-  .ie &:after {
-    left: calc(50% - 120px);
-    top: calc(50% - 120px);
+	.ie &::after {
+		left: calc(50% - 120px);
+		top: calc(50% - 120px);
 
-    @include media(md, max) {
-      left: calc(50% - 96px);
-      top: calc(50% - 96px);
-    }
-  }
+		@include media(md, max) {
+			left: calc(50% - 96px);
+			top: calc(50% - 96px);
+		}
+	}
 }
 
 .preloader-back {
@@ -84,21 +84,21 @@
 	align-items: center;
 	position: relative;
 
-  .ie & {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+	.ie & {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
 
-	&:before {
+	&::before {
 		position: absolute;
 		display: block;
 		content: '';
 		height: 264px;
 		width: 264px;
-		background: url(../images/preloader/preloader-shadow.png);
+		background: url(/Media/assets/images/preloader/preloader-shadow.png);
 		background-size: contain;
 		animation: rotate 10s linear infinite;
 
@@ -113,21 +113,21 @@
 
 	}
 
-  .ie &:before {
-    left: calc(50% - 132px);
-    top: calc(50% - 132px);
+	.ie &::before {
+		left: calc(50% - 132px);
+		top: calc(50% - 132px);
 
-    @include media(md, max) {
-      left: calc(50% - 105px);
-      top: calc(50% - 105px);
-    }
-  }
+		@include media(md, max) {
+			left: calc(50% - 105px);
+			top: calc(50% - 105px);
+		}
+	}
 
-	&:after {
+	&::after {
 		position: absolute;
 		display: block;
 		content: '';
-		background: url(../images/preloader/preloader-back.png);
+		background: url(/Media/assets/images/preloader/preloader-back.png);
 		background-size: contain;
 		animation: rotateBack 10s linear infinite;
 		transform-origin: center center;
@@ -144,15 +144,16 @@
 		}
 	}
 
-  .ie &:after {
-    left: calc(50% - 175px);
-    top: calc(50% - 175px);
+	.ie &::after {
+		left: calc(50% - 175px);
+		top: calc(50% - 175px);
 
-    @include media(md, max) {
-      left: calc(50% - 140px);
-      top: calc(50% - 140px);
-    }
-  }
+		@include media(md, max) {
+			left: calc(50% - 140px);
+			top: calc(50% - 140px);
+		}
+	}
+
 }
 
 @keyframes rotate {
@@ -169,64 +170,65 @@
 
 .preloader-error {
 
-  &-wrapper {
-    position: fixed;
-    z-index: 999999;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 15px;
-    background-color: rgba(#fff, .7);
-    opacity: 0;
-    pointer-events: none;
+	max-width: 420px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px 10px 20px;
+	border-radius: 7px;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 5px 0 10px rgba(#000000, .1);
 
-    &.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
+	&-wrapper {
+		position: fixed;
+		z-index: 999999;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 30px 15px;
+		background-color: rgba(#fff, .7);
+		opacity: 0;
+		pointer-events: none;
 
-  max-width: 420px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 30px 10px 20px;
-  border-radius: 7px;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 5px 0 10px rgba(#000000, .1);
+		&.active {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
 
-  @include media(sm) {
-    padding: 30px 30px 20px;
-  }
+	@include media(sm) {
+		padding: 30px 30px 20px;
+	}
 
-  &__title {
-    margin-bottom: 25px;
-    font-size: rem(32);
-    font-weight: 900;
-    color: map_get($colors, 'main');
+	&__title {
+		margin-bottom: 25px;
+		font-size: rem(32);
+		font-weight: 900;
+		color: map_get($colors, 'main');
 
-    @include media(sm, max) {
-      font-size: 32px;
-    }
-  }
+		@include media(sm, max) {
+			font-size: 32px;
+		}
+	}
 
-  &__text {
-    margin-bottom: 36px;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: .025em;
-    color: #212121;
-  }
+	&__text {
+		margin-bottom: 36px;
+		font-size: 14px;
+		font-weight: 600;
+		letter-spacing: .025em;
+		color: #212121;
+	}
 
-  &__buttons {
-    margin-left: -25px;
-    .button {
-      margin-left: 25px;
-    }
-  }
+	&__buttons {
+		margin-left: -25px;
+
+		.button {
+			margin-left: 25px;
+		}
+	}
 }

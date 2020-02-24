@@ -76,13 +76,13 @@
 
 	&__wrap {
 		position: relative;
-		background: url(../images/achievements/achievements-main.jpg);
+		background: url(/Media/assets/images/achievements/achievements-main.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		padding-top: calc(725/1920*100%);
 
 		@include media(sm, max) {
-			background-image: url(../images/achievements/achievements-main-mb.jpg);
+			background-image: url(/Media/assets/images/achievements/achievements-main-mb.jpg);
 			padding-top: calc(627/375*100%);
 			background-position: center center;
 			background-position-y: top;
@@ -103,7 +103,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 100%;
-		background: url(../images/achievements/achievements-info-bg.jpg);
+		background: url(/Media/assets/images/achievements/achievements-info-bg.jpg);
 		background-position: right center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -288,7 +288,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 100%;
-		background: url(../images/achievements/meet-bg.jpg);
+		background: url(/Media/assets/images/achievements/meet-bg.jpg);
 		background-position: left center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -327,7 +327,7 @@
 			margin-right: 0;
 
 			background: linear-gradient(to left, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, 0) 100%);
-			box-shadow: -9.811px 8.529px 45px 0px rgba(114, 195, 214, 0.25);
+			box-shadow: -9.811px 8.529px 45px 0 rgba(114, 195, 214, 0.25);
 		}
 
 		@include media(sm) {
@@ -351,10 +351,10 @@
 		}
 
 		@include media(def) {
-			box-shadow: -9.811px 8.529px 45px 0px rgba(114, 195, 214, 0.25);
+			box-shadow: -9.811px 8.529px 45px 0 rgba(114, 195, 214, 0.25);
 
 			[dir="rtl"] & {
-				box-shadow: 9.811px 8.529px 45px 0px rgba(114, 195, 214, 0.25);
+				box-shadow: 9.811px 8.529px 45px 0 rgba(114, 195, 214, 0.25);
 			}
 		}
 
@@ -374,18 +374,21 @@
 		max-width: 1170px;
 		position: relative;
 		padding: 9% 3% 9% 17%;
+
 		[dir="rtl"] & {
 			padding: 9% 17% 9% 3%;
 		}
 
 		@include media(sm) {
 			padding: 9% 3% 9% 19%;
+
 			[dir="rtl"] & {
 				padding: 9% 19% 9% 3%;
 			}
 		}
 		@include media(ms) {
 			padding: 5% 4% 5% 16%;
+
 			[dir="rtl"] & {
 				padding: 5% 16% 5% 4%;
 			}
@@ -433,7 +436,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 100%;
-		background: url(../images/achievements/permission-bg.jpg) no-repeat;
+		background: url(/Media/assets/images/achievements/permission-bg.jpg) no-repeat;
 		background-position: top right;
 		background-size: cover;
 
@@ -548,6 +551,7 @@
 		display: inline-block;
 	}
 
+	// sass-lint:disable no-important
 	&--left {
 		&.section-img {
 			@include media(mg, max) {
@@ -562,6 +566,7 @@
 		}
 	}
 
+	// sass-lint:disable no-important
 	&--right {
 		&.section-img {
 			@include media(mg, max) {

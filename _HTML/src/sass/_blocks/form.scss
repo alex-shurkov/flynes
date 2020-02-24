@@ -186,9 +186,6 @@ select:-webkit-autofill:focus {
 		max-height: 47px;
 		transition: box-shadow 0.15s ease;
 		box-shadow: 0 4px 12px 0 rgba(61, 61, 61, 0.2);
-		-webkit-appearance: none;
-		-webkit-box-shadow: 0 4px 12px 0 rgba(61, 61, 61, 0.2);
-		-moz-box-shadow: 0 0 5px 1px rgba(224, 39, 14, 1);
 		@include media(sm, max) {
 			font-size: 13px;
 		}

@@ -51,10 +51,6 @@
 		}
 	}
 
-	svg {
-		fill: map_get($colors, main);
-	}
-
 	&__title {
 		padding: 18px 24px 12px;
 		display: flex;
@@ -78,6 +74,7 @@
 			padding: 14px 15px;
 			margin: 0;
 
+			//sass-lint:disable-all
 			& ~ * {
 				padding-right: 15px;
 				padding-left: 15px;
@@ -168,6 +165,7 @@
 	}
 
 	svg {
+		fill: map_get($colors, main);
 		&.aside {
 			&__text-icon {
 				fill: #313131;
@@ -323,6 +321,7 @@
 			background-color: #f8f8f8;
 			padding: 14px 15px;
 
+			//sass-lint:disable-all
 			& ~ * {
 				padding-right: 15px;
 				padding-left: 15px;
@@ -371,6 +370,7 @@
 			background-color: #f8f8f8;
 			padding: 14px 15px;
 
+			//sass-lint:disable-all
 			& ~ * {
 				padding-right: 15px;
 				padding-left: 15px;
@@ -458,6 +458,7 @@
 		background-color: #f8f8f8;
 		padding: 14px 15px;
 
+		//sass-lint:disable-all
 		& ~ * {
 			padding-right: 15px;
 			padding-left: 15px;

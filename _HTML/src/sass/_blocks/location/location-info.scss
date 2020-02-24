@@ -136,6 +136,7 @@
 	&__place {
 		display: flex;
 		margin-top: 10px;
+
 		svg {
 			fill: #9c9c9c;
 		}
@@ -169,6 +170,7 @@
 	&__date {
 		display: flex;
 		text-align: center;
+
 		&-item {
 			width: 50%;
 		}
@@ -345,6 +347,7 @@
 
 		&.madinah {
 			padding-top: 5px;
+
 			svg {
 				transform: scale(1.3);
 				position: relative;

@@ -29,7 +29,7 @@
 
 	@include media(md) {
 		padding-bottom: 170px;
-		background-image: url(../images/contacts/contacts-main.jpg);
+		background-image: url(/Media/assets/images/contacts/contacts-main.jpg);
 	}
 }
 
@@ -60,7 +60,7 @@
 			background-position-y: 37%;
 			background-position-x: center;
 			padding: 75px 20px;
-			background-image: url(../images/contacts/contacts-main-mb.jpg);
+			background-image: url(/Media/assets/images/contacts/contacts-main-mb.jpg);
 			background-size: cover;
 
 			[dir="rtl"] & {
@@ -262,7 +262,7 @@
 			bottom: 0;
 			width: 100%;
 			height: 100%;
-			background-image: url(../images/contacts/contacts-form-img.png);
+			background-image: url(/Media/assets/images/contacts/contacts-form-img.png);
 			background-repeat: no-repeat;
 			background-position: 10% 0;
 

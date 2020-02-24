@@ -12,17 +12,7 @@
 			}
 		}
 	}
-}
 
-@keyframes spin {
-	from {
-		transform: rotate(0deg);
-	} to {
-		  transform: rotate(360deg);
-	  }
-}
-
-.visa {
 	&-top__group,
 	&__group {
 		background: #ffffff;
@@ -95,7 +85,7 @@
 			width: 100%;
 			top: 0;
 			left: 0;
-			background:  url(../images/static-svg/tick.svg) no-repeat;
+			background:  url(/Media/assets/images/static-svg/tick.svg) no-repeat;
 			background-size: contain;
 			background-position: center;
 		}
@@ -106,14 +96,14 @@
 				animation-duration: 1500ms;
 				animation-iteration-count: infinite;
 				animation-timing-function: linear;
-				background-image:  url(../images/static-svg/preloader.svg);
+				background-image:  url(/Media/assets/images/static-svg/preloader.svg);
 			}
 
 		}
 
 		.is-canceled & {
 			&::before {
-				background-image:  url(../images/static-svg/close.svg);
+				background-image:  url(/Media/assets/images/static-svg/close.svg);
 			}
 		}
 	}
@@ -134,14 +124,6 @@
 		color: #313131;
 		line-height: 20px;
 		letter-spacing: 0.01em;
-	}
-
-	&__head {
-		.visa__title {
-			.review & {
-				color: #df2d69;
-			}
-		}
 	}
 
 	&__value {
@@ -199,14 +181,29 @@
 		}
 	}
 
-
 	&__head {
 		border-bottom: 1px solid map_get($colors, main);
 		margin: 0 19px 5px;
 		padding: 16px 20px;
 
+		.visa__title {
+			.review & {
+				color: #df2d69;
+			}
+		}
+
 		@include media(def, max) {
 			padding: 16px 0;
 		}
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
 	}
 }

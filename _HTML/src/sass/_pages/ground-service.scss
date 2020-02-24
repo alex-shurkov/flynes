@@ -40,6 +40,7 @@
 		cursor: pointer;
 	}
 
+	// sass-lint:disable no-important
 	&__content {
 		position: absolute !important;
 		left: -5px;
@@ -54,6 +55,7 @@
 		font-size: 10px;
 		display: none !important;
 
+		// sass-lint:disable no-important
 		.info-tooltip:hover & {
 			display: block !important;
 		}
@@ -211,10 +213,11 @@
 			margin-top: 36px;
 		}
 	}
+
 	&__btn {
 		display: flex;
 		padding-top: 15px;
-		transition: background-color 0.15s linear;;
+		transition: background-color 0.15s linear;
 		align-items: flex-end;
 		justify-content: flex-end;
 
@@ -237,6 +240,7 @@
 			font-size: 12px;
 			border-radius: 5px;
 			font-weight: 600;
+
 			&::after {
 				content: none;
 			}

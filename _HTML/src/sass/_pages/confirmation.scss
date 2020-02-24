@@ -20,7 +20,7 @@
 			bottom: 0;
 			width: 100%;
 			height: 100%;
-			background: url(../images/confirm/confirm-bg.png);
+			background: url(/Media/assets/images/confirm/confirm-bg.png);
 			background-position: right center;
 			background-size: contain;
 			background-repeat: no-repeat;
@@ -30,7 +30,7 @@
 			}
 
 			.confirmation--error & {
-				background-image: url(../images/confirm/confirm-bg-2.png);
+				background-image: url(/Media/assets/images/confirm/confirm-bg-2.png);
 
 			}
 		}
@@ -131,8 +131,8 @@
 		}
 
 		@include media(def, max) {
-			 top: 20%;
-			 max-height: 60%;
+			top: 20%;
+			max-height: 60%;
 		 }
 
 		@include media(lg, max) {
@@ -168,16 +168,6 @@
 		}
 	}
 
-	&__list {
-		margin-top: 30px;
-	}
-
-	&__list-item {
-		font-size: 16px;
-		color: #313131;
-		font-weight: 700;
-	}
-
 	&__title {
 		font-weight: 700;
 		font-size: 25px;
@@ -198,6 +188,7 @@
 			position: relative;
 			top: 5px;
 			margin-right: 10px;
+
 			[dir="rtl"] & {
 				margin-right: 0;
 				margin-left: 10px;
@@ -209,6 +200,7 @@
 				min-height: 30px;
 				min-width: 30px;
 				margin-right: 5px;
+
 				[dir="rtl"] & {
 					margin-right: 0;
 					margin-left: 5px;
@@ -233,7 +225,7 @@
 			}
 		}
 	}
-	
+
 	&__bottom {
 		font-size: 16px;
 		font-weight: 600;
@@ -255,7 +247,7 @@
 			margin-top: 17px;
 		}
 	}
-	
+
 	&__link {
 		padding: 8px 42px;
 		text-transform: none;

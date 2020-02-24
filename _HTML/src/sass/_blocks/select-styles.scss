@@ -4,7 +4,7 @@
 	border-radius: 8px;
 	padding: 14px;
 	width: 100%;
-	background: #ffffff url(../images/static-svg/select-arrow.svg) no-repeat;
+	background: #ffffff url(/Media/assets/images/static-svg/select-arrow.svg) no-repeat;
 	background-size: 9px 9px;
 	background-position-x: calc(100% - 14px);
 	background-position-y: center;
@@ -68,7 +68,7 @@
 	}
 
 	&.open {
-		background-image: url(../images/static-svg/select-arrow-up-colored.svg);
+		background-image: url(/Media/assets/images/static-svg/select-arrow-up-colored.svg);
 		box-shadow: 0 6px 12px 0 rgba(#00b8b0, 0.25);
 		outline: none;
 
@@ -151,7 +151,5 @@
 				background-color: #e7fffe;
 			}
 		}
-
 	}
-
 }

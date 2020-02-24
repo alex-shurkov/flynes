@@ -56,6 +56,7 @@
 			border-radius: 5px;
 			font-weight: 600;
 			transition: background-color 0.15s linear;
+
 			&::after {
 				content: none;
 			}
@@ -81,7 +82,7 @@
 			display: block;
 			content: '';
 			position: absolute;
-			background: url(../images/transportation/route-road.png) bottom left repeat-x;
+			background: url(/Media/assets/images/transportation/route-road.png) bottom left repeat-x;
 			right: 0;
 			left: 0;
 			bottom: 0;
@@ -102,7 +103,7 @@
 			display: block;
 			content: '';
 			position: absolute;
-			background: url(../images/transportation/route-city.png) bottom left no-repeat;
+			background: url(/Media/assets/images/transportation/route-city.png) bottom left no-repeat;
 			left: 0;
 			width: 216px;
 			bottom: 35px;
@@ -240,7 +241,7 @@
 			margin: 0 auto;
 			background-repeat: no-repeat;
 			background-position: center;
-			background-image: url(../images/transportation/marker-default.png);
+			background-image: url(/Media/assets/images/transportation/marker-default.png);
 
 			@include media(ms, max) {
 				transform: scale(0.7);
@@ -249,9 +250,8 @@
 
 		.route__point--last & {
 			&::before {
-				background-image: url(../images/transportation/marker-active.png)
+				background-image: url(/Media/assets/images/transportation/marker-active.png);
 			}
 		}
 	}
-
 }

@@ -1,3 +1,4 @@
+//sass-lint:disable-all
 .flight {
 	padding-top: 40px;
 	background: #f8f8f8;
@@ -372,47 +373,47 @@
 				order: 6;
 			}
 		}
+	}
 
-    .gcell-none {
-      @include media(sm) {
-        display: none;
-      }
-    }
+	.gcell-none {
+		@include media(sm) {
+			display: none;
+		}
+	}
 
-    .gcell-auto {
-      flex-basis: auto;
-      width: auto;
-      max-width: none;
-      flex-grow: 1;
+	.gcell-auto {
+		flex-basis: auto;
+		width: auto;
+		max-width: none;
+		flex-grow: 1;
 
 
-      .flight-row__cell {
-        @include media(sm) {
-          height: 58px;
-        }
-      }
+		.flight-row__cell {
+			@include media(sm) {
+				height: 58px;
+			}
+		}
 
-      .flight-row__cell--desc {
+		.flight-row__cell--desc {
 
-        @include media(sm, max) {
-          border-bottom: 1px solid inherit;
-        }
+			@include media(sm, max) {
+				border-bottom: 1px solid inherit;
+			}
 
-        border-right: 1px solid #72c3d6;
-      }
-    }
+			border-right: 1px solid #72c3d6;
+		}
+	}
 
-    &--default {
-      .flight-row__cell,
-      .gcell-auto .flight-row__cell--desc {
-        border-color: #d0d0d0;
-      }
-      @include media(sm) {
-        .gcell:nth-child(2)>.flight-row__cell--desc {
-          border-color: #d0d0d0;
-        }
-      }
-    }
+	&--default {
+		.flight-row__cell,
+		.gcell-auto .flight-row__cell--desc {
+			border-color: #d0d0d0;
+		}
+		@include media(sm) {
+			.gcell:nth-child(2)>.flight-row__cell--desc {
+				border-color: #d0d0d0;
+			}
+		}
 	}
 
 	&__promo {
@@ -445,9 +446,9 @@
 			@include media(sm, max) {
 				border-bottom: none;
 
-        &--auto {
-          border-bottom: 1px solid;
-        }
+				&--auto {
+					border-bottom: 1px solid;
+				}
 
 				.gcell:nth-child(8) > & {
 					border-bottom: 1px solid #72c3d6;
@@ -461,6 +462,7 @@
 					border-left: none;
 					border-right: 1px solid #72c3d6;;
 				}
+
 				box-shadow: 0 3px 12px 0 rgba(47, 47, 47, 0.1);
 
 				.gcell:nth-child(2) > & {
@@ -508,7 +510,7 @@
 
 				[dir="rtl"] & {
 					border-left: none;
-					border-right: 1px solid #72c3d6;;
+					border-right: 1px solid #72c3d6;
 				}
 
 				.gcell:nth-child(7) > & {
@@ -588,7 +590,7 @@
 				display: block;
 				top: 0;
 				right: 2px;
-				background-image: url(../images/static-svg/tick-rose.svg);
+				background-image: url(/Media/assets/images/static-svg/tick-rose.svg);
 				background-repeat: no-repeat;
 				background-position: center;
 				height: 20px;
@@ -621,6 +623,7 @@
 			&.economy,
 			&.business {
 				margin-left: 5px;
+
 				[dir="rtl"] & {
 					margin-left: 0;
 					margin-right: 5px;
@@ -640,7 +643,7 @@
 				cursor: auto;
 				pointer-events: none;
 
-				&:before {
+				&::before {
 					content: '';
 				}
 			}
@@ -667,11 +670,11 @@
 		}
 	}
 
-  &__error {
-    font-size: 13px;
-    font-weight: 600;
-    color: map_get($colors, 'secondary');
-  }
+	&__error {
+		font-size: 13px;
+		font-weight: 600;
+		color: map_get($colors, 'secondary');
+	}
 
 	&__name {
 		font-size: 14px;
@@ -698,6 +701,7 @@
 
 }
 
+// sass-lint:disable no-important
 .order {
 	@include media(sm) {
 		&-0 {
@@ -758,6 +762,7 @@
 		cursor: pointer;
 	}
 
+	// sass-lint:disable no-important
 	&__content {
 		position: absolute !important;
 		left: -5px;
@@ -772,6 +777,7 @@
 		font-size: 10px;
 		display: none !important;
 
+		// sass-lint:disable no-important
 		.info-tooltip:hover & {
 			display: block !important;
 		}

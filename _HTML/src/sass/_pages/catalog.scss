@@ -13,7 +13,7 @@
 
 	&__wrap {
 		position: relative;
-		background: url(../images/catalog/catalog-main.png);
+		background: url(/Media/assets/images/catalog/catalog-main.png);
 		background-size: cover;
 		background-repeat: no-repeat;
 		padding-top: calc(864 / 1920 * 100%);
@@ -24,7 +24,7 @@
 		}
 
 		@include media(sm, max) {
-			background-image: url(../images/catalog/catalog-main-mobile.png);
+			background-image: url(/Media/assets/images/catalog/catalog-main-mobile.png);
 		}
 
 	}

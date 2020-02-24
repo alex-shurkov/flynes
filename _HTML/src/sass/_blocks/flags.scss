@@ -1,3 +1,4 @@
+//sass-lint:disable-all
 //styles for flags
 
 .flag {
@@ -7,7 +8,7 @@
 	width: 24px;
 	margin-right: 6px;
 	transform: scale(0.9);
-	background-image: url(../images/sprites/sprite-flags.png);
+	background-image: url(/Media/assets/images/sprites/sprite-flags.png);
 
 	[dir="rtl"] & {
 		margin-right: 0;

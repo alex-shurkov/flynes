@@ -1,8 +1,8 @@
 .sm-payment {
 	padding-bottom: 20px;
-		@include media(sm) {
-			margin: 0 -24px;
-		}
+	@include media(sm) {
+		margin: 0 -24px;
+	}
 
 	&__left {
 		@include media(lg) {
@@ -29,6 +29,7 @@
 
 		@include media(lg) {
 			margin-right: 11%;
+
 			[dir="rtl"] & {
 				margin-right: 0;
 				margin-left: 11%;
@@ -39,7 +40,7 @@
 	&__card {
 		min-height: 220px;
 		background-color: #dbfbfa;
-		background-image: url(../images/payment/card-bg.png);
+		background-image: url(/Media/assets/images/payment/card-bg.png);
 		border-radius: 8px;
 		position: relative;
 		padding: 20px 15px;
@@ -52,7 +53,7 @@
 			padding: 24px;
 		}
 
-		&:before {
+		&::before {
 			position: absolute;
 			content: '';
 			display: block;
@@ -60,7 +61,7 @@
 			right: 24px;
 			height: 18px;
 			width: 57px;
-			background: url(../images/payment/card-img.png);
+			background: url(/Media/assets/images/payment/card-img.png);
 			background-size: contain;
 
 			[dir="rtl"] & {

@@ -189,7 +189,7 @@
 			right: 0;
 			bottom: 0;
 			border-radius: 5px;
-			background-image: url(../images/personal-cabinet/profile-bg.png);
+			background-image: url(/Media/assets/images/personal-cabinet/profile-bg.png);
 			background-position: right center;
 			background-repeat: no-repeat;
 
@@ -413,6 +413,7 @@
 		padding: 5px 10px;
 		border: none;
 		cursor: pointer;
+
 		svg {
 			height: 16px;
 			width: 16px;
@@ -485,6 +486,7 @@
 			padding: 8px 26px;
 		}
 
+		// sass-lint:disable no-important
 		.active + & {
 			border-left-color: transparent !important;
 
@@ -509,6 +511,7 @@
 			}
 		}
 
+		// sass-lint:disable no-important
 		&.active {
 			border-radius: 3px;
 			border-color: rgb(114, 195, 214) !important;
@@ -534,6 +537,7 @@
 		}
 	}
 
+	// sass-lint:disable no-important
 	.select-drop {
 		display: inline-block;
 		width: 130px !important;

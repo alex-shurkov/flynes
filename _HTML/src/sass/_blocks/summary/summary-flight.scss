@@ -100,12 +100,13 @@
 		text-align: center;
 		border-radius: 3px;
 		display: inline-block;
-		margin: 0 0 12px 0;
+		margin: 0 0 12px;
 		@include media(sm) {
 			padding: 6px 25px;
 		}
 		@include media(md) {
 			margin-right: 25px;
+
 			[dir="rtl"] & {
 				margin-right: 0;
 				margin-left: 25px;
@@ -401,6 +402,7 @@
 	}
 }
 
+// sass-lint:disable no-important
 .order {
 	@include media(sm) {
 		&-0 {

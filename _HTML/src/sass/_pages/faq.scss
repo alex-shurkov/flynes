@@ -4,7 +4,7 @@
 
 .faq-top {
 	&__wrap {
-		background: url(../images/faq/faq-main-bg.jpg);
+		background: url(/Media/assets/images/faq/faq-main-bg.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center bottom;
@@ -12,7 +12,7 @@
 		position: relative;
 
 		@include media(xs, max) {
-			background-image: url(../images/faq/faq-mb-bg.jpg);
+			background-image: url(/Media/assets/images/faq/faq-mb-bg.jpg);
 			height: 389px;
 			min-height: 389px;
 		}
@@ -198,6 +198,7 @@
 					border-bottom-right-radius: 0;
 
 					&:hover {
+						// sass-lint:disable no-important
 						.acc-head__text {
 							color: #ffffff !important;
 						}
@@ -232,6 +233,7 @@
 			}
 		}
 
+		//sass-lint:disable-all
 		& > .acc-item.active {
 			margin-bottom: 25px;
 			@include media(sm) {
@@ -358,6 +360,7 @@
 	position: relative;
 	cursor: pointer;
 
+	// sass-lint:disable no-important
 	&:hover {
 		& > .acc-head__text {
 			color: map-get($colors, secondary) !important;

@@ -122,6 +122,7 @@
 		font-size: 15px;
 		color: map-get($colors, dark);
 		font-weight: 600;
+
 		[dir="rtl"] & {
 			padding-left: 0;
 			padding-right: 15px;
@@ -239,8 +240,8 @@
 }
 
 .ie {
-  .t-counter__action--plus::after {
-    top: 1px;
-    left: 12px;
-  }
+	.t-counter__action--plus::after {
+		top: 1px;
+		left: 12px;
+	}
 }

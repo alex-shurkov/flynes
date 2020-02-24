@@ -55,6 +55,7 @@
 	background: #f8f8f8;
 	padding: 21px 0;
 	position: relative;
+
 	&::after {
 		position: absolute;
 		content: '';
@@ -85,6 +86,7 @@
 			position: relative;
 			top: 5px;
 			margin-bottom: 10px;
+
 			[dir="rtl"] & {
 				padding-left: 20px;
 				padding-right: 0;
@@ -126,6 +128,7 @@
 				@include media(xl, max) {
 					padding-top: 5px;
 				}
+
 				svg {
 					position: relative;
 					top: -10px;
@@ -264,6 +267,7 @@
 	&__part {
 		padding: 10px 0;
 
+		// sass-lint:disable no-important
 		&--visitors {
 			width: auto !important;
 		}
@@ -290,6 +294,7 @@
 	&__line {
 		width: 41px;
 		position: relative;
+
 		&::after {
 			position: absolute;
 			content: '';
@@ -528,6 +533,7 @@
 
 	&__nav-wrap {
 		position: relative;
+
 		&::after {
 			content: '';
 			display: block;
@@ -551,7 +557,7 @@
 			position: absolute;
 			height: 35px;
 			width: 35px;
-			background-image: url(../images/hotel/preview-hover.png);
+			background-image: url(/Media/assets/images/hotel/preview-hover.png);
 			background-size: contain;
 			background-repeat: no-repeat;
 			opacity: 0;
@@ -659,6 +665,7 @@
 
 	&__text {
 		color: #9c9c9c;
+
 		span {
 			display: block;
 			margin-bottom: 14px;
@@ -956,6 +963,7 @@
 			color: #01bab4;
 
 			svg {
+				// sass-lint:disable no-important
 				&.room-arrow {
 					fill: map-get($colors, main) !important;
 				}
@@ -992,6 +1000,7 @@
 					margin-left: 0;
 				}
 
+				// sass-lint:disable no-important
 				.room--open & {
 					fill: map-get($colors, main) !important;
 					transform: scale(1, -1);
@@ -1106,6 +1115,7 @@
 		}
 	}
 
+	// sass-lint:disable no-important
 	.select-drop {
 		display: inline-block;
 		width: 58px !important;
@@ -1114,7 +1124,7 @@
 		border-radius: 3px;
 		background-position-x: calc(100% - 10px);
 		padding: 6px 18px 6px 12px;
-		background-image: url(../images/static-svg/select-arrow-grey.svg);
+		background-image: url(/Media/assets/images/static-svg/select-arrow-grey.svg);
 
 		[dir="rtl"] & {
 			background-position-x: 10px;
@@ -1301,9 +1311,9 @@
 			margin-top: 24px;
 		}
 
+		//sass-lint:disable-all
 		.room.selected & {
 			background: map-get($colors, secondary);
-
 		}
 
 		&.disabled {

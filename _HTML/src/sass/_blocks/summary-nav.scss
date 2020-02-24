@@ -50,7 +50,7 @@
 	&__next {
 		background-color: #64d3cf;
 		border: 2px solid #64d3cf;
-		transition: all 0.15s linear;
+		transition: ease-out 0.15s linear;
 
 		&:hover {
 			background-color: map-get($colors, main);
