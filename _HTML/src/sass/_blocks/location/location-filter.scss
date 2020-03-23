@@ -291,6 +291,22 @@
 		top: -10px;
 		cursor: grab;
 
+		> span {
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-top: 5px;
+			transform: translateX(-50%);
+			opacity: 0;
+			transition: .3s ease-out all;
+		}
+
+		&:hover {
+		  > span {
+			  opacity: 1;
+		  }
+		}
+
 		&::before {
 			display: block;
 			content: '';
