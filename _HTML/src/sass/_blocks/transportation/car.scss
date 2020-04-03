@@ -525,7 +525,7 @@
 
 
 .car-group-table {
-	margin-bottom: 15px;
+	margin-bottom: 17px;
 }
 
 .car-group-table,
@@ -537,6 +537,7 @@
 
 .car-group-table-cell {
 	margin-bottom: 5px;
+  padding-bottom: 3px;
 }
 
 .car-group-table-sm {
@@ -588,7 +589,7 @@
 
 .car-group-title {
 	margin-top: 0;
-	margin-bottom: 0;
+	margin-bottom: 5px;
 	font-size: 18px;
 	font-weight: 700;
 	letter-spacing: .01em;
@@ -638,12 +639,12 @@
 	&,
 	&:focus,
 	&:active {
-		color: #67d6d2;
+		color: #3dc5be;
 		text-decoration: underline;
 	}
 
 	&:hover {
-		color: #313131;
+		color: #67d6d2;
 	}
 }
 
@@ -663,8 +664,8 @@
 }
 
 .car-group-inline-icon-svg {
-	color: #3de5ff;
-	fill: #3de5ff;
+	color: #01bab4;
+	fill: #01bab4;
 }
 
 .car-group-inline-icon-circle {
