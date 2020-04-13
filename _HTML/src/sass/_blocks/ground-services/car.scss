@@ -355,7 +355,6 @@
   .rating {
     display: flex;
     align-items: center;
-
     @include media(ms, max) {
       margin-top: 10px;
     }
@@ -526,14 +525,14 @@
 
 
 .car-group-table {
-  margin-top: 11px;
-  margin-bottom: 22px;
-  width: 100%;
-  border-spacing: 0;
+  margin-bottom: 17px;
 }
 
-.car-group-table-inner-table {
-  width: 100%;
+.car-group-table,
+.car-group-table-body,
+.car-group-table-row,
+.car-group-table-cell {
+  display: block;
 }
 
 .car-group-table-cell {
@@ -542,8 +541,7 @@
 }
 
 .car-group-table-sm {
-  margin-top: 5px;
-  width: 100%;
+  margin-bottom: 20px;
 }
 
 @media(min-width: 576px) {
@@ -565,7 +563,7 @@
   }
 
   .car-group-table-sm {
-    //padding-left: 9%;
+    padding-left: 9%;
   }
 
   .car-group-table-sm-cell {
@@ -575,78 +573,18 @@
 
 @media (min-width: 1200px) {
   .car-group-table-cell-inset {
-    padding-left: 35%;
+    padding-left: 13%;
   }
 }
 
 .car-group-image-wrapper {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-width: 200px;
   height: 100%;
+  padding: 30px 5px;
   border: 1px solid rgba(#000000, .1);
-}
-
-.car-group-image {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.car-group-image-footer {
-  width: 100%;
-  margin-top: auto;
-  padding: 15px;
-  background-color: #fafafa;
-}
-
-.car-group-rating {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-left: -10px;
-  margin-bottom: -10px;
-
-  >* {
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-}
-
-.car-group-rating-score {
-  padding: 6px;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1;
-  color: #fff;
-  border-radius: 5px;
-  background-color: #01bab4;
-}
-
-.car-group-rating-title {
-  font-size: 15px;
-  font-weight: 900;
-  letter-spacing: 0.01em;
-  color: #313131;
-}
-
-.car-group-rating-reviews {
-  a {
-    font-size: 11px;
-    text-decoration: underline;
-
-    &,
-    &:focus,
-    &:active {
-      color: #707070;
-    }
-
-    &:hover {
-      color: #01bab4;
-    }
-  }
 }
 
 .car-group-title {
@@ -664,25 +602,18 @@
 }
 
 .car-group-inline-title {
-  margin: 0;
-  font-size: 14px;
+  margin: 0 15px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: .02em;
-  color: #707070;
+  color: #313131;
 }
 
 .car-group-inline-text {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
   font-size: 15px;
   font-weight: 400;
-}
-
-.car-group-table-inner-cell {
-  padding: 15px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border: 1px solid rgba(#000000, 0.1);
 }
 
 .car-group-inline-text-sm {
@@ -695,7 +626,7 @@
 }
 
 .car-group-inline-text-lg {
-  font-size: 14px;
+  font-weight: 700;
   color: #313131;
 }
 
@@ -802,7 +733,6 @@
 .car-group-total-info {
   display: inline-block;
   margin-top: 2px;
-  font-size: 11px;
 
   .span,
   svg {
@@ -835,18 +765,7 @@
   vertical-align: bottom;
 }
 
-.car-group-table-total-cell-3 {
-  margin-left: -10px;
-  margin-bottom: -10px;
-
-  >* {
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-}
-
 @media (max-width: 575px) {
-
   .car-group-table-total,
   .car-group-table-total-body,
   .car-group-table-total-row,
@@ -861,23 +780,12 @@
 }
 
 @media (min-width: 576px) {
-
-  .car-group-table-total-cell-1.inset {
-    padding-left: 15px;
-  }
-
   .car-group-table-total-cell-2 {
     min-width: 120px;
   }
 
   .car-group-table-total-cell-3 {
     text-align: right;
-  }
-
-  .car-group-table-total-cell-3.group {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
   }
 }
 
@@ -922,7 +830,7 @@
   line-height: 1.25;
   color: rgba(#000000, .5);
 
-  li+li {
+  li + li {
     margin-top: 10px;
   }
 
@@ -987,19 +895,19 @@
   padding-bottom: 30px;
 }
 
-.car-group-definition+.car-group-definition {
+.car-group-definition + .car-group-definition {
   margin-top: 25px;
 }
 
-.car-group-title+.car-group-definition {
+.car-group-title + .car-group-definition {
   margin-top: 20px;
 }
 
-.car-group-definition+.car-group-table-total {
+.car-group-definition + .car-group-table-total {
   margin-top: 35px;
 }
 
-.car-group-total-sum+.car-group-inline {
+.car-group-total-sum + .car-group-inline {
   margin-top: 20px;
 }
 
@@ -1032,20 +940,4 @@
       font-size: 14px;
     }
   }
-}
-
-.car-group-table-row-offset {
-  td {
-    padding-top: 17px;
-  }
-}
-
-.car-group-table-row-footer-cell {
-  padding: 15px 15px 5px;
-  border-left: 1px solid rgba(#000000, 0.1);
-  border-right: 1px solid rgba(#000000, 0.1);
-  border-bottom: 1px solid rgba(#000000, 0.1);
-  background-color: #fafafa;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
 }
