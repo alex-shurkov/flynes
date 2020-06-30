@@ -7,21 +7,6 @@
 		padding: 15px 10px;
 	}
 
-  &__footer {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center;
-
-    .button {
-      background-color: #67d6d2;
-      text-decoration: none;
-
-      &:hover {
-        background-color: #01bab4;
-      }
-    }
-  }
-
 	&__item {
 		padding: 24px 8px 12px;
 		border-radius: 5px;
@@ -30,20 +15,24 @@
 		display: flex;
 		position: relative;
 		flex-wrap: wrap;
-    margin-bottom: 31px;
 
-    &::after {
-      display: block;
-      content: '';
-      position: absolute;
-      height: 1px;
-      width: 98%;
-      margin: 0 auto;
-      right: 0;
-      left: 0;
-      bottom: -16px;
-      border-top: 1px dashed #b8b8b8;
-    }
+		&:not(:last-of-type) {
+			margin-bottom: 31px;
+
+			&::after {
+				display: block;
+				content: '';
+				position: absolute;
+				height: 1px;
+				width: 98%;
+				margin: 0 auto;
+				right: 0;
+				left: 0;
+				bottom: -16px;
+				border-top: 1px dashed #b8b8b8;
+			}
+		}
+
 	}
 
 	&__btn {

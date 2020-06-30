@@ -417,3 +417,45 @@
 		}
 	}
 }
+
+.sidebar-block {
+	pointer-events: none;
+
+	&__title {
+		position: relative;
+		cursor: pointer;
+		pointer-events: all;
+
+		&:before {
+		  content: '';
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 4px 6px 4px;
+			border-color: transparent transparent #313131 transparent;
+			transform: translateY(-50%);
+			transition: .3s ease-out transform;
+		}
+	}
+
+	&.collapsed &__title {
+		&:before {
+		  transform: translateY(-50%) scale(1, -1);
+		}
+	}
+
+	&__content {
+		pointer-events: none;
+
+		* {
+			pointer-events: all;
+		}
+	}
+
+	&.collapsed &__content {
+		display: none;
+	}
+}
