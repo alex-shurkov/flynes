@@ -205,6 +205,11 @@
 				transform: scale(-1, 1);
 			}
 		}
+
+		.container,
+		.grid {
+			min-height: inherit;
+		}
 	}
 
 	&__view {
@@ -229,6 +234,20 @@
 			right: 0;
 			bottom: 0;
 			margin: auto;
+		}
+
+		&--rounder {
+			img {
+				border-radius: 50%;
+			}
+		}
+
+		&--top {
+			padding-top: 103%;
+
+			img {
+				bottom: auto;
+			}
 		}
 	}
 
@@ -311,8 +330,14 @@
 	}
 
 	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		min-height: 100%;
 		font-size: 13px;
 		font-weight: 600;
+
 		@include media(ms) {
 			font-size: 14.5px;
 		}
@@ -328,6 +353,10 @@
 		margin-bottom: 4px;
 		align-items: center;
 		min-height: 48px;
+
+		&--last {
+			margin-bottom: 30px;
+		}
 
 		@include media(xs, max) {
 			flex-wrap: wrap;
@@ -354,6 +383,31 @@
 	&__info-text {
 		width: 45%;
 		color: #808080;
+
+		.form-group--double {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -5px;
+			margin-bottom: -5px;
+
+			@media (min-width: 1281px) {
+				flex-wrap: nowrap;
+			}
+
+			.form-group__wrap {
+				flex-grow: 1;
+				margin-left: 5px;
+				margin-bottom: 5px;
+			}
+		}
+
+		.form-group__input--accent {
+			color: #01bab4;
+		}
+
+		&--full {
+			width: 90%;
+		}
 
 		@include media(sm) {
 			padding-left: 20px;
@@ -408,7 +462,6 @@
 		}
 	}
 
-
 	&__info-link {
 		padding: 5px 10px;
 		border: none;
@@ -438,6 +491,23 @@
 
 	}
 
+	&__info-button {
+		margin-top: auto;
+
+		&-group {
+			margin-top: auto;
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -5px;
+			margin-bottom: -5px;
+
+			&-item {
+				min-width: 180px;
+				margin-left: 5px;
+				margin-bottom: 5px;
+			}
+		}
+	}
 }
 
 .pc-booking	{

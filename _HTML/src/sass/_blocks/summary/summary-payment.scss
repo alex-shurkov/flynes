@@ -102,6 +102,55 @@
 				}
 			}
 		}
+
+		&--iban {
+			&::before {
+				display: none;
+			}
+
+			&-total {
+				font-size: 15px;
+				color: #313131;
+
+				&-sum {
+					font-size: 18px;
+					font-weight: 700;
+				}
+			}
+
+			&-footer {
+				align-items: center;
+				justify-content: space-between;
+
+				@media (min-width: 1200px) {
+					align-items: center;
+					justify-content: space-between;
+					flex-direction: row-reverse;
+				}
+			}
+
+			.form-group__label {
+				margin-bottom: 12px;
+				padding-left: 0;
+			}
+
+			.form-group-iban {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+
+				label {
+					font-size: 15px;
+					color: #313131;
+					letter-spacing: 0.01em;
+					margin: 0 12px;
+				}
+
+				.form-group__input {
+					max-width: 156px;
+				}
+			}
+		}
 	}
 
 	&__holder {

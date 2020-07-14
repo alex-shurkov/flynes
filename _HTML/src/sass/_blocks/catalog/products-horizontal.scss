@@ -120,7 +120,28 @@
 		}
 	}
 
+	.hrz-products__label {
+		z-index: 100;
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100px;
+		height: 40px;
+		font-family: 'Lato';
+		font-size: 12px;
+		font-weight: 900;
+		letter-spacing: 0.05em;
+		color: #fff;
+		text-transform: uppercase;
+		border-top-right-radius: 8px;
+		border-bottom-left-radius: 8px;
+	}
+
 	&__link {
+		position: relative;
 		line-height: 1.2;
 		text-decoration: none;
 		display: flex;

@@ -204,3 +204,79 @@
 		}
 	}
 }
+
+.mecca-collapse {
+
+	&__header {
+		display: none;
+	}
+
+	@media (max-width: 640px) {
+		padding-top: 90px;
+		background-color: #f8f8f8;
+
+		&__inner {
+			margin: 0 15px 20px;
+			padding: 30px 15px;
+			box-shadow: 0 4px 12px 0 rgba(61, 61, 61, 0.2);
+		}
+
+		&__header {
+			position: relative;
+			display: block;
+			font-size: 19px;
+			font-weight: 700;
+			color: #333333;
+			text-align: left;
+			cursor: pointer;
+			padding: 10px 20px 10px 20px;
+		}
+
+		&__icons {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&__icon {
+			&--close {
+				display: none;
+			}
+		}
+
+		.active &__icon {
+			&--open {
+				display: none;
+			}
+
+			&--close {
+				display: block;
+			}
+		}
+
+		&__text {
+			&--close {
+				display: none;
+			}
+		}
+
+		.active &__text {
+			&--open {
+				display: none;
+			}
+
+			&--close {
+				display: block;
+			}
+		}
+
+		.active + &__body {
+			display: none;
+		}
+
+		.breadcrumbs__container {
+			padding-top: 0;
+		}
+	}
+}
