@@ -118,6 +118,7 @@
 		background-color: transparent;
 		height: 100%;
 		padding: 20px 15px;
+		overflow-y: hidden;
 
 		.open & {
 			background-color: rgba(250, 250, 250, 0.8);
@@ -163,7 +164,7 @@
 
 	&__right-wrap {
 		overflow-y: hidden;
-		height: 100%;
+		height: calc(100% - 66px);
 
 		.open & {
 			overflow-y: auto;

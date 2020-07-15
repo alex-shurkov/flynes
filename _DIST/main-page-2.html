@@ -2625,11 +2625,10 @@
 												<div class="input-filled__text input-filled__text--one-line">8 May 2019</div>
 												<div class="input-filled__subtext">Thursday</div>
 											</div>
+											<!--todo for programmer: this calendar must always show only one month -->
+											<div id="root" class="fs-day-picker"></div>
 										</div>
 										<!--todo end-->
-
-										<!--todo for programmer: this calendar must always show only one month -->
-										<div id="root" class="fs-day-picker"></div>
 									</div>
 									<div class="form-group fs-nights">
 										<span class="form-group__label fs-label">stay</span>
@@ -2652,26 +2651,26 @@
 												<div class="input-filled__text">Madinah</div>
 												<div class="input-filled__subtext">5 nights</div>
 											</div>
-										</div>
 
-										<!--markup for visitors dropdown-->
-										<div class="nights-results">
-											<div class="nights-results__counters">
-												<div class="counter">
-													<span class="counter__action"></span>
-													<span class="counter__value _flex _flex-column _items-center">
-														<span class="counter__amount">1</span>
-														<span class="counter__desc">Mecca</span>
-													</span>
-													<span class="counter__action counter__action--plus"></span>
-												</div>
-												<div class="counter">
-													<span class="counter__action"></span>
-													<span class="counter__value _flex _flex-column _items-center">
-														<span class="counter__amount">1</span>
-														<span class="counter__desc">Madinah</span>
-													</span>
-													<span class="counter__action counter__action--plus"></span>
+											<!--markup for visitors dropdown-->
+											<div class="nights-results">
+												<div class="nights-results__counters">
+													<div class="counter">
+														<span class="counter__action"></span>
+														<span class="counter__value _flex _flex-column _items-center">
+															<span class="counter__amount">1</span>
+															<span class="counter__desc">Mecca</span>
+														</span>
+														<span class="counter__action counter__action--plus"></span>
+													</div>
+													<div class="counter">
+														<span class="counter__action"></span>
+														<span class="counter__value _flex _flex-column _items-center">
+															<span class="counter__amount">1</span>
+															<span class="counter__desc">Madinah</span>
+														</span>
+														<span class="counter__action counter__action--plus"></span>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -2707,106 +2706,105 @@
 										<div class="fs-visitors__item fs-visitors__item--filled input-filled" onclick="function f(el){(!el.parentNode.classList.value.includes('open'))?el.parentNode.classList.add('open'):el.parentNode.classList.remove('open');};f(this);">
 											<div class="input-filled__text">4 adults, 2 children</div>
 											<div class="input-filled__subtext">3 rooms</div>
+											<!--markup for visitors dropdown-->
+											<div class="visitors-results">
+												<div class="visitors-results__info">
+													<div class="visitors-results__info-left">
+														<div class="visitors-results__info-title">Traveling with kids?</div>
+														<div class="visitors-results__info-text">
+															Include them above for the best prices and recommendations.
+														</div>
+													</div>
+													<div class="visitors-results__info-right">
+														<button class="button visitors-results__info-btn">+ room</button>
+													</div>
+												</div>
+												<div class="visitors-results__counters">
+
+													<div class="visitors-results__item">
+														<div class="visitors-results__item-head">
+															<div class="visitors-results__item-title">Room №1</div>
+															<button class="visitors-results__item-remove" type="button">
+																<span>Remove</span>
+																<svg width="9" height="9">
+																	<use href="#close"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="visitors-results__item-body">
+															<div class="counter counter--column">
+																<span class="counter__action"></span>
+																<span class="counter__value _flex _flex-column _items-center">
+																	<span class="counter__amount">1</span>
+																	<span class="counter__desc">Adults</span>
+																</span>
+																<span class="counter__action counter__action--plus"></span>
+															</div>
+															<div class="counter  counter--column">
+																<span class="counter__action"></span>
+																<span class="counter__value _flex _flex-column _items-center">
+																	<span class="counter__amount">0</span>
+																	<span class="counter__desc">Child</span>
+																	<span class="counter__desc counter__desc--sm">2 - 12 years</span>
+																</span>
+																<span class="counter__action counter__action--plus"></span>
+															</div>
+															<div class="counter counter--column counter--border">
+																<span class="counter__action"></span>
+																<span class="counter__value _flex _flex-column _items-center">
+																	<span class="counter__amount">0</span>
+																	<span class="counter__desc">Infant</span>
+																	<span class="counter__desc counter__desc--sm">Under 2 years</span>
+																</span>
+																<span class="counter__action counter__action--plus"></span>
+															</div>
+														</div>
+													</div>
+
+													<div class="visitors-results__item">
+														<div class="visitors-results__item-head">
+															<div class="visitors-results__item-title">Room №2</div>
+															<button class="visitors-results__item-remove" type="button">
+																<span>Remove</span>
+																<svg width="9" height="9">
+																	<use href="#close"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="visitors-results__item-body">
+															<div class="counter counter--column">
+																<span class="counter__action"></span>
+																<span class="counter__value _flex _flex-column _items-center">
+																	<span class="counter__amount">1</span>
+																	<span class="counter__desc">Adults</span>
+																</span>
+																<span class="counter__action counter__action--plus"></span>
+															</div>
+															<div class="counter  counter--column">
+																<span class="counter__action"></span>
+																<span class="counter__value _flex _flex-column _items-center">
+																	<span class="counter__amount">0</span>
+																	<span class="counter__desc">Child</span>
+																	<span class="counter__desc counter__desc--sm">2 - 12 years</span>
+																</span>
+																<span class="counter__action counter__action--plus"></span>
+															</div>
+															<div class="counter counter--column counter--border">
+																<span class="counter__action"></span>
+																<span class="counter__value _flex _flex-column _items-center">
+																	<span class="counter__amount">0</span>
+																	<span class="counter__desc">Infant</span>
+																	<span class="counter__desc counter__desc--sm">Under 2 years</span>
+																</span>
+																<span class="counter__action counter__action--plus"></span>
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</div>
 										</div>
 										<!--todo end-->
-
-										<!--markup for visitors dropdown-->
-										<div class="visitors-results">
-											<div class="visitors-results__info">
-												<div class="visitors-results__info-left">
-													<div class="visitors-results__info-title">Traveling with kids?</div>
-													<div class="visitors-results__info-text">
-														Include them above for the best prices and recommendations.
-													</div>
-												</div>
-												<div class="visitors-results__info-right">
-													<button class="button visitors-results__info-btn">+ room</button>
-												</div>
-											</div>
-											<div class="visitors-results__counters">
-
-												<div class="visitors-results__item">
-													<div class="visitors-results__item-head">
-														<div class="visitors-results__item-title">Room №1</div>
-														<button class="visitors-results__item-remove" type="button">
-															<span>Remove</span>
-															<svg width="9" height="9">
-																<use href="#close"></use>
-															</svg>
-														</button>
-													</div>
-													<div class="visitors-results__item-body">
-														<div class="counter counter--column">
-															<span class="counter__action"></span>
-															<span class="counter__value _flex _flex-column _items-center">
-																<span class="counter__amount">1</span>
-																<span class="counter__desc">Adults</span>
-															</span>
-															<span class="counter__action counter__action--plus"></span>
-														</div>
-														<div class="counter  counter--column">
-															<span class="counter__action"></span>
-															<span class="counter__value _flex _flex-column _items-center">
-																<span class="counter__amount">0</span>
-																<span class="counter__desc">Child</span>
-																<span class="counter__desc counter__desc--sm">2 - 12 years</span>
-															</span>
-															<span class="counter__action counter__action--plus"></span>
-														</div>
-														<div class="counter counter--column counter--border">
-															<span class="counter__action"></span>
-															<span class="counter__value _flex _flex-column _items-center">
-																<span class="counter__amount">0</span>
-																<span class="counter__desc">Infant</span>
-																<span class="counter__desc counter__desc--sm">Under 2 years</span>
-															</span>
-															<span class="counter__action counter__action--plus"></span>
-														</div>
-													</div>
-												</div>
-
-												<div class="visitors-results__item">
-													<div class="visitors-results__item-head">
-														<div class="visitors-results__item-title">Room №2</div>
-														<button class="visitors-results__item-remove" type="button">
-															<span>Remove</span>
-															<svg width="9" height="9">
-																<use href="#close"></use>
-															</svg>
-														</button>
-													</div>
-													<div class="visitors-results__item-body">
-														<div class="counter counter--column">
-															<span class="counter__action"></span>
-															<span class="counter__value _flex _flex-column _items-center">
-																<span class="counter__amount">1</span>
-																<span class="counter__desc">Adults</span>
-															</span>
-															<span class="counter__action counter__action--plus"></span>
-														</div>
-														<div class="counter  counter--column">
-															<span class="counter__action"></span>
-															<span class="counter__value _flex _flex-column _items-center">
-																<span class="counter__amount">0</span>
-																<span class="counter__desc">Child</span>
-																<span class="counter__desc counter__desc--sm">2 - 12 years</span>
-															</span>
-															<span class="counter__action counter__action--plus"></span>
-														</div>
-														<div class="counter counter--column counter--border">
-															<span class="counter__action"></span>
-															<span class="counter__value _flex _flex-column _items-center">
-																<span class="counter__amount">0</span>
-																<span class="counter__desc">Infant</span>
-																<span class="counter__desc counter__desc--sm">Under 2 years</span>
-															</span>
-															<span class="counter__action counter__action--plus"></span>
-														</div>
-													</div>
-												</div>
-
-											</div>
-										</div>
 									</div>
 								</div>
 								<div class="catalog-left__form-item catalog-left__form-item--collapsed">
