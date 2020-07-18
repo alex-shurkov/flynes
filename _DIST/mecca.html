@@ -2888,227 +2888,241 @@
 						<!--markup for mobile static filter (visible before 1024px)-->
 						<div class="loc-filter__left _def-hide">
 							<div class="loc-filter__title weight--bold color--rose size--md">Filtered by:</div>
-							<div class="grid grid--1 grid--sm-2 grid--space-lg">
-								<div class="lf-group">
-									<div class="size--ms weight--bold _mb-md">Stay time:</div>
-									<div class="lf-time">
-										<label class="radio">
-											<input type="radio" name="stay-time" class="radio__input" value="one-night" />
-											<span>For night</span>
-										</label>
-										<label class="radio">
-											<input type="radio" name="stay-time" class="radio__input" value="three-nights" />
-											<span>For 3 nights</span>
-										</label>
-									</div>
+							<div class="collapse-block" onclick="function f(el){(!el.classList.value.includes('active'))?el.classList.add('active'):el.classList.remove('active');};f(this);">
+								<div class="collapse-block__header">
+									<div class="collapse-block__title collapse-block__title--open">Collapse Filteres</div>
+									<div class="collapse-block__title collapse-block__title--close">Expand Filtere</div>
+									<svg width="26" height="26" class="collapse-block__icon collapse-block__icon--open">
+										<use href="#plus"></use>
+									</svg>
+									<svg width="26" height="26" class="collapse-block__icon collapse-block__icon--close">
+										<use href="#error"></use>
+									</svg>
 								</div>
-								<div class="lf-price lf-group">
-									<div class="lf-price__title">
-										SAR 67 - SAR 900+
-									</div>
-
-									<div class="lf-slider">
-										<div class="lf-slider__btn lf-slider__btn--start">
-											<span>67</span>
+								<div class="collapse-block__body">
+									<div class="grid grid--1 grid--sm-2 grid--space-lg">
+										<div class="lf-group">
+											<div class="size--ms weight--bold _mb-md">Stay time:</div>
+											<div class="lf-time">
+												<label class="radio">
+													<input type="radio" name="stay-time" class="radio__input" value="one-night" />
+													<span>For night</span>
+												</label>
+												<label class="radio">
+													<input type="radio" name="stay-time" class="radio__input" value="three-nights" />
+													<span>For 3 nights</span>
+												</label>
+											</div>
 										</div>
-										<div class="lf-slider__btn lf-slider__btn--end">
-											<span>900</span>
+										<div class="lf-price lf-group">
+											<div class="lf-price__title">
+												SAR 67 - SAR 900+
+											</div>
+
+											<div class="lf-slider">
+												<div class="lf-slider__btn lf-slider__btn--start">
+													<span>67</span>
+												</div>
+												<div class="lf-slider__btn lf-slider__btn--end">
+													<span>900</span>
+												</div>
+											</div>
+
 										</div>
-									</div>
+										<div class="lf-group">
+											<div class="size--ms weight--bold _mb-def">Comfort level:</div>
 
-								</div>
-								<div class="lf-group">
-									<div class="size--ms weight--bold _mb-def">Comfort level:</div>
+											<div class="lf-checkboxes lf-checkboxes--comfort">
 
-									<div class="lf-checkboxes lf-checkboxes--comfort">
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+													</span>
+												</label>
 
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+													</span>
+												</label>
 
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+													</span>
+												</label>
 
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+													</span>
+												</label>
 
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
+														<svg width="17" height="17">
+															<use href="#star"></use>
+														</svg>
 
-												<svg width="17" height="17">
-													<use href="#star"></use>
-												</svg>
+													</span>
+												</label>
 
-											</span>
-										</label>
+											</div>
+										</div>
+										<div class="lf-group sidebar-block" onclick="function f(el){(!el.classList.value.includes('collapsed'))?el.classList.add('collapsed'):el.classList.remove('collapsed');};f(this);">
+											<div class="size--ms weight--bold _mb-def sidebar-block__title">
+												Facilities:
+											</div>
+											<div class="lf-checkboxes lf-checkboxes--row sidebar-block__content">
 
-									</div>
-								</div>
-								<div class="lf-group sidebar-block" onclick="function f(el){(!el.classList.value.includes('collapsed'))?el.classList.add('collapsed'):el.classList.remove('collapsed');};f(this);">
-									<div class="size--ms weight--bold _mb-def sidebar-block__title">
-										Facilities:
-									</div>
-									<div class="lf-checkboxes lf-checkboxes--row sidebar-block__content">
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
+														Kitchen
+													</span>
+												</label>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
-												Kitchen
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
+														Air conditioning
+													</span>
+												</label>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
-												Air conditioning
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
+														Ironing facilities
+													</span>
+												</label>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
-												Ironing facilities
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
+														Ironing facilities
+													</span>
+												</label>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
-												Ironing facilities
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
+														Internet access
+													</span>
+												</label>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
-												Internet access
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
+														TV
+													</span>
+												</label>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
-												TV
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
+														Heating
+													</span>
+												</label>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
-												Heating
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
+														Refregerator
+													</span>
+												</label>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
-												Refregerator
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
+														Coffee / Tea maker
+													</span>
+												</label>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
-												Coffee / Tea maker
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
+														Washing machine
+													</span>
+												</label>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
-												Washing machine
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
+														Private pool
+													</span>
+												</label>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
-												Private pool
-											</span>
-										</label>
+												<label class="form-check">
+													<input type="checkbox" name="preferences-check" value="1">
+													<span>
+														Bathtub
+													</span>
+												</label>
 
-										<label class="form-check">
-											<input type="checkbox" name="preferences-check" value="1">
-											<span>
-												Bathtub
-											</span>
-										</label>
-
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -3361,61 +3375,77 @@
 									</div>
 
 									<div class="loc-filter__right">
-										<div class="loc-filter__nav">
-											<ul class="loc-filter__menu">
-												<li class="loc-filter__menu-item">
-													<span class="loc-filter__menu-item-inner">
-														<svg class="loc-filter__menu-item-svg" width="21" height="21">
-															<use href="#filter-tag"></use>
-														</svg>
-														<span class="loc-filter__menu-item-text">Price</span>
-														<span class="loc-filter__menu-item-icon"></span>
-													</span>
 
-													<ul class="loc-filter__menu-dropdown">
-														<li class="loc-filter__menu-dropdown-item">
-															<svg class="loc-filter__menu-dropdown-item-svg" width="15" height="15">
-																<use href="#filter-down-arrow"></use>
-															</svg>
-															<span class="loc-filter__menu-dropdown-item-text">Hight To Low</span>
+										<div class="collapse-block" onclick="function f(el){(!el.classList.value.includes('active'))?el.classList.add('active'):el.classList.remove('active');};f(this);">
+											<div class="collapse-block__header">
+												<div class="collapse-block__title collapse-block__title--open">Collapse Filteres</div>
+												<div class="collapse-block__title collapse-block__title--close">Expand Filtere</div>
+												<svg width="26" height="26" class="collapse-block__icon collapse-block__icon--open">
+													<use href="#plus"></use>
+												</svg>
+												<svg width="26" height="26" class="collapse-block__icon collapse-block__icon--close">
+													<use href="#error"></use>
+												</svg>
+											</div>
+											<div class="collapse-block__body">
+												<div class="loc-filter__nav">
+													<ul class="loc-filter__menu">
+														<li class="loc-filter__menu-item">
+															<span class="loc-filter__menu-item-inner">
+																<svg class="loc-filter__menu-item-svg" width="21" height="21">
+																	<use href="#filter-tag"></use>
+																</svg>
+																<span class="loc-filter__menu-item-text">Price</span>
+																<span class="loc-filter__menu-item-icon"></span>
+															</span>
+
+															<ul class="loc-filter__menu-dropdown">
+																<li class="loc-filter__menu-dropdown-item">
+																	<svg class="loc-filter__menu-dropdown-item-svg" width="15" height="15">
+																		<use href="#filter-down-arrow"></use>
+																	</svg>
+																	<span class="loc-filter__menu-dropdown-item-text">Hight To Low</span>
+																</li>
+																<li class="loc-filter__menu-dropdown-item">
+																	<svg class="loc-filter__menu-dropdown-item-svg" width="15" height="15" style="transform: scale(1, -1)">
+																		<use href="#filter-down-arrow"></use>
+																	</svg>
+																	<span class="loc-filter__menu-dropdown-item-text">Low To Hight</span>
+																</li>
+															</ul>
 														</li>
-														<li class="loc-filter__menu-dropdown-item">
-															<svg class="loc-filter__menu-dropdown-item-svg" width="15" height="15" style="transform: scale(1, -1)">
-																<use href="#filter-down-arrow"></use>
-															</svg>
-															<span class="loc-filter__menu-dropdown-item-text">Low To Hight</span>
+														<li class="loc-filter__menu-item">
+															<span class="loc-filter__menu-item-inner">
+																<svg class="loc-filter__menu-item-svg" width="17" height="17">
+																	<use href="#star"></use>
+																</svg>
+																<span class="loc-filter__menu-item-text">Star rating</span>
+																<span class="loc-filter__menu-item-icon"></span>
+															</span>
+														</li>
+														<li class="loc-filter__menu-item">
+															<span class="loc-filter__menu-item-inner">
+																<svg class="loc-filter__menu-item-svg" width="22" height="22">
+																	<use href="#filter-hotel"></use>
+																</svg>
+																<span class="loc-filter__menu-item-text">Name</span>
+																<span class="loc-filter__menu-item-icon"></span>
+															</span>
+														</li>
+														<li class="loc-filter__menu-item">
+															<span class="loc-filter__menu-item-inner">
+																<svg class="loc-filter__menu-item-svg" width="22" height="22">
+																	<use href="#filter-placeholder"></use>
+																</svg>
+																<span class="loc-filter__menu-item-text">Distance</span>
+																<span class="loc-filter__menu-item-icon"></span>
+															</span>
 														</li>
 													</ul>
-												</li>
-												<li class="loc-filter__menu-item">
-													<span class="loc-filter__menu-item-inner">
-														<svg class="loc-filter__menu-item-svg" width="17" height="17">
-															<use href="#star"></use>
-														</svg>
-														<span class="loc-filter__menu-item-text">Star rating</span>
-														<span class="loc-filter__menu-item-icon"></span>
-													</span>
-												</li>
-												<li class="loc-filter__menu-item">
-													<span class="loc-filter__menu-item-inner">
-														<svg class="loc-filter__menu-item-svg" width="22" height="22">
-															<use href="#filter-hotel"></use>
-														</svg>
-														<span class="loc-filter__menu-item-text">Name</span>
-														<span class="loc-filter__menu-item-icon"></span>
-													</span>
-												</li>
-												<li class="loc-filter__menu-item">
-													<span class="loc-filter__menu-item-inner">
-														<svg class="loc-filter__menu-item-svg" width="22" height="22">
-															<use href="#filter-placeholder"></use>
-														</svg>
-														<span class="loc-filter__menu-item-text">Distance</span>
-														<span class="loc-filter__menu-item-icon"></span>
-													</span>
-												</li>
-											</ul>
+												</div>
+											</div>
 										</div>
+
 										<div class="loc-filter__right-wrap">
 
 											<div class="hrz-products">
