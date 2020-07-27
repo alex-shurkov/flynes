@@ -226,6 +226,17 @@
 		}
 	}
 
+	@media(max-width: 639px) {
+		width: 100vw;
+		.loc-filter__right {
+			min-width: 320px;
+			width: calc(100vw - 60px);
+		}
+
+		.hrz-products__link {
+		}
+	}
+
 }
 
 .loc-filter__nav {
@@ -614,6 +625,11 @@
 			border-color: transparent transparent #313131 transparent;
 			transform: translateY(-50%);
 			transition: .3s ease-out transform;
+
+			[dir='rtl'] & {
+				right: auto;
+				left: 10px;
+			}
 		}
 	}
 
@@ -633,5 +649,85 @@
 
 	&.collapsed &__content {
 		display: none;
+	}
+}
+
+.collapse-block {
+	$this: &;
+
+	&__header {
+		position: relative;
+		padding: 15px 40px 15px 0;
+
+		[dir='rtl'] & {
+			padding: 15px 0 15px 40px;
+		}
+	}
+
+	&__title {
+		font-size: 17px;
+		font-weight: 700;
+
+		&--open {
+			display: block;
+
+			#{$this}.active & {
+				display: none;
+			}
+		}
+
+		&--close {
+			display: none;
+
+			#{$this}.active & {
+				display: block;
+			}
+		}
+	}
+
+	&__body {
+		display: none;
+
+		#{$this}.active & {
+			display: block;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 5px;
+
+		[dir='rtl'] & {
+			right: auto;
+			left: 5px;
+		}
+
+		&--open {
+			display: block;
+
+			#{$this}.active & {
+				display: none;
+			}
+		}
+
+		&--close {
+			display: none;
+
+			#{$this}.active & {
+				display: block;
+			}
+		}
+	}
+
+	@media (min-width: 1025px) {
+		&__header {
+			display: none;
+		}
+
+		&__body {
+			display: block !important;
+		}
 	}
 }

@@ -21,6 +21,14 @@
 		display: initial;
 	}
 
+	._visibility-hidden {
+		visibility: hidden !important;
+	}
+
+	._visibility-visible {
+		visibility: visible !important;
+	}
+
 	@media print {
 		._noprint {
 			display: none !important;
@@ -36,9 +44,27 @@
 			}
 		}
 
+		@include media($size) {
+			._#{$mod}visibility-hidden {
+				visibility: hidden !important;
+			}
+		}
+
+		@include media($size) {
+			._#{$mod}visibility-visible {
+				visibility: visible !important;
+			}
+		}
+
 		@include media($size, max) {
 			._#{$mod}show {
 				display: none !important;
+			}
+		}
+
+		@include media($size) {
+			._#{$mod}unhidden {
+				display: initial !important;
 			}
 		}
 	}

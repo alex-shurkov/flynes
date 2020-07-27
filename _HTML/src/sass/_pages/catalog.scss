@@ -236,6 +236,10 @@
 
 					.fs-goal__item {
 						margin-right: 0;
+
+						[dir='rtl'] & {
+							margin-left: 0;
+						}
 					}
 
 					.fs-goal__text {
@@ -332,6 +336,11 @@
 				max-width: 200px;
 				width: 100%;
 				margin-left: auto;
+
+				[dir='rtl'] & {
+					margin-left: 0;
+					margin-right: auto;
+				}
 			}
 
 			.form-group__label {

@@ -138,6 +138,11 @@
 		text-transform: uppercase;
 		border-top-right-radius: 8px;
 		border-bottom-left-radius: 8px;
+
+		[dir='rtl'] & {
+			right: auto;
+			left: 0;
+		}
 	}
 
 	&__link {

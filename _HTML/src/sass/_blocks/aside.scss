@@ -613,6 +613,11 @@
 			background-color: #fff;
 			transition: .3s ease-out all;
 
+			[dir='rtl'] & {
+				right: auto;
+				left: 25px;
+			}
+
 			&:hover {
 			  transform: scale(1.2);
 			}
